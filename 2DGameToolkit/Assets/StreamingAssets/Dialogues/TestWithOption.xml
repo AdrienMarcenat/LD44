@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<Dialogue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <m_Nodes>
+    <Node>
+      <m_ID>9d94ed10-31cc-4eb8-949b-6377d4952662</m_ID>
+      <m_Name>Bob</m_Name>
+      <m_Text>This dialogue has options</m_Text>
+      <m_NextNodeID />
+      <m_Options>
+        <Option>
+          <m_Text>Talk to Lea</m_Text>
+          <m_DestinationNodeID>ca5aed68-7f9e-4b1c-98cd-a85a9206eca7</m_DestinationNodeID>
+        </Option>
+        <Option>
+          <m_Text>Talk to Shulk</m_Text>
+          <m_DestinationNodeID>d8f21f30-9334-433c-a94e-64327f10960f</m_DestinationNodeID>
+        </Option>
+      </m_Options>
+    </Node>
+    <Node>
+      <m_ID>ca5aed68-7f9e-4b1c-98cd-a85a9206eca7</m_ID>
+      <m_Name>Lea</m_Name>
+      <m_Text>Thank you for choosing me !</m_Text>
+      <m_NextNodeID />
+      <m_Options />
+    </Node>
+    <Node>
+      <m_ID>d8f21f30-9334-433c-a94e-64327f10960f</m_ID>
+      <m_Name>Shulk</m_Name>
+      <m_Text>I provide option too.</m_Text>
+      <m_NextNodeID />
+      <m_Options>
+        <Option>
+          <m_Text>Quit</m_Text>
+          <m_DestinationNodeID />
+        </Option>
+      </m_Options>
+    </Node>
+  </m_Nodes>
+  <m_RootNodeID>9d94ed10-31cc-4eb8-949b-6377d4952662</m_RootNodeID>
+</Dialogue>

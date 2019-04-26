@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<GraphOfDialogueNodeConnection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <m_Nodes>
+    <DialogueNode>
+      <m_ID>eb7afbcd-e3c6-4981-a13c-69a276256899</m_ID>
+      <m_Rect>
+        <x>275</x>
+        <y>98</y>
+        <position>
+          <x>275</x>
+          <y>98</y>
+        </position>
+        <center>
+          <x>375</x>
+          <y>198</y>
+        </center>
+        <min>
+          <x>275</x>
+          <y>98</y>
+        </min>
+        <max>
+          <x>475</x>
+          <y>298</y>
+        </max>
+        <width>200</width>
+        <height>200</height>
+        <size>
+          <x>200</x>
+          <y>200</y>
+        </size>
+        <xMin>275</xMin>
+        <yMin>98</yMin>
+        <xMax>475</xMax>
+        <yMax>298</yMax>
+      </m_Rect>
+      <m_InPoint>
+        <m_Id>c1c7bcdd-5865-4545-89ae-023c8c970023</m_Id>
+      </m_InPoint>
+      <m_OutPoint>
+        <m_Id>2def21ae-3576-485c-8f27-e230034d89b1</m_Id>
+      </m_OutPoint>
+      <m_Node>
+        <m_ID>eb7afbcd-e3c6-4981-a13c-69a276256899</m_ID>
+        <m_Name>Bob</m_Name>
+        <m_Text>This is a test.</m_Text>
+        <m_NextNodeID>9a420c4b-7d1f-4340-8bf1-c3713cf41a3b</m_NextNodeID>
+        <m_Options />
+      </m_Node>
+      <m_OptionOutPoints />
+    </DialogueNode>
+    <DialogueNode>
+      <m_ID>9a420c4b-7d1f-4340-8bf1-c3713cf41a3b</m_ID>
+      <m_Rect>
+        <x>584</x>
+        <y>199</y>
+        <position>
+          <x>584</x>
+          <y>199</y>
+        </position>
+        <center>
+          <x>684</x>
+          <y>299</y>
+        </center>
+        <min>
+          <x>584</x>
+          <y>199</y>
+        </min>
+        <max>
+          <x>784</x>
+          <y>399</y>
+        </max>
+        <width>200</width>
+        <height>200</height>
+        <size>
+          <x>200</x>
+          <y>200</y>
+        </size>
+        <xMin>584</xMin>
+        <yMin>199</yMin>
+        <xMax>784</xMax>
+        <yMax>399</yMax>
+      </m_Rect>
+      <m_InPoint>
+        <m_Id>81cfc5b1-2d73-4d18-b818-11c0553a1308</m_Id>
+      </m_InPoint>
+      <m_OutPoint>
+        <m_Id>2192ad28-49c9-4cd1-8838-a869ac63af2a</m_Id>
+      </m_OutPoint>
+      <m_Node>
+        <m_ID>9a420c4b-7d1f-4340-8bf1-c3713cf41a3b</m_ID>
+        <m_Name>Lea</m_Name>
+        <m_Text>It has no option</m_Text>
+        <m_NextNodeID />
+        <m_Options />
+      </m_Node>
+      <m_OptionOutPoints />
+    </DialogueNode>
+  </m_Nodes>
+  <m_Connections>
+    <Connection>
+      <m_InPoint>
+        <m_Id>81cfc5b1-2d73-4d18-b818-11c0553a1308</m_Id>
+      </m_InPoint>
+      <m_OutPoint>
+        <m_Id>2def21ae-3576-485c-8f27-e230034d89b1</m_Id>
+      </m_OutPoint>
+    </Connection>
+  </m_Connections>
+</GraphOfDialogueNodeConnection>

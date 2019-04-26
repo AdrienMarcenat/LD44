@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<Dialogue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <m_Nodes>
+    <Node>
+      <m_ID>eb7afbcd-e3c6-4981-a13c-69a276256899</m_ID>
+      <m_Name>Bob</m_Name>
+      <m_Text>This is a test.</m_Text>
+      <m_NextNodeID>9a420c4b-7d1f-4340-8bf1-c3713cf41a3b</m_NextNodeID>
+      <m_Options />
+    </Node>
+    <Node>
+      <m_ID>9a420c4b-7d1f-4340-8bf1-c3713cf41a3b</m_ID>
+      <m_Name>Lea</m_Name>
+      <m_Text>It has no option</m_Text>
+      <m_NextNodeID />
+      <m_Options />
+    </Node>
+  </m_Nodes>
+  <m_RootNodeID>eb7afbcd-e3c6-4981-a13c-69a276256899</m_RootNodeID>
+</Dialogue>
