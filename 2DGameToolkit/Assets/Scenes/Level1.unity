@@ -479,50 +479,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_FadeSpeed: 0.05
---- !u!1 &325063241 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6176806929481394971, guid: 974e13595956d1a4db7b2266ed5eaf76,
-    type: 3}
-  m_PrefabInstance: {fileID: 689240943}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &325063244
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 325063241}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c68eb79aa4493c46be23739ff1b9fe0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_TimeInSeconds: 0.5
---- !u!169 &325063245
-AudioLowPassFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 325063241}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_LowpassResonanceQ: 1
-  lowpassLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0.22727273
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &393502656
 GameObject:
   m_ObjectHideFlags: 0
@@ -968,11 +924,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8708077511696560022, guid: 974e13595956d1a4db7b2266ed5eaf76,
-        type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 974e13595956d1a4db7b2266ed5eaf76, type: 3}
 --- !u!1001 &825675431
@@ -1030,17 +981,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 194981593, guid: 437f931776d897b42a9524dbf1aeb07b, type: 3}
-      propertyPath: m_BulletPrefab
-      value: 
-      objectReference: {fileID: 12841111538080621, guid: 7c27518ed1f115b448ea7e500bc12a19,
-        type: 3}
-    - target: {fileID: 114811839695801754, guid: 437f931776d897b42a9524dbf1aeb07b,
-        type: 3}
-      propertyPath: m_BulletPrefab
-      value: 
-      objectReference: {fileID: 6630469833174016720, guid: 6b566f5ae0f22c146b230e98826de36c,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 437f931776d897b42a9524dbf1aeb07b, type: 3}
 --- !u!1 &920333348
@@ -2426,8 +2366,8 @@ PrefabInstance:
     m_TransformParent: {fileID: 1259225936}
     m_Modifications:
     - target: {fileID: 1202455298598088, guid: 58744491102de384b8de8b2853a6a21e, type: 3}
-      propertyPath: m_IsActive
-      value: 1
+      propertyPath: m_Name
+      value: PausePanel
       objectReference: {fileID: 0}
     - target: {fileID: 224735307084582782, guid: 58744491102de384b8de8b2853a6a21e,
         type: 3}
@@ -2468,6 +2408,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 224735307084582782, guid: 58744491102de384b8de8b2853a6a21e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224735307084582782, guid: 58744491102de384b8de8b2853a6a21e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224735307084582782, guid: 58744491102de384b8de8b2853a6a21e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224735307084582782, guid: 58744491102de384b8de8b2853a6a21e,
         type: 3}

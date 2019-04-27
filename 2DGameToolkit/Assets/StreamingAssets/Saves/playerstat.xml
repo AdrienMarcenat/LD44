@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="Windows-1252"?>
 <PlayerStat xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <m_HP>0</m_HP>
-  <m_Force>0</m_Force>
-  <m_Magic>0</m_Magic>
-  <m_JumpNumber>0</m_JumpNumber>
-  <m_Speed>0</m_Speed>
+  <m_HP>10</m_HP>
+  <m_Force>1</m_Force>
+  <m_Magic>1</m_Magic>
+  <m_JumpNumber>1</m_JumpNumber>
 </PlayerStat>

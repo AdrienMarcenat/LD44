@@ -13,6 +13,11 @@ public class DialogueOptionButton : MonoBehaviour
 
     public void OnOptionChosen()
     {
+        Command command = Dialogue.DialogueCommand.ConstructDialogueCommand(m_Option.m_Action);
+        if (command != null)
+        {
+            command.Execute();
+        }
         Dialogue.DialogueManagerProxy.Get().DisplayNode(m_Option.m_DestinationNodeID);
     }
 

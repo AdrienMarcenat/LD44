@@ -4,34 +4,34 @@
     <DialogueNode>
       <m_ID>9d94ed10-31cc-4eb8-949b-6377d4952662</m_ID>
       <m_Rect>
-        <x>266</x>
-        <y>97</y>
+        <x>138</x>
+        <y>206</y>
         <position>
-          <x>266</x>
-          <y>97</y>
+          <x>138</x>
+          <y>206</y>
         </position>
         <center>
-          <x>366</x>
-          <y>217</y>
+          <x>338</x>
+          <y>326</y>
         </center>
         <min>
-          <x>266</x>
-          <y>97</y>
+          <x>138</x>
+          <y>206</y>
         </min>
         <max>
-          <x>466</x>
-          <y>337</y>
+          <x>538</x>
+          <y>446</y>
         </max>
-        <width>200</width>
+        <width>400</width>
         <height>240</height>
         <size>
-          <x>200</x>
+          <x>400</x>
           <y>240</y>
         </size>
-        <xMin>266</xMin>
-        <yMin>97</yMin>
-        <xMax>466</xMax>
-        <yMax>337</yMax>
+        <xMin>138</xMin>
+        <yMin>206</yMin>
+        <xMax>538</xMax>
+        <yMax>446</yMax>
       </m_Rect>
       <m_InPoint>
         <m_Id>dce46fd0-aefe-476d-a962-97e9a3bf4017</m_Id>
@@ -48,10 +48,12 @@
           <Option>
             <m_Text>Talk to Lea</m_Text>
             <m_DestinationNodeID>ca5aed68-7f9e-4b1c-98cd-a85a9206eca7</m_DestinationNodeID>
+            <m_Action>None</m_Action>
           </Option>
           <Option>
             <m_Text>Talk to Shulk</m_Text>
             <m_DestinationNodeID>d8f21f30-9334-433c-a94e-64327f10960f</m_DestinationNodeID>
+            <m_Action>None</m_Action>
           </Option>
         </m_Options>
       </m_Node>
@@ -60,34 +62,34 @@
     <DialogueNode>
       <m_ID>ca5aed68-7f9e-4b1c-98cd-a85a9206eca7</m_ID>
       <m_Rect>
-        <x>643</x>
-        <y>243</y>
+        <x>682</x>
+        <y>130</y>
         <position>
-          <x>643</x>
-          <y>243</y>
+          <x>682</x>
+          <y>130</y>
         </position>
         <center>
-          <x>743</x>
-          <y>343</y>
+          <x>882</x>
+          <y>230</y>
         </center>
         <min>
-          <x>643</x>
-          <y>243</y>
+          <x>682</x>
+          <y>130</y>
         </min>
         <max>
-          <x>843</x>
-          <y>443</y>
+          <x>1082</x>
+          <y>330</y>
         </max>
-        <width>200</width>
+        <width>400</width>
         <height>200</height>
         <size>
-          <x>200</x>
+          <x>400</x>
           <y>200</y>
         </size>
-        <xMin>643</xMin>
-        <yMin>243</yMin>
-        <xMax>843</xMax>
-        <yMax>443</yMax>
+        <xMin>682</xMin>
+        <yMin>130</yMin>
+        <xMax>1082</xMax>
+        <yMax>330</yMax>
       </m_Rect>
       <m_InPoint>
         <m_Id>de2f069b-fa34-4948-8349-8edd90943b85</m_Id>
@@ -107,34 +109,34 @@
     <DialogueNode>
       <m_ID>d8f21f30-9334-433c-a94e-64327f10960f</m_ID>
       <m_Rect>
-        <x>580</x>
-        <y>485</y>
+        <x>674</x>
+        <y>351</y>
         <position>
-          <x>580</x>
-          <y>485</y>
+          <x>674</x>
+          <y>351</y>
         </position>
         <center>
-          <x>680</x>
-          <y>595</y>
+          <x>874</x>
+          <y>461</y>
         </center>
         <min>
-          <x>580</x>
-          <y>485</y>
+          <x>674</x>
+          <y>351</y>
         </min>
         <max>
-          <x>780</x>
-          <y>705</y>
+          <x>1074</x>
+          <y>571</y>
         </max>
-        <width>200</width>
+        <width>400</width>
         <height>220</height>
         <size>
-          <x>200</x>
+          <x>400</x>
           <y>220</y>
         </size>
-        <xMin>580</xMin>
-        <yMin>485</yMin>
-        <xMax>780</xMax>
-        <yMax>705</yMax>
+        <xMin>674</xMin>
+        <yMin>351</yMin>
+        <xMax>1074</xMax>
+        <yMax>571</yMax>
       </m_Rect>
       <m_InPoint>
         <m_Id>86dd0e34-3ee0-478d-81a7-debcd1dc40fa</m_Id>
@@ -149,8 +151,9 @@
         <m_NextNodeID />
         <m_Options>
           <Option>
-            <m_Text>Quit</m_Text>
+            <m_Text>Quit the game</m_Text>
             <m_DestinationNodeID />
+            <m_Action>Quit</m_Action>
           </Option>
         </m_Options>
       </m_Node>
@@ -163,7 +166,7 @@
         <m_Id>de2f069b-fa34-4948-8349-8edd90943b85</m_Id>
       </m_InPoint>
       <m_OutPoint>
-        <m_Id>20412b15-a81c-4ea2-ad0b-8d3d1351982c</m_Id>
+        <m_Id>65f44c08-07c4-4d70-b86e-a94be436cbbc</m_Id>
       </m_OutPoint>
     </Connection>
     <Connection>
@@ -171,7 +174,7 @@
         <m_Id>86dd0e34-3ee0-478d-81a7-debcd1dc40fa</m_Id>
       </m_InPoint>
       <m_OutPoint>
-        <m_Id>c8695704-b17c-4d19-b0d0-2664d4a4e748</m_Id>
+        <m_Id>fea6a420-884a-4cdf-9be9-0da3ae69bce4</m_Id>
       </m_OutPoint>
     </Connection>
   </m_Connections>

@@ -28,7 +28,7 @@ public class UpgradeMagic : IStatChange
         stat.m_HP--;
     }
 }
-public class JumpNumber : IStatChange
+public class UpgradeJump : IStatChange
 {
     public void ChangeStats(PlayerStat stat)
     {

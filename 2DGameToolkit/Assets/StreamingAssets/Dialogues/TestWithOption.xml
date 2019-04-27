@@ -10,10 +10,12 @@
         <Option>
           <m_Text>Talk to Lea</m_Text>
           <m_DestinationNodeID>ca5aed68-7f9e-4b1c-98cd-a85a9206eca7</m_DestinationNodeID>
+          <m_Action>None</m_Action>
         </Option>
         <Option>
           <m_Text>Talk to Shulk</m_Text>
           <m_DestinationNodeID>d8f21f30-9334-433c-a94e-64327f10960f</m_DestinationNodeID>
+          <m_Action>None</m_Action>
         </Option>
       </m_Options>
     </Node>
@@ -31,8 +33,9 @@
       <m_NextNodeID />
       <m_Options>
         <Option>
-          <m_Text>Quit</m_Text>
+          <m_Text>Quit the game</m_Text>
           <m_DestinationNodeID />
+          <m_Action>Quit</m_Action>
         </Option>
       </m_Options>
     </Node>

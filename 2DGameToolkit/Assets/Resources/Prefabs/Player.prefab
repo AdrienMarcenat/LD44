@@ -48,7 +48,7 @@ MonoBehaviour:
   m_CurrentAmmo: 0
   m_AmmoVelocity: 0
   m_FireRate: 0.7
-  m_BulletPrefab: {fileID: 1810760541365871461, guid: 7c27518ed1f115b448ea7e500bc12a19,
+  m_BulletPrefab: {fileID: 12841111538080621, guid: 7c27518ed1f115b448ea7e500bc12a19,
     type: 3}
 --- !u!1 &1295975795656072
 GameObject:
@@ -333,5 +333,5 @@ MonoBehaviour:
   m_CurrentAmmo: 0
   m_AmmoVelocity: 10
   m_FireRate: 0.7
-  m_BulletPrefab: {fileID: 242683469909459474, guid: 6b566f5ae0f22c146b230e98826de36c,
+  m_BulletPrefab: {fileID: 6630469833174016720, guid: 6b566f5ae0f22c146b230e98826de36c,
     type: 3}
