@@ -58,11 +58,11 @@ public class PlayerController : MonoBehaviour
                 break;
             case "Right":
                 Move (state == EInputState.Held ? 1 : 0);
-                m_FacingDirection = m_Right;
+                ChangeFacingDirection(m_Right);
                 break;
             case "Left":
                 Move (state == EInputState.Held ? -1 : 0);
-                m_FacingDirection = m_Left;
+                ChangeFacingDirection(m_Left);
                 break;
             case "Fire":
                 if (state == EInputState.Held)
@@ -71,13 +71,22 @@ public class PlayerController : MonoBehaviour
                 }
                 break;
             case "Slash":
-                if (state == EInputState.Held)
+                if (state == EInputState.Down)
                 {
                     Slash();
                 }
                 break;
             default:
                 break;
+        }
+    }
+
+    private void ChangeFacingDirection(Vector3 newFacingDirection)
+    {
+        if (m_FacingDirection != newFacingDirection)
+        {
+            m_FacingDirection = newFacingDirection;
+            transform.localScale *= -1;
         }
     }
 
