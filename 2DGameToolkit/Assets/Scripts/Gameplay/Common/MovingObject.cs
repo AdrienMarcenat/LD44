@@ -25,10 +25,24 @@ public class MovingObject : MonoBehaviour
     {
         m_RigidBody.AddForce (force, ForceMode2D.Impulse);
     }
+    public void CancelVelocity()
+    {
+        m_RigidBody.velocity = Vector2.zero;
+    }
+
+    public void CancelXVelocity()
+    {
+        m_RigidBody.velocity = new Vector2(0, m_RigidBody.velocity.y);
+    }
 
     public void CancelYVelocity()
     {
         m_RigidBody.velocity = new Vector2(m_RigidBody.velocity.x, 0f);
+    }
+
+    public void ApplySpeedMultiplier(float muliplier)
+    {
+        m_SmoothSpeed *= muliplier;
     }
 
     public void MoveHorizontal (float xDir)

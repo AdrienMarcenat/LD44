@@ -8,7 +8,6 @@ public class Enemy : MonoBehaviour
     [SerializeField] private AudioClip m_Sound;
     [SerializeField] private float m_HitColorTime;
 
-    protected Transform m_Target;
     protected Health m_Health;
     protected Animator m_Animator;
     protected SpriteRenderer m_Sprite;
@@ -46,12 +45,15 @@ public class Enemy : MonoBehaviour
         this.UnregisterAsListener (gameObject.name);
     }
 
-    private void OnCollisionStay2D (Collision2D other)
+    private void OnCollisionEnter2D (Collision2D other)
     {
         if (other.gameObject.tag == "Player")
         {
             Health playerHealth = other.gameObject.GetComponent<Health> ();
             playerHealth.LoseHealth (m_PlayerDamageOnCollision);
+            OnPlayerCollision();
         }
     }
+
+    public virtual void OnPlayerCollision() { }
 }

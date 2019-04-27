@@ -6,6 +6,7 @@ using UnityEngine;
 public class MovingEnemy : Enemy
 {
     private MovingObject m_Body;
+    private Transform m_Target;
 
     void Start ()
     {
