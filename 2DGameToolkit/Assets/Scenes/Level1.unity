@@ -945,7 +945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f469169c58ccef34fb22b1a073bdcbdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MaxHealth: 10
+  m_MaxHealth: 5
 --- !u!114 &957026018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2564,7 +2564,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1010579222374794, guid: cccac38c1adee6841a9aabcdfad4eee7, type: 3}
       propertyPath: m_Name
-      value: Enemy
+      value: EvilPainting
+      objectReference: {fileID: 0}
+    - target: {fileID: 1010579222374794, guid: cccac38c1adee6841a9aabcdfad4eee7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4079508624134862, guid: cccac38c1adee6841a9aabcdfad4eee7, type: 3}
       propertyPath: m_LocalPosition.x

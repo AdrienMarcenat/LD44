@@ -34,7 +34,7 @@ public class EnemySeeker : Enemy
         m_Body = GetComponent<MovingObject>();
         this.RegisterToUpdate(EUpdatePass.AI);
         EnemyPlayerAiming enemyAI = gameObject.AddComponent<EnemyPlayerAiming>();
-        enemyAI.SetFireParameters(0, 1, 1, 1);
+        enemyAI.SetFireParameters(2, 1, 1, 0);
     }
 
     protected new void OnDestroy()

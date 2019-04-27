@@ -281,7 +281,7 @@ GameObject:
   - component: {fileID: 4109906556737888}
   - component: {fileID: 114811839695801754}
   m_Layer: 0
-  m_Name: Bow
+  m_Name: Blast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -313,10 +313,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27529e155b0b9d042a549a410cf264e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Type: Bow
+  m_Type: Blast
   m_TotalAmmo: 2147483647
   m_CurrentAmmo: 0
   m_AmmoVelocity: 10
   m_FireRate: 0.7
-  m_BulletPrefab: {fileID: 6630469833174016720, guid: 6b566f5ae0f22c146b230e98826de36c,
+  m_BulletPrefab: {fileID: 6007506422951949005, guid: 466dfd8ed0b5b744c87bc20d2081e538,
     type: 3}

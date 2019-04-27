@@ -131,7 +131,7 @@ public class PlayerController : MonoBehaviour
 
     private void Fire ()
     {
-        m_WeaponManager.Fire ("Bow", m_FacingDirection);
+        m_WeaponManager.Fire ("Blast", m_FacingDirection);
     }
 
     private void Slash()
