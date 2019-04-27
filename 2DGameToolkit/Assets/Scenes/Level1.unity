@@ -1972,6 +1972,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4363870461989696903, guid: 158765199a6cb1f4ab94863c284b7ce1,
+        type: 3}
+      propertyPath: m_KeepDistance
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4363870461989696903, guid: 158765199a6cb1f4ab94863c284b7ce1,
+        type: 3}
+      propertyPath: m_YLocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4363870461989696903, guid: 158765199a6cb1f4ab94863c284b7ce1,
+        type: 3}
+      propertyPath: m_KeepDistanceInner
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4363870461989696903, guid: 158765199a6cb1f4ab94863c284b7ce1,
+        type: 3}
+      propertyPath: m_KeepDistanceOuter
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 158765199a6cb1f4ab94863c284b7ce1, type: 3}
 --- !u!1 &1511257445

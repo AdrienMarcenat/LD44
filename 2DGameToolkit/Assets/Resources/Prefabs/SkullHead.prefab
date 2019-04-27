@@ -423,8 +423,10 @@ MonoBehaviour:
   m_PlayerDamageOnCollision: 1
   m_Sound: {fileID: 0}
   m_HitColorTime: 0.1
-  m_KeepDistance: 0
+  m_KeepDistance: 5
   m_WaitTimeAfterCollision: 1
-  m_SpeedMultiplierAfterCollision: 0.4
+  m_SlowSpeed: 1
   m_IsSeeking: 0
+  m_XLocked: 0
+  m_YLocked: 1
   m_SeekingSound: {fileID: 0}

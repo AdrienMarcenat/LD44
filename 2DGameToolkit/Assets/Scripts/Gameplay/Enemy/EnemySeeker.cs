@@ -5,10 +5,12 @@ using System.Collections;
 public class EnemySeeker : Enemy
 {
     // This enemy will not move closer to the target than this distance
-    [SerializeField] float m_KeepDistance = 0f;
+    [SerializeField] float m_KeepDistance= 0f;
     [SerializeField] float m_WaitTimeAfterCollision = 1f;
-    [SerializeField] float m_SpeedMultiplierAfterCollision = 0.4f;
+    [SerializeField] float m_SlowSpeed = 1f;
     [SerializeField] bool m_IsSeeking = false;
+    [SerializeField] bool m_XLocked = false;
+    [SerializeField] bool m_YLocked = false;
     [SerializeField] AudioClip m_SeekingSound;
 
     private MovingObject m_Body;
@@ -47,14 +49,19 @@ public class EnemySeeker : Enemy
 
     private void MoveEnemy()
     {
+        float horizontal = m_XLocked ? 0 : m_Target.transform.position.x - transform.position.x;
+        float vertical = m_YLocked ? 0 : m_Target.transform.position.y - transform.position.y;
+
         if ((m_Target.position - transform.position).magnitude > m_KeepDistance)
         {
-            float horizontal = m_Target.transform.position.x - transform.position.x;
-            float vertical = m_Target.transform.position.y - transform.position.y;
-
-            m_Body.Move(horizontal, vertical);
+            m_Body.MoveAccelerate(horizontal, vertical, Time.deltaTime);
+        }
+        else
+        {
+            m_Body.MoveDecelerate(horizontal, vertical, 5 * Time.deltaTime);
         }
     }
+
     public override void OnPlayerCollision()
     {
         StartCoroutine(WaitAfterCollisionRoutine());
@@ -63,8 +70,8 @@ public class EnemySeeker : Enemy
     private IEnumerator WaitAfterCollisionRoutine()
     {
         m_Body.CancelVelocity();
-        m_Body.ApplySpeedMultiplier(m_SpeedMultiplierAfterCollision);
+        m_Body.SetSmoothSpeed(m_SlowSpeed);
         yield return new WaitForSecondsRealtime(m_WaitTimeAfterCollision);
-        m_Body.ApplySpeedMultiplier(1 / m_SpeedMultiplierAfterCollision);
+        m_Body.ResetSmoothSpeed();
     }
 }
