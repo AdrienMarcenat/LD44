@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     private const float m_GroundedRadius = 0.2f;
     private bool m_Grounded;
     private Vector3 m_FacingDirection;
+    private int m_JumpCount;
 
     private static Vector3 m_Right = new Vector3 (1, 0, 0);
     private static Vector3 m_Left = new Vector3 (-1, 0, 0);
@@ -24,8 +25,10 @@ public class PlayerController : MonoBehaviour
         m_WeaponManager = GetComponent<WeaponManager> ();
         m_GroundCheck = transform.Find ("GroundCheck");
         m_FacingDirection = new Vector3 (1, 0, 0);
+        GetComponent<Health>().SetMaxHealth(PlayerManagerProxy.Get().GetPlayerStat().m_HP);
         this.RegisterAsListener ("Player", typeof(PlayerInputGameEvent));
     }
+
 
     private void OnDestroy ()
     {
@@ -34,13 +37,24 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate ()
     {
-        m_Grounded = false;
+        bool grounded = false;
         
         Collider2D[] colliders = Physics2D.OverlapCircleAll (m_GroundCheck.position, m_GroundedRadius, m_WhatIsGround);
         foreach (Collider2D collider in colliders)
         {
             if (collider.gameObject != gameObject)
-                m_Grounded = true;
+            {
+                grounded = true;
+                break;
+            }
+        }
+        if(grounded != m_Grounded)
+        {
+            if (grounded)
+            {
+                m_JumpCount = 0;
+            }
+            m_Grounded = grounded;
         }
     }
 
@@ -92,10 +106,10 @@ public class PlayerController : MonoBehaviour
 
     private void Jump()
     {
-        if (m_Grounded)
+        if (m_Grounded || m_JumpCount < PlayerManagerProxy.Get().GetPlayerStat().m_JumpNumber)
         {
-            // Don't wait fo the physic to set m_Grounded to false to ensure applying the force only once
-            m_Grounded = false;
+            m_JumpCount++;
+            m_Mover.CancelYVelocity();
             m_Mover.ApplyForce (new Vector2 (0f, m_JumpForce));
         }
     }

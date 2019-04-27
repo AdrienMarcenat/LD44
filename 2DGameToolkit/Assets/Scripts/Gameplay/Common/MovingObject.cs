@@ -26,6 +26,11 @@ public class MovingObject : MonoBehaviour
         m_RigidBody.AddForce (force, ForceMode2D.Impulse);
     }
 
+    public void CancelYVelocity()
+    {
+        m_RigidBody.velocity = new Vector2(m_RigidBody.velocity.x, 0f);
+    }
+
     public void MoveHorizontal (float xDir)
     {
         m_RigidBody.velocity = new Vector2 (xDir * m_SmoothSpeed, m_RigidBody.velocity.y);
