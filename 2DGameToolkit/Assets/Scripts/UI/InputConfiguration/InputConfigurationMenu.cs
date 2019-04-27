@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class InputConfigurationMenu : MonoBehaviour
 {
-    [SerializeField] private readonly GameObject m_ConfigurationButton;
+    [SerializeField] private GameObject m_ConfigurationButton;
 
     void Start ()
     {

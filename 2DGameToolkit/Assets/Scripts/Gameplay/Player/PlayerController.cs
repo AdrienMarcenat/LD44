@@ -84,7 +84,7 @@ public class PlayerController : MonoBehaviour
                 Move (state == EInputState.Held ? -1 : 0);
                 ChangeFacingDirection(m_Left);
                 break;
-            case "Fire":
+            case "Blast":
                 if (state == EInputState.Held)
                 {
                     Fire ();

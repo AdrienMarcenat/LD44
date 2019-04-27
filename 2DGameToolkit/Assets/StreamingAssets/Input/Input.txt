@@ -2,6 +2,6 @@ Pause:Escape
 Jump:Space
 Right:RightArrow
 Left:LeftArrow
-Fire:C
+Blast:C
 Slash:X
 Enter:Return
