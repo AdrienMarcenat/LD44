@@ -18,12 +18,15 @@ public class PlayerNormalState : HSMState
 
     public void OnGameEvent (GameOverGameEvent gameOverEvent)
 	{
-        //ChangeNextTransition (HSMTransition.EType.Clear, typeof(PlayerGameOverState));
+        ChangeNextTransition (HSMTransition.EType.Clear, typeof(PlayerGameOverState));
 	}
 
 	public void OnGameEvent (DamageGameEvent damageEvent)
     {
-        ChangeNextTransition (HSMTransition.EType.Child, typeof (PlayerInvicibleState));
+        if (damageEvent.GetDamage() > 0)
+        {
+            ChangeNextTransition(HSMTransition.EType.Child, typeof(PlayerInvicibleState));
+        }
     }
 }
 

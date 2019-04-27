@@ -27,7 +27,6 @@ public class PlayerController : MonoBehaviour
         m_WeaponManager = GetComponent<WeaponManager> ();
         m_GroundCheck = transform.Find ("GroundCheck");
         m_FacingDirection = new Vector3 (1, 0, 0);
-        GetComponent<Health>().SetMaxHealth(PlayerManagerProxy.Get().GetPlayerStat().m_HP);
         this.RegisterAsListener ("Player", typeof(PlayerInputGameEvent));
         m_PlayerHSM.StartFlow();
     }

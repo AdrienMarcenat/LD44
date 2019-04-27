@@ -4,6 +4,7 @@ public class PlayerHSM : HSM
     public PlayerHSM ()
         : base (new PlayerNormalState ()
               , new PlayerInvicibleState ()
+              , new PlayerGameOverState()
         )
     {}
 
