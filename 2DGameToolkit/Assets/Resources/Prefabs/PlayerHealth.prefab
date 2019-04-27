@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3894678001059153620}
   - component: {fileID: 3894678001059153617}
-  - component: {fileID: 3894678001059153619}
+  - component: {fileID: 8893613575788980158}
+  - component: {fileID: 3341650717293694872}
   m_Layer: 5
   m_Name: PlayerHealth
   m_TagString: Untagged
@@ -45,7 +46,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3894678001059153621}
   m_CullTransparentMesh: 0
---- !u!114 &3894678001059153619
+--- !u!114 &8893613575788980158
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -54,7 +55,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 3894678001059153621}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ed44f7d67a7772479ba1d1767b8b6ac, type: 3}
+  m_Script: {fileID: 11500000, guid: d6aa85bf1ead99a4ebe10abb60f5e015, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HPPrefab: {fileID: 651401395417856898, guid: 37745359780a1464d9752b3925512ef1,
+    type: 3}
+--- !u!114 &3341650717293694872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3894678001059153621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6aa85bf1ead99a4ebe10abb60f5e015, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_HPPrefab: {fileID: 651401395417856898, guid: 37745359780a1464d9752b3925512ef1,
