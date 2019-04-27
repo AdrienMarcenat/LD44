@@ -35,7 +35,7 @@ public class PlayerManager : IPlayerManager
     public void OnGameEvent(ChangePlayerStatGameEvent changePlayerStatGameEvent)
     {
         changePlayerStatGameEvent.GetStatChange().ChangeStats(m_PlayerStat);
-        new GameFlowEvent(EGameFlowAction.EndLevel).Push();
+        LevelManagerProxy.Get().NextLevel();
     }
 
     public PlayerStat GetPlayerStat()

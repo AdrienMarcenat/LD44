@@ -40,7 +40,7 @@ public class LevelManager
     public void NextLevel()
     {
         m_CurrentLevel++;
-        LoadScene(m_CurrentLevel); ;
+        LoadScene(m_CurrentLevel);
     }
 
     public void LoadScene (int levelIndex)

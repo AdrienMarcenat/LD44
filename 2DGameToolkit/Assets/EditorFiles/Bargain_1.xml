@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<GraphOfDialogueNodeConnection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <m_Nodes>
+    <DialogueNode>
+      <m_ID>486ef591-1c55-416e-859b-ee9e3be4712f</m_ID>
+      <m_Rect>
+        <x>352</x>
+        <y>92</y>
+        <position>
+          <x>352</x>
+          <y>92</y>
+        </position>
+        <center>
+          <x>552</x>
+          <y>222</y>
+        </center>
+        <min>
+          <x>352</x>
+          <y>92</y>
+        </min>
+        <max>
+          <x>752</x>
+          <y>352</y>
+        </max>
+        <width>400</width>
+        <height>260</height>
+        <size>
+          <x>400</x>
+          <y>260</y>
+        </size>
+        <xMin>352</xMin>
+        <yMin>92</yMin>
+        <xMax>752</xMax>
+        <yMax>352</yMax>
+      </m_Rect>
+      <m_InPoint>
+        <m_Id>ae60c5b9-02b4-4e6c-9b43-45983b8130ec</m_Id>
+      </m_InPoint>
+      <m_OutPoint>
+        <m_Id>eb8b5318-bfc5-41d8-b3f2-cc063d53a4bc</m_Id>
+      </m_OutPoint>
+      <m_OptionOutPoints>
+        <ConnectionPoint>
+          <m_Id>dd9d847c-77f1-4254-a467-25611b7b7eb9</m_Id>
+        </ConnectionPoint>
+        <ConnectionPoint>
+          <m_Id>b2c6b157-e912-4e8a-b6e0-82aaf8eedd50</m_Id>
+        </ConnectionPoint>
+        <ConnectionPoint>
+          <m_Id>1792c2b2-0f53-4a6b-b52e-429dcad9fd53</m_Id>
+        </ConnectionPoint>
+      </m_OptionOutPoints>
+      <m_Node>
+        <m_ID>486ef591-1c55-416e-859b-ee9e3be4712f</m_ID>
+        <m_Name>Devil</m_Name>
+        <m_Text>Give me your soul, I'll give you my strentgh.</m_Text>
+        <m_NextNodeID />
+        <m_Options>
+          <Option>
+            <m_Text>Gain 1 Force, lose 1 HP</m_Text>
+            <m_DestinationNodeID />
+            <m_Action>UpgradeForce</m_Action>
+          </Option>
+          <Option>
+            <m_Text>Gain 1 Magic, lose 1 HP</m_Text>
+            <m_DestinationNodeID />
+            <m_Action>UpgradeMagic</m_Action>
+          </Option>
+          <Option>
+            <m_Text>Gain 1 Jump, lose 2 HP</m_Text>
+            <m_DestinationNodeID />
+            <m_Action>UpgradeJump</m_Action>
+          </Option>
+        </m_Options>
+      </m_Node>
+    </DialogueNode>
+  </m_Nodes>
+  <m_Connections />
+</GraphOfDialogueNodeConnection>
