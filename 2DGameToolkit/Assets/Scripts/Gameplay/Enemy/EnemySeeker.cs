@@ -37,8 +37,9 @@ public class EnemySeeker : Enemy
         enemyAI.SetFireParameters(0, 1, 1, 1);
     }
 
-    private void OnDestroy()
+    protected new void OnDestroy()
     {
+        base.OnDestroy();
         this.UnregisterToUpdate(EUpdatePass.AI);
     }
 

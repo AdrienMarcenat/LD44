@@ -32,7 +32,6 @@ public class PlayerController : MonoBehaviour
         m_PlayerHSM.StartFlow();
     }
 
-
     private void OnDestroy ()
     {
         m_PlayerHSM.Stop();

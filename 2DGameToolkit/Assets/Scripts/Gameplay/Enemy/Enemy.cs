@@ -40,7 +40,7 @@ public class Enemy : MonoBehaviour
         Destroy (gameObject, 1);
     }
 
-    private void OnDestroy ()
+    protected void OnDestroy ()
     {
         this.UnregisterAsListener (gameObject.name);
     }

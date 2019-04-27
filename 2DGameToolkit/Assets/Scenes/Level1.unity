@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 8719097}
   - component: {fileID: 8719099}
   - component: {fileID: 8719098}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ground (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -505,7 +505,7 @@ GameObject:
   - component: {fileID: 393502657}
   - component: {fileID: 393502659}
   - component: {fileID: 393502658}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ground (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -617,7 +617,7 @@ GameObject:
   - component: {fileID: 527412912}
   - component: {fileID: 527412911}
   - component: {fileID: 527412910}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ground (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -789,7 +789,7 @@ GameObject:
   - component: {fileID: 684535944}
   - component: {fileID: 684535943}
   - component: {fileID: 684535942}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1012,7 +1012,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 920333349}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1810,7 +1810,7 @@ GameObject:
   - component: {fileID: 1321368446}
   - component: {fileID: 1321368448}
   - component: {fileID: 1321368447}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ground (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1971,26 +1971,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4363870461989696903, guid: 158765199a6cb1f4ab94863c284b7ce1,
-        type: 3}
-      propertyPath: m_KeepDistance
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4363870461989696903, guid: 158765199a6cb1f4ab94863c284b7ce1,
-        type: 3}
-      propertyPath: m_YLocked
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4363870461989696903, guid: 158765199a6cb1f4ab94863c284b7ce1,
-        type: 3}
-      propertyPath: m_KeepDistanceInner
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4363870461989696903, guid: 158765199a6cb1f4ab94863c284b7ce1,
-        type: 3}
-      propertyPath: m_KeepDistanceOuter
-      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 158765199a6cb1f4ab94863c284b7ce1, type: 3}
@@ -2582,7 +2562,7 @@ GameObject:
   - component: {fileID: 2118564139}
   - component: {fileID: 2118564141}
   - component: {fileID: 2118564140}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ground (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
