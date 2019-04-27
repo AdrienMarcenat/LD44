@@ -6,6 +6,7 @@
               , new GameFlowPauseState ()
               , new GameFlowDialogueState ()
               , new GameFlowGameOverState ()
+              , new GameFlowRoomTransitionState()
         )
     {
     }

@@ -5,6 +5,8 @@
     Start,
     EndDialogue,
     StartDialogue,
+    StartTransition,
+    EndTransition,
     Quit,
 }
 

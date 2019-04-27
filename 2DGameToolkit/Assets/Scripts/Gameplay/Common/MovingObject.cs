@@ -30,4 +30,14 @@ public class MovingObject : MonoBehaviour
     {
         m_RigidBody.velocity = new Vector2 (xDir * m_SmoothSpeed, m_RigidBody.velocity.y);
     }
+
+    public void Freeze()
+    {
+        m_RigidBody.constraints = RigidbodyConstraints2D.FreezeAll;
+    }
+
+    public void Unfreeze()
+    {
+        m_RigidBody.constraints = RigidbodyConstraints2D.FreezeRotation;
+    }
 }

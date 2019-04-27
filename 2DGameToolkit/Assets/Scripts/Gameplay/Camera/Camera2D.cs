@@ -25,7 +25,7 @@ public class Camera2D : MonoBehaviour
         m_Lanes.Sort ((Transform t1, Transform t2) => t1.position.y.CompareTo (t2.position.y));
     }
 
-    void FixedUpdate ()
+    void Update ()
     {
         if (m_TrackingTarget == null)
             m_TrackingTarget = m_Player;

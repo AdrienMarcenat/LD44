@@ -10,7 +10,7 @@ public class FadeImage : MonoBehaviour
     void OnEnable ()
     {
         m_FadeInOutImage = GetComponent<Image> ();
-        this.RegisterAsListener ("Game", typeof (LevelEvent));
+        this.RegisterAsListener ("Game", typeof (LevelEvent), typeof(GameFlowEvent));
         StartCoroutine (FadeIn ());
     }
 
@@ -28,6 +28,19 @@ public class FadeImage : MonoBehaviour
         else
         {
             StartCoroutine (FadeOut ());
+        }
+    }
+
+    public void OnGameEvent(GameFlowEvent flowEvent)
+    {
+        StopAllCoroutines();
+        if (flowEvent.GetAction() == EGameFlowAction.StartTransition)
+        {
+            BlackOut();
+        }
+        if (flowEvent.GetAction() == EGameFlowAction.EndTransition)
+        {
+            StartCoroutine(FadeIn());
         }
     }
 
@@ -66,6 +79,13 @@ public class FadeImage : MonoBehaviour
     {
         Color c = m_FadeInOutImage.color;
         c.a = a;
+        m_FadeInOutImage.color = c;
+    }
+
+    private void BlackOut()
+    {
+        Color c = m_FadeInOutImage.color;
+        c.a = 1f;
         m_FadeInOutImage.color = c;
     }
 }

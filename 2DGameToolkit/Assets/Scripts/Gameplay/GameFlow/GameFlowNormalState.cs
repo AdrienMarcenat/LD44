@@ -27,6 +27,9 @@ public class GameFlowNormalState : HSMState
             case EGameFlowAction.StartDialogue:
                 ChangeNextTransition (HSMTransition.EType.Child, typeof (GameFlowDialogueState));
                 break;
+            case EGameFlowAction.StartTransition:
+                ChangeNextTransition(HSMTransition.EType.Child, typeof(GameFlowRoomTransitionState));
+                break;
         }
     }
 
