@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
     private Vector3 m_FacingDirection;
     private int m_JumpCount;
 
+    private PlayerHSM m_PlayerHSM = new PlayerHSM();
+
     private static Vector3 m_Right = new Vector3 (1, 0, 0);
     private static Vector3 m_Left = new Vector3 (-1, 0, 0);
 
@@ -27,11 +29,13 @@ public class PlayerController : MonoBehaviour
         m_FacingDirection = new Vector3 (1, 0, 0);
         GetComponent<Health>().SetMaxHealth(PlayerManagerProxy.Get().GetPlayerStat().m_HP);
         this.RegisterAsListener ("Player", typeof(PlayerInputGameEvent));
+        m_PlayerHSM.StartFlow();
     }
 
 
     private void OnDestroy ()
     {
+        m_PlayerHSM.Stop();
         this.UnregisterAsListener ("Player");
     }
 

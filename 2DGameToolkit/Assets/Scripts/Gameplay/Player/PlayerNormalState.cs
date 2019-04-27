@@ -16,12 +16,12 @@ public class PlayerNormalState : HSMState
         this.UnregisterAsListener ("Player");
     }
 
-    public void OneGameEvent (GameOverGameEvent gameOverEvent)
+    public void OnGameEvent (GameOverGameEvent gameOverEvent)
 	{
-        ChangeNextTransition (HSMTransition.EType.Clear, typeof(PlayerGameOverState));
+        //ChangeNextTransition (HSMTransition.EType.Clear, typeof(PlayerGameOverState));
 	}
 
-	public void OneGameEvent (DamageGameEvent damageEvent)
+	public void OnGameEvent (DamageGameEvent damageEvent)
     {
         ChangeNextTransition (HSMTransition.EType.Child, typeof (PlayerInvicibleState));
     }

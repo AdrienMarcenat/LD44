@@ -42,6 +42,7 @@ public class HSM
         m_IsStackChanged = false;
         foreach (HSMState state in m_StateStack)
         {
+            state.OnUpdate();
             m_TransitionQueue.Enqueue (state.EvalTransition ());
         }
         ApplyHSMTransitions ();

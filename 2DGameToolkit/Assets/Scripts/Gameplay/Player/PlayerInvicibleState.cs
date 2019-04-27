@@ -3,16 +3,23 @@ using System.Collections;
 
 public class PlayerInvicibleState : HSMState
 {
-    [SerializeField] private float m_InvulnerabilitySeconds;
-    [SerializeField] private float m_BlinkingRate;
+    private float m_InvulnerabilitySeconds = 1f;
+    private float m_BlinkingRate = 0.1f;
+
     private Health m_Health;
     private SpriteRenderer m_Sprite;
+
     private float m_InvulnerabilitySecondsDelay;
+    private float m_Timer;
     
     public override void OnEnter ()
     {
+        GameObject player = PlayerManagerProxy.Get().GetPlayer();
+        m_Health = player.GetComponent<Health>();
+        m_Sprite = player.GetComponent<SpriteRenderer>();
         m_Health.Enable (false);
-        //StartCoroutine (InvulnerabilityRoutine ());
+        m_InvulnerabilitySecondsDelay = m_InvulnerabilitySeconds;
+        m_Sprite.enabled = false;
     }
 
     public override void OnExit ()
@@ -21,16 +28,23 @@ public class PlayerInvicibleState : HSMState
         m_Health.Enable (true);
     }
 
-    IEnumerator InvulnerabilityRoutine ()
+    public override bool OnUpdate()
     {
-        m_InvulnerabilitySecondsDelay = m_InvulnerabilitySeconds;
-        while (m_InvulnerabilitySecondsDelay > 0)
+        m_Timer += Time.deltaTime;
+        if (m_Timer > m_BlinkingRate)
         {
-            m_InvulnerabilitySecondsDelay -= Time.deltaTime + m_BlinkingRate;
-            m_Sprite.enabled = !m_Sprite.enabled;
-            yield return new WaitForSeconds (m_BlinkingRate);
+            m_Timer = 0;
+            if (m_InvulnerabilitySecondsDelay > 0)
+            {
+                m_InvulnerabilitySecondsDelay -= Time.deltaTime + m_BlinkingRate;
+                m_Sprite.enabled = !m_Sprite.enabled;
+            }
+            else
+            {
+                ChangeNextTransition(HSMTransition.EType.Exit);
+            }
         }
-        ChangeNextTransition (HSMTransition.EType.Exit);
+        return false;
     }
 }
 
