@@ -37,7 +37,7 @@ public class DialogueNode : Node
     }
     protected override float GetWidth()
     {
-        return 200f;
+        return 400f;
     }
     protected override float GetHeight()
     {
@@ -61,11 +61,12 @@ public class DialogueNode : Node
         {
             GUILayout.BeginHorizontal ();
             option.m_Text = GUILayout.TextArea(option.m_Text, GUILayout.ExpandWidth (true));
-            if(GUILayout.Button("X", GUILayout.ExpandWidth (false)))
+            option.m_Action = (Dialogue.EAction)EditorGUILayout.EnumPopup(option.m_Action, GUILayout.MaxWidth(100));
+            if (GUILayout.Button("X", GUILayout.ExpandWidth (false)))
             {
                 optionToRemove.Add (option);
             }
-            GUILayout.EndHorizontal ();
+            GUILayout.EndHorizontal();
         }
         GUILayout.EndArea ();
         foreach (ConnectionPoint optionConnectionPoint in m_OptionConnectionPoints)
@@ -104,7 +105,7 @@ public class DialogueNode : Node
         ConnectionPoint outPoint = new ConnectionPoint(this, EConnectionPointType.Out
             , m_OutPointStyle, m_OnClickOutPoint, m_Rect.height, false);
         // The option is created without connection, so it points to the exit node id
-        Dialogue.Option option = new Dialogue.Option("Option", "");
+        Dialogue.Option option = new Dialogue.Option("Option", "", Dialogue.EAction.None);
         m_Node.AddOption(option);
         m_ConnectionPointToOption.Add(outPoint.m_Id, option);
         m_OptionToConnectionPoint.Add (option, outPoint);
