@@ -205,9 +205,9 @@ GameObject:
   - component: {fileID: 222671959301862520}
   - component: {fileID: 114205322787840490}
   - component: {fileID: 114738977927064512}
-  - component: {fileID: 114031085139181310}
+  - component: {fileID: 3819129528644110785}
   m_Layer: 5
-  m_Name: MenuButton
+  m_Name: SaveAndQuitButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -310,8 +310,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114031085139181310}
-        m_MethodName: GameFlowAction
+      - m_Target: {fileID: 3819129528644110785}
+        m_MethodName: SaveAndQuit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -323,7 +323,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114031085139181310
+--- !u!114 &3819129528644110785
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -332,10 +332,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1430379601664510}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa029827b16c3cd448472f5f5379b34b, type: 3}
+  m_Script: {fileID: 11500000, guid: febd3bbb8736a7840ac37b8564e1ae76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Action: 8
 --- !u!1 &1435358712021304
 GameObject:
   m_ObjectHideFlags: 0
@@ -414,7 +413,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Retry
+  m_Text: Abandon run
 --- !u!1 &1466958573423514
 GameObject:
   m_ObjectHideFlags: 0
@@ -570,9 +569,9 @@ GameObject:
   - component: {fileID: 222069765745935412}
   - component: {fileID: 114590919820516968}
   - component: {fileID: 114448545310035208}
-  - component: {fileID: 114448682968468466}
+  - component: {fileID: 4972089947060256459}
   m_Layer: 5
-  m_Name: RetryButton
+  m_Name: AbandonRunButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -675,8 +674,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114448682968468466}
-        m_MethodName: GameFlowAction
+      - m_Target: {fileID: 4972089947060256459}
+        m_MethodName: AbandonRun
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -688,7 +687,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114448682968468466
+--- !u!114 &4972089947060256459
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -697,10 +696,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1548101374118108}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa029827b16c3cd448472f5f5379b34b, type: 3}
+  m_Script: {fileID: 11500000, guid: 4aee7b17c393bab429f028a7fb70b8d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Action: 1
 --- !u!1 &1720723251553282
 GameObject:
   m_ObjectHideFlags: 0
@@ -779,4 +777,4 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Menu
+  m_Text: Save and quit

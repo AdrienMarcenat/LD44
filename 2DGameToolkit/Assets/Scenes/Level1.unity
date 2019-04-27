@@ -248,6 +248,30 @@ Transform:
   m_Father: {fileID: 1136283793}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &280624142 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8193321508718918757, guid: 85921ef08eba9394fb2662b3e9dd0305,
+    type: 3}
+  m_PrefabInstance: {fileID: 4950793626531355683}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: febd3bbb8736a7840ac37b8564e1ae76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &300935757 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 122909888679152495, guid: 85921ef08eba9394fb2662b3e9dd0305,
+    type: 3}
+  m_PrefabInstance: {fileID: 4950793626531355683}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4aee7b17c393bab429f028a7fb70b8d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &393502656
 GameObject:
   m_ObjectHideFlags: 0
@@ -2330,6 +2354,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4949971106976410714, guid: 85921ef08eba9394fb2662b3e9dd0305,
+        type: 3}
+      propertyPath: m_Name
+      value: SaveAndQuitButton
+      objectReference: {fileID: 0}
     - target: {fileID: 5164459035941952712, guid: 85921ef08eba9394fb2662b3e9dd0305,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -2350,6 +2379,21 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4981934381891346020, guid: 85921ef08eba9394fb2662b3e9dd0305,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 280624142}
+    - target: {fileID: 4981934381891346020, guid: 85921ef08eba9394fb2662b3e9dd0305,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SaveAndQuit
+      objectReference: {fileID: 0}
+    - target: {fileID: 4949947951665429880, guid: 85921ef08eba9394fb2662b3e9dd0305,
+        type: 3}
+      propertyPath: m_Name
+      value: AbandonRunButton
+      objectReference: {fileID: 0}
     - target: {fileID: 5163497071180164186, guid: 85921ef08eba9394fb2662b3e9dd0305,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -2369,6 +2413,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4981643964332931244, guid: 85921ef08eba9394fb2662b3e9dd0305,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 300935757}
+    - target: {fileID: 4981643964332931244, guid: 85921ef08eba9394fb2662b3e9dd0305,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: AbandonRun
       objectReference: {fileID: 0}
     - target: {fileID: 5163679748666257938, guid: 85921ef08eba9394fb2662b3e9dd0305,
         type: 3}

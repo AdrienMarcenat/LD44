@@ -23,6 +23,17 @@ public class PlayerManager : IPlayerManager
         this.UnregisterAsListener("Player");
     }
 
+    public void SaveStat()
+    {
+        SaveManagerProxy.Get().SaveObject(m_PlayerStat, m_PlayerStatSavePath);
+    }
+
+    public void ResetStat()
+    {
+        m_PlayerStat = new PlayerStat();
+        SaveStat();
+    }
+
     public void OnGameEvent(LevelEvent levelEvent)
     {
         if(levelEvent.GetLevelIndex() == 0)
@@ -38,7 +49,7 @@ public class PlayerManager : IPlayerManager
         }
         else
         {
-            SaveManagerProxy.Get().SaveObject(m_PlayerStat, m_PlayerStatSavePath);
+            SaveStat();
         }
     }
 

@@ -11,6 +11,8 @@ public interface IPlayerManager
     GameObject GetPlayer();
     void RegiterStatChangeCallback(IPlayerStatWatcher cb);
     void UnregiterStatChangeCallback(IPlayerStatWatcher cb);
+    void ResetStat();
+    void SaveStat();
 }
 
 public class PlayerManagerProxy : UniqueProxy<IPlayerManager>
