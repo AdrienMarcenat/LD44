@@ -28,6 +28,21 @@ public class LevelManager
 {
     private int m_CurrentLevel = 0;
 
+    public LevelManager()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    ~LevelManager()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+    public void NextLevel()
+    {
+        m_CurrentLevel++;
+        LoadScene(m_CurrentLevel); ;
+    }
+
     public void LoadScene (int levelIndex)
     {
         new LevelEvent (m_CurrentLevel, false).Push ();
