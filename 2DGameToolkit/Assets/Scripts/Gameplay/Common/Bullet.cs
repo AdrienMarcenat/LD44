@@ -2,7 +2,7 @@
 
 public class Bullet : MonoBehaviour
 {
-	[SerializeField] private int m_Damage;
+	[SerializeField] protected int m_Damage;
 	[SerializeField] private float m_Range;
 	[SerializeField] private float m_Penetration;
 	[SerializeField] private string m_TargetTag;
@@ -24,7 +24,7 @@ public class Bullet : MonoBehaviour
 			Health targetHealth = other.GetComponent<Health> ();
 			if (targetHealth)
 			{
-				targetHealth.LoseHealth (m_Damage);
+				targetHealth.LoseHealth (GetModifiedDamage());
 			}
 
 			Destroy (gameObject, m_Penetration);
@@ -40,4 +40,9 @@ public class Bullet : MonoBehaviour
 	{
 		return m_FollowShooter;
 	}
+
+    public virtual int GetModifiedDamage()
+    {
+        return m_Damage;
+    }
 }
