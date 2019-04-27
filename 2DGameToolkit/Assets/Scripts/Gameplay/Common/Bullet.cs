@@ -2,7 +2,7 @@
 
 public class Bullet : MonoBehaviour
 {
-	[SerializeField] private float m_Damage;
+	[SerializeField] private int m_Damage;
 	[SerializeField] private float m_Range;
 	[SerializeField] private float m_Penetration;
 	[SerializeField] private string m_TargetTag;
@@ -11,8 +11,10 @@ public class Bullet : MonoBehaviour
 	void Update ()
 	{
         m_Range -= Time.deltaTime;
-		if (m_Range < 0)
-			Destroy (gameObject);
+        if (m_Range < 0)
+        {
+            Destroy(gameObject);
+        }
 	}
 
 	private void OnTriggerEnter2D (Collider2D other)

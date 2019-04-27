@@ -4,7 +4,7 @@ using System.Collections;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] protected int m_Type;
-    [SerializeField] protected float m_PlayerDamageOnCollision;
+    [SerializeField] protected int m_PlayerDamageOnCollision;
     [SerializeField] private AudioClip m_Sound;
     [SerializeField] private float m_HitColorTime;
 

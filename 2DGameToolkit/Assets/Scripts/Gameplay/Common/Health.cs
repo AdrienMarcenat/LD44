@@ -24,46 +24,46 @@ public class GameOverGameEvent : GameEvent
 
 public class Health : MonoBehaviour
 {
-	[SerializeField] protected float m_MaxHealth;
-	protected float m_CurrentHealth;
-    private float m_DamageModifier;
+	[SerializeField] protected int m_MaxHealth;
+	protected int m_CurrentHealth;
+    private int m_DamageModifier;
     private bool m_Enable;
 
 	protected void Start ()
 	{
 		m_CurrentHealth = m_MaxHealth;
-        m_DamageModifier = 1.0f;
+        m_DamageModifier = 1;
         m_Enable = true;
 	}
 
-    public void Heal (float value)
+    public void Heal (int value)
     {
         if (!m_Enable)
         {
             return;
         }
-        m_CurrentHealth = Mathf.Clamp(m_CurrentHealth + value, 0, m_MaxHealth);
+        m_CurrentHealth = System.Math.Max(m_MaxHealth, m_CurrentHealth + value);
     }
 
-    public void LoseHealth (float damage)
+    public void LoseHealth (int damage)
 	{
         if (!m_Enable)
         {
             return;
         }
 
-		m_CurrentHealth = Mathf.Max (0, m_CurrentHealth - m_DamageModifier * damage);
+		m_CurrentHealth = System.Math.Max (0, m_CurrentHealth - m_DamageModifier * damage);
         new DamageGameEvent (gameObject.name, damage).Push();
 
 		CheckIfGameOver ();
 	}
 
-	public float GetCurrentHealth ()
+	public int GetCurrentHealth ()
 	{
 		return m_CurrentHealth;
 	}
 
-    public void SetMaxHealth (float value)
+    public void SetMaxHealth (int value)
     {
         m_MaxHealth = value;
     }
@@ -86,7 +86,7 @@ public class Health : MonoBehaviour
 		m_Enable = enable;
 	}
 
-	public void SetDamageModifier (float modifier)
+	public void SetDamageModifier (int modifier)
 	{
 		m_DamageModifier = modifier;
 	}

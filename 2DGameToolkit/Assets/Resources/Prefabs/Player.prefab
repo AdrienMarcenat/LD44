@@ -48,7 +48,7 @@ MonoBehaviour:
   m_CurrentAmmo: 0
   m_AmmoVelocity: 0
   m_FireRate: 0.7
-  m_BulletPrefab: {fileID: 7497866214871350130, guid: 7c27518ed1f115b448ea7e500bc12a19,
+  m_BulletPrefab: {fileID: 1810760541365871461, guid: 7c27518ed1f115b448ea7e500bc12a19,
     type: 3}
 --- !u!1 &1295975795656072
 GameObject:
@@ -240,7 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f469169c58ccef34fb22b1a073bdcbdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MaxHealth: 100
+  m_MaxHealth: 10
 --- !u!114 &1271093080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -333,5 +333,5 @@ MonoBehaviour:
   m_CurrentAmmo: 0
   m_AmmoVelocity: 10
   m_FireRate: 0.7
-  m_BulletPrefab: {fileID: 1632520097383956, guid: 6b566f5ae0f22c146b230e98826de36c,
+  m_BulletPrefab: {fileID: 242683469909459474, guid: 6b566f5ae0f22c146b230e98826de36c,
     type: 3}

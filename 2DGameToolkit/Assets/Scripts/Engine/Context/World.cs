@@ -11,6 +11,8 @@ public class World : MonoBehaviour
     private InputManager m_InputManager;
     private LevelManager m_LevelManager;
     private SoundManager m_SoundManager;
+    private SaveManager m_SaveManager;
+    private PlayerManager m_PlayerManager;
 
     private GameFlowHSM m_GameFlowHSM;
 
@@ -32,6 +34,8 @@ public class World : MonoBehaviour
             m_LevelManager = new LevelManager();
             m_GameFlowHSM = new GameFlowHSM();
             m_SoundManager = new SoundManager (m_EfxSource, m_MusicSource);
+            m_SaveManager = new SaveManager();
+            m_PlayerManager = new PlayerManager();
             OpenProxies ();
             OnEngineStart();
         }
@@ -59,10 +63,14 @@ public class World : MonoBehaviour
         InputManagerProxy.Open(m_InputManager);
         LevelManagerProxy.Open(m_LevelManager);
         SoundManagerProxy.Open (m_SoundManager);
+        SaveManagerProxy.Open(m_SaveManager);
+        PlayerManagerProxy.Open(m_PlayerManager);
     }
 
     void CloseProxies()
     {
+        PlayerManagerProxy.Close(m_PlayerManager);
+        SaveManagerProxy.Close(m_SaveManager);
         SoundManagerProxy.Close (m_SoundManager);
         LevelManagerProxy.Close (m_LevelManager);
         InputManagerProxy.Close(m_InputManager);
@@ -76,10 +84,12 @@ public class World : MonoBehaviour
         m_GameFlowHSM.StartFlow();
         m_InputManager.OnEngineStart();
         m_GameEventManager.OnEngineStart();
+        m_PlayerManager.OnEngineStart();
     }
 
     void OnEngineStop()
     {
+        m_PlayerManager.OnEngineStop();
         m_GameEventManager.OnEngineStop();
         m_InputManager.OnEngineStop();
         m_GameFlowHSM.StopFlow();

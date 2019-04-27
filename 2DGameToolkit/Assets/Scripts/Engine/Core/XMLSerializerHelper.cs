@@ -19,4 +19,13 @@ public class XMLSerializerHelper
         reader.Close();
         return deserialized;
     }
+
+    public static object Deserialize(string path, System.Type type)
+    {
+        XmlSerializer serializer = new XmlSerializer(type);
+        StreamReader reader = new StreamReader(path);
+        object deserialized = serializer.Deserialize(reader.BaseStream);
+        reader.Close();
+        return deserialized;
+    }
 }
