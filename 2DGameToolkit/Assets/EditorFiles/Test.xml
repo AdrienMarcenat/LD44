@@ -2,94 +2,104 @@
 <GraphOfDialogueNodeConnection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <m_Nodes>
     <DialogueNode>
-      <m_ID>eb7afbcd-e3c6-4981-a13c-69a276256899</m_ID>
+      <m_ID>7f50170f-f60c-4376-ab87-e41239489dcb</m_ID>
       <m_Rect>
-        <x>275</x>
-        <y>98</y>
+        <x>183</x>
+        <y>209</y>
         <position>
-          <x>275</x>
-          <y>98</y>
+          <x>183</x>
+          <y>209</y>
         </position>
         <center>
-          <x>375</x>
-          <y>198</y>
+          <x>383</x>
+          <y>319</y>
         </center>
         <min>
-          <x>275</x>
-          <y>98</y>
+          <x>183</x>
+          <y>209</y>
         </min>
         <max>
-          <x>475</x>
-          <y>298</y>
+          <x>583</x>
+          <y>429</y>
         </max>
-        <width>200</width>
-        <height>200</height>
+        <width>400</width>
+        <height>220</height>
         <size>
-          <x>200</x>
-          <y>200</y>
+          <x>400</x>
+          <y>220</y>
         </size>
-        <xMin>275</xMin>
-        <yMin>98</yMin>
-        <xMax>475</xMax>
-        <yMax>298</yMax>
+        <xMin>183</xMin>
+        <yMin>209</yMin>
+        <xMax>583</xMax>
+        <yMax>429</yMax>
       </m_Rect>
       <m_InPoint>
-        <m_Id>c1c7bcdd-5865-4545-89ae-023c8c970023</m_Id>
+        <m_Id>c5f5a6b1-b83b-4c8d-b42e-7d83b292922d</m_Id>
       </m_InPoint>
       <m_OutPoint>
-        <m_Id>2def21ae-3576-485c-8f27-e230034d89b1</m_Id>
+        <m_Id>4f3ef301-9a12-4b5b-ae59-f18fbe31dcf1</m_Id>
       </m_OutPoint>
       <m_Node>
-        <m_ID>eb7afbcd-e3c6-4981-a13c-69a276256899</m_ID>
+        <m_ID>7f50170f-f60c-4376-ab87-e41239489dcb</m_ID>
         <m_Name>Bob</m_Name>
-        <m_Text>This is a test.</m_Text>
-        <m_NextNodeID>9a420c4b-7d1f-4340-8bf1-c3713cf41a3b</m_NextNodeID>
-        <m_Options />
+        <m_Text>This is a test</m_Text>
+        <m_NextNodeID>9ae2fa37-c02d-4baf-ac50-98e711e0d3f3</m_NextNodeID>
+        <m_Options>
+          <Option>
+            <m_Text>Option</m_Text>
+            <m_DestinationNodeID />
+            <m_Action>None</m_Action>
+          </Option>
+        </m_Options>
       </m_Node>
-      <m_OptionOutPoints />
+      <m_OptionOutPoints>
+        <ConnectionPoint>
+          <m_Id>3143af86-9332-4c24-9078-ced62e34f41e</m_Id>
+        </ConnectionPoint>
+      </m_OptionOutPoints>
     </DialogueNode>
     <DialogueNode>
-      <m_ID>9a420c4b-7d1f-4340-8bf1-c3713cf41a3b</m_ID>
+      <m_ID>9ae2fa37-c02d-4baf-ac50-98e711e0d3f3</m_ID>
       <m_Rect>
-        <x>584</x>
-        <y>199</y>
+        <x>759</x>
+        <y>233</y>
         <position>
-          <x>584</x>
-          <y>199</y>
+          <x>759</x>
+          <y>233</y>
         </position>
         <center>
-          <x>684</x>
-          <y>299</y>
+          <x>959</x>
+          <y>333</y>
         </center>
         <min>
-          <x>584</x>
-          <y>199</y>
+          <x>759</x>
+          <y>233</y>
         </min>
         <max>
-          <x>784</x>
-          <y>399</y>
+          <x>1159</x>
+          <y>433</y>
         </max>
-        <width>200</width>
+        <width>400</width>
         <height>200</height>
         <size>
-          <x>200</x>
+          <x>400</x>
           <y>200</y>
         </size>
-        <xMin>584</xMin>
-        <yMin>199</yMin>
-        <xMax>784</xMax>
-        <yMax>399</yMax>
+        <xMin>759</xMin>
+        <yMin>233</yMin>
+        <xMax>1159</xMax>
+        <yMax>433</yMax>
       </m_Rect>
       <m_InPoint>
-        <m_Id>81cfc5b1-2d73-4d18-b818-11c0553a1308</m_Id>
+        <m_Id>2b8ac138-cfc1-44f8-a3b6-2171de2940f5</m_Id>
       </m_InPoint>
       <m_OutPoint>
-        <m_Id>2192ad28-49c9-4cd1-8838-a869ac63af2a</m_Id>
+        <m_Id>4725d0bb-3f8d-4928-bee1-0162322ced88</m_Id>
       </m_OutPoint>
       <m_Node>
-        <m_ID>9a420c4b-7d1f-4340-8bf1-c3713cf41a3b</m_ID>
-        <m_Name>Lea</m_Name>
-        <m_Text>It has no option</m_Text>
+        <m_ID>9ae2fa37-c02d-4baf-ac50-98e711e0d3f3</m_ID>
+        <m_Name>Bob</m_Name>
+        <m_Text>End of the test</m_Text>
         <m_NextNodeID />
         <m_Options />
       </m_Node>
@@ -99,10 +109,10 @@
   <m_Connections>
     <Connection>
       <m_InPoint>
-        <m_Id>81cfc5b1-2d73-4d18-b818-11c0553a1308</m_Id>
+        <m_Id>2b8ac138-cfc1-44f8-a3b6-2171de2940f5</m_Id>
       </m_InPoint>
       <m_OutPoint>
-        <m_Id>2def21ae-3576-485c-8f27-e230034d89b1</m_Id>
+        <m_Id>4f3ef301-9a12-4b5b-ae59-f18fbe31dcf1</m_Id>
       </m_OutPoint>
     </Connection>
   </m_Connections>

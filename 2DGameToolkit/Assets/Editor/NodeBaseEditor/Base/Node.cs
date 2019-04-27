@@ -45,6 +45,19 @@ public class Node
         m_ID = id ?? Guid.NewGuid().ToString();
     }
 
+    public virtual ConnectionPoint GetConnectionPoint(string id)
+    {
+        if (m_InPoint.m_Id == id)
+        {
+            return m_InPoint;
+        }
+        if(m_OutPoint.m_Id == id)
+        {
+            return m_OutPoint;
+        }
+        return null;
+    }
+
     protected virtual float GetWidth()
     {
         return 200f;

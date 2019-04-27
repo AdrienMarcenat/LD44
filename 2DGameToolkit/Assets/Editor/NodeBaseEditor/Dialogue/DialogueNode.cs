@@ -15,10 +15,9 @@ public class DialogueNode : Node
     private Rect m_RectWithMargin;
     private Dictionary<string, Dialogue.Option> m_ConnectionPointToOption = new Dictionary<string, Dialogue.Option>();
     private Dictionary<Dialogue.Option, ConnectionPoint> m_OptionToConnectionPoint = new Dictionary<Dialogue.Option, ConnectionPoint> ();
-    private List<ConnectionPoint> m_OptionConnectionPoints = new List<ConnectionPoint>();
 
-    public Dialogue.Node m_Node;
     public List<ConnectionPoint> m_OptionOutPoints = new List<ConnectionPoint>();
+    public Dialogue.Node m_Node;
 
     public DialogueNode()
     {}
@@ -69,7 +68,7 @@ public class DialogueNode : Node
             GUILayout.EndHorizontal();
         }
         GUILayout.EndArea ();
-        foreach (ConnectionPoint optionConnectionPoint in m_OptionConnectionPoints)
+        foreach (ConnectionPoint optionConnectionPoint in m_OptionOutPoints)
         {
             optionConnectionPoint.Draw();
         }
@@ -89,28 +88,38 @@ public class DialogueNode : Node
     {
         m_Rect.height -= value;
         m_RectWithMargin.height -= value;
-        if (m_OptionConnectionPoints.Count > 0)
+        if (m_OptionOutPoints.Count > 0)
         {
             float offset = GetHeight();
-            for (int i = 0; i < m_OptionConnectionPoints.Count; i++)
+            for (int i = 0; i < m_OptionOutPoints.Count; i++)
             {
-                m_OptionConnectionPoints[i].SetOffset (offset);
+                m_OptionOutPoints[i].SetOffset (offset);
                 offset += m_OptionFieldHeight;
             }
         }
     }
-
     private void AddOption()
     {
         ConnectionPoint outPoint = new ConnectionPoint(this, EConnectionPointType.Out
             , m_OutPointStyle, m_OnClickOutPoint, m_Rect.height, false);
         // The option is created without connection, so it points to the exit node id
         Dialogue.Option option = new Dialogue.Option("Option", "", Dialogue.EAction.None);
+        m_OptionOutPoints.Add(outPoint);
         m_Node.AddOption(option);
         m_ConnectionPointToOption.Add(outPoint.m_Id, option);
-        m_OptionToConnectionPoint.Add (option, outPoint);
-        m_OptionConnectionPoints.Add(outPoint);
-        IncreaseHeight (m_OptionFieldHeight);
+        m_OptionToConnectionPoint.Add(option, outPoint);
+        IncreaseHeight(m_OptionFieldHeight);
+    }
+
+    private void AddOption(Dialogue.Option option, ConnectionPoint connectionPoint)
+    {
+        ConnectionPoint outPoint = new ConnectionPoint(this, EConnectionPointType.Out
+            , m_OutPointStyle, m_OnClickOutPoint, m_Rect.height, false, connectionPoint.m_Id);
+        // The option is created without connection, so it points to the exit node id
+        m_OptionOutPoints.Add(outPoint);
+        m_ConnectionPointToOption.Add(outPoint.m_Id, option);
+        m_OptionToConnectionPoint.Add(option, outPoint);
+        IncreaseHeight(m_OptionFieldHeight);
     }
 
     private void RemoveOption(Dialogue.Option option)
@@ -118,7 +127,7 @@ public class DialogueNode : Node
         m_Node.RemoveOption(option);
         ConnectionPoint outPoint = GetConnectionPointFromOption (option);
         outPoint.OnBeingRemoved ();
-        m_OptionConnectionPoints.Remove(outPoint);
+        m_OptionOutPoints.Remove(outPoint);
         m_OptionToConnectionPoint.Remove (option);
         m_ConnectionPointToOption.Remove (outPoint.m_Id);
         DecreaseHeight (m_OptionFieldHeight);
@@ -176,7 +185,7 @@ public class DialogueNode : Node
     }
     protected override void OnClickRemoveNode ()
     {
-        foreach (ConnectionPoint optionConnectionPoint in m_OptionConnectionPoints)
+        foreach (ConnectionPoint optionConnectionPoint in m_OptionOutPoints)
         {
             optionConnectionPoint.OnBeingRemoved ();
         }
@@ -186,5 +195,24 @@ public class DialogueNode : Node
     public bool IsRoot()
     {
         return !m_InPoint.HasConnection ();
+    }
+
+    public void DeserializeOptions(List<ConnectionPoint> optionOutPoints)
+    {
+        for (int i = 0; i < m_Node.m_Options.Count; ++i)
+        {
+            AddOption(m_Node.m_Options[i], optionOutPoints[i]);
+        }
+    }
+    public override ConnectionPoint GetConnectionPoint(string id)
+    {
+        foreach (ConnectionPoint optionConnectionPoint in m_OptionOutPoints)
+        {
+            if(optionConnectionPoint.m_Id == id)
+            {
+                return optionConnectionPoint;
+            }
+        }
+        return base.GetConnectionPoint(id); ;
     }
 }

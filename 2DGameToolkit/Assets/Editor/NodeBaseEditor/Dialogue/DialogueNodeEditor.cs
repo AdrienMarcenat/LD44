@@ -43,8 +43,12 @@ public class DialogueNodeEditor : NodeBasedEditor<DialogueNodeEditor, DialogueNo
                 nodeDeserialized.m_OutPoint.m_Id,
                 nodeDeserialized.m_ID
                 );
+        node.m_Node.m_ID = nodeDeserialized.m_Node.m_ID;
         node.m_Node.m_Name = nodeDeserialized.m_Node.m_Name;
         node.m_Node.m_Text = nodeDeserialized.m_Node.m_Text;
+        node.m_Node.m_NextNodeID = nodeDeserialized.m_Node.m_NextNodeID;
+        node.m_Node.m_Options = nodeDeserialized.m_Node.m_Options;
+        node.DeserializeOptions(nodeDeserialized.m_OptionOutPoints);
         return node;
     }
 

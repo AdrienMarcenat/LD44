@@ -2,25 +2,25 @@
 <GraphOfDialogueNodeConnection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <m_Nodes>
     <DialogueNode>
-      <m_ID>9d94ed10-31cc-4eb8-949b-6377d4952662</m_ID>
+      <m_ID>e7fc557b-ad11-4900-aa2d-a529551a0bb9</m_ID>
       <m_Rect>
-        <x>138</x>
-        <y>206</y>
+        <x>151</x>
+        <y>96</y>
         <position>
-          <x>138</x>
-          <y>206</y>
+          <x>151</x>
+          <y>96</y>
         </position>
         <center>
-          <x>338</x>
-          <y>326</y>
+          <x>351</x>
+          <y>216</y>
         </center>
         <min>
-          <x>138</x>
-          <y>206</y>
+          <x>151</x>
+          <y>96</y>
         </min>
         <max>
-          <x>538</x>
-          <y>446</y>
+          <x>551</x>
+          <y>336</y>
         </max>
         <width>400</width>
         <height>240</height>
@@ -28,57 +28,64 @@
           <x>400</x>
           <y>240</y>
         </size>
-        <xMin>138</xMin>
-        <yMin>206</yMin>
-        <xMax>538</xMax>
-        <yMax>446</yMax>
+        <xMin>151</xMin>
+        <yMin>96</yMin>
+        <xMax>551</xMax>
+        <yMax>336</yMax>
       </m_Rect>
       <m_InPoint>
-        <m_Id>dce46fd0-aefe-476d-a962-97e9a3bf4017</m_Id>
+        <m_Id>7eed0b99-423e-4320-afd0-6a6998fe3ea7</m_Id>
       </m_InPoint>
       <m_OutPoint>
-        <m_Id>d19ec3fc-8af7-4d25-95c5-749383f112dd</m_Id>
+        <m_Id>1951b284-6154-4953-983d-db3c479a27c6</m_Id>
       </m_OutPoint>
+      <m_OptionOutPoints>
+        <ConnectionPoint>
+          <m_Id>bcd4b33e-01a5-49c9-a2a3-85cfff73959d</m_Id>
+        </ConnectionPoint>
+        <ConnectionPoint>
+          <m_Id>4d8650fb-4a70-4107-88cc-4a135b1f7032</m_Id>
+        </ConnectionPoint>
+      </m_OptionOutPoints>
       <m_Node>
-        <m_ID>9d94ed10-31cc-4eb8-949b-6377d4952662</m_ID>
+        <m_ID>e7fc557b-ad11-4900-aa2d-a529551a0bb9</m_ID>
         <m_Name>Bob</m_Name>
-        <m_Text>This dialogue has options</m_Text>
+        <m_Text>This is a dialogue with options.</m_Text>
         <m_NextNodeID />
         <m_Options>
           <Option>
             <m_Text>Talk to Lea</m_Text>
-            <m_DestinationNodeID>ca5aed68-7f9e-4b1c-98cd-a85a9206eca7</m_DestinationNodeID>
+            <m_DestinationNodeID>6d83568f-9392-4bb5-9f41-c4ce79a14ff3</m_DestinationNodeID>
             <m_Action>None</m_Action>
           </Option>
           <Option>
             <m_Text>Talk to Shulk</m_Text>
-            <m_DestinationNodeID>d8f21f30-9334-433c-a94e-64327f10960f</m_DestinationNodeID>
+            <m_DestinationNodeID>60f1a67e-6407-480a-84e9-9534bd6dbd19</m_DestinationNodeID>
             <m_Action>None</m_Action>
           </Option>
         </m_Options>
       </m_Node>
-      <m_OptionOutPoints />
     </DialogueNode>
     <DialogueNode>
-      <m_ID>ca5aed68-7f9e-4b1c-98cd-a85a9206eca7</m_ID>
+      <m_ID>6d83568f-9392-4bb5-9f41-c4ce79a14ff3</m_ID>
       <m_Rect>
-        <x>682</x>
-        <y>130</y>
+        <x>700</x>
+        <y>105</y>
         <position>
-          <x>682</x>
-          <y>130</y>
+          <x>700</x>
+          <y>105</y>
         </position>
         <center>
-          <x>882</x>
-          <y>230</y>
+          <x>900</x>
+          <y>205</y>
         </center>
         <min>
-          <x>682</x>
-          <y>130</y>
+          <x>700</x>
+          <y>105</y>
         </min>
         <max>
-          <x>1082</x>
-          <y>330</y>
+          <x>1100</x>
+          <y>305</y>
         </max>
         <width>400</width>
         <height>200</height>
@@ -86,46 +93,46 @@
           <x>400</x>
           <y>200</y>
         </size>
-        <xMin>682</xMin>
-        <yMin>130</yMin>
-        <xMax>1082</xMax>
-        <yMax>330</yMax>
+        <xMin>700</xMin>
+        <yMin>105</yMin>
+        <xMax>1100</xMax>
+        <yMax>305</yMax>
       </m_Rect>
       <m_InPoint>
-        <m_Id>de2f069b-fa34-4948-8349-8edd90943b85</m_Id>
+        <m_Id>693643fd-496d-43fa-b900-6fbe2bb04d7d</m_Id>
       </m_InPoint>
       <m_OutPoint>
-        <m_Id>9cd33539-d4d3-45ec-8df9-00cd718b81dc</m_Id>
+        <m_Id>26654270-bedf-4189-999f-68dc337d1902</m_Id>
       </m_OutPoint>
+      <m_OptionOutPoints />
       <m_Node>
-        <m_ID>ca5aed68-7f9e-4b1c-98cd-a85a9206eca7</m_ID>
+        <m_ID>6d83568f-9392-4bb5-9f41-c4ce79a14ff3</m_ID>
         <m_Name>Lea</m_Name>
         <m_Text>Thank you for choosing me !</m_Text>
         <m_NextNodeID />
         <m_Options />
       </m_Node>
-      <m_OptionOutPoints />
     </DialogueNode>
     <DialogueNode>
-      <m_ID>d8f21f30-9334-433c-a94e-64327f10960f</m_ID>
+      <m_ID>60f1a67e-6407-480a-84e9-9534bd6dbd19</m_ID>
       <m_Rect>
-        <x>674</x>
-        <y>351</y>
+        <x>701</x>
+        <y>335</y>
         <position>
-          <x>674</x>
-          <y>351</y>
+          <x>701</x>
+          <y>335</y>
         </position>
         <center>
-          <x>874</x>
-          <y>461</y>
+          <x>901</x>
+          <y>445</y>
         </center>
         <min>
-          <x>674</x>
-          <y>351</y>
+          <x>701</x>
+          <y>335</y>
         </min>
         <max>
-          <x>1074</x>
-          <y>571</y>
+          <x>1101</x>
+          <y>555</y>
         </max>
         <width>400</width>
         <height>220</height>
@@ -133,48 +140,52 @@
           <x>400</x>
           <y>220</y>
         </size>
-        <xMin>674</xMin>
-        <yMin>351</yMin>
-        <xMax>1074</xMax>
-        <yMax>571</yMax>
+        <xMin>701</xMin>
+        <yMin>335</yMin>
+        <xMax>1101</xMax>
+        <yMax>555</yMax>
       </m_Rect>
       <m_InPoint>
-        <m_Id>86dd0e34-3ee0-478d-81a7-debcd1dc40fa</m_Id>
+        <m_Id>655247fc-60be-4184-ac74-0ebf42152a47</m_Id>
       </m_InPoint>
       <m_OutPoint>
-        <m_Id>5baf9a0e-875f-4548-b74b-9ed34a78db71</m_Id>
+        <m_Id>39a0768c-fdcb-45b7-8d56-1e8bbfe6982b</m_Id>
       </m_OutPoint>
+      <m_OptionOutPoints>
+        <ConnectionPoint>
+          <m_Id>32c81837-6e3b-43e8-b57b-57d458feb00b</m_Id>
+        </ConnectionPoint>
+      </m_OptionOutPoints>
       <m_Node>
-        <m_ID>d8f21f30-9334-433c-a94e-64327f10960f</m_ID>
+        <m_ID>60f1a67e-6407-480a-84e9-9534bd6dbd19</m_ID>
         <m_Name>Shulk</m_Name>
-        <m_Text>I provide option too.</m_Text>
+        <m_Text>I provide options too.</m_Text>
         <m_NextNodeID />
         <m_Options>
           <Option>
-            <m_Text>Quit the game</m_Text>
+            <m_Text>Quit</m_Text>
             <m_DestinationNodeID />
             <m_Action>Quit</m_Action>
           </Option>
         </m_Options>
       </m_Node>
-      <m_OptionOutPoints />
     </DialogueNode>
   </m_Nodes>
   <m_Connections>
     <Connection>
       <m_InPoint>
-        <m_Id>de2f069b-fa34-4948-8349-8edd90943b85</m_Id>
+        <m_Id>693643fd-496d-43fa-b900-6fbe2bb04d7d</m_Id>
       </m_InPoint>
       <m_OutPoint>
-        <m_Id>65f44c08-07c4-4d70-b86e-a94be436cbbc</m_Id>
+        <m_Id>bcd4b33e-01a5-49c9-a2a3-85cfff73959d</m_Id>
       </m_OutPoint>
     </Connection>
     <Connection>
       <m_InPoint>
-        <m_Id>86dd0e34-3ee0-478d-81a7-debcd1dc40fa</m_Id>
+        <m_Id>655247fc-60be-4184-ac74-0ebf42152a47</m_Id>
       </m_InPoint>
       <m_OutPoint>
-        <m_Id>fea6a420-884a-4cdf-9be9-0da3ae69bce4</m_Id>
+        <m_Id>4d8650fb-4a70-4107-88cc-4a135b1f7032</m_Id>
       </m_OutPoint>
     </Connection>
   </m_Connections>

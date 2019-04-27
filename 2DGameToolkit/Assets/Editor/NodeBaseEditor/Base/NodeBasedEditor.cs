@@ -399,10 +399,31 @@ public class NodeBasedEditor<Editor, NodeType, ConnectionType> : EditorWindow
 
         foreach (var connectionDeserialized in graphDeserialized.m_Connections)
         {
-            var inPoint = m_Graph.m_Nodes.First(n => n.m_InPoint.m_Id == connectionDeserialized.m_InPoint.m_Id).m_InPoint;
-            var outPoint = m_Graph.m_Nodes.First(n => n.m_OutPoint.m_Id == connectionDeserialized.m_OutPoint.m_Id).m_OutPoint;
+            ConnectionPoint outPoint = null;
+            foreach (Node n in m_Graph.m_Nodes)
+            {
+                outPoint = n.GetConnectionPoint(connectionDeserialized.m_OutPoint.m_Id);
+                if(outPoint != null)
+                {
+                    break;
+                }
+            }
+            ConnectionPoint inPoint = null;
+            foreach (Node n in m_Graph.m_Nodes)
+            {
+                inPoint = n.GetConnectionPoint(connectionDeserialized.m_InPoint.m_Id);
+                if (inPoint != null)
+                {
+                    break;
+                }
+            }
             Connection connectionBase = new Connection(inPoint, outPoint, OnClickRemoveConnection);
-            m_Graph.m_Connections.Add(GetAsFinalType().CreateConnection(connectionBase));
+            ConnectionType connection = GetAsFinalType().CreateConnection(connectionBase);
+            m_Graph.m_Connections.Add(connection);
+            inPoint.OnConnectionMade(connection);
+            outPoint.OnConnectionMade(connection);
+            outPoint.GetNode().OnConnectionMade(connection);
+            inPoint.GetNode().OnConnectionMade(connection);
         }
     }
 }

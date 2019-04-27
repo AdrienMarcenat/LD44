@@ -2,43 +2,43 @@
 <Dialogue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <m_Nodes>
     <Node>
-      <m_ID>9d94ed10-31cc-4eb8-949b-6377d4952662</m_ID>
+      <m_ID>e7fc557b-ad11-4900-aa2d-a529551a0bb9</m_ID>
       <m_Name>Bob</m_Name>
-      <m_Text>This dialogue has options</m_Text>
+      <m_Text>This is a dialogue with options.</m_Text>
       <m_NextNodeID />
       <m_Options>
         <Option>
           <m_Text>Talk to Lea</m_Text>
-          <m_DestinationNodeID>ca5aed68-7f9e-4b1c-98cd-a85a9206eca7</m_DestinationNodeID>
+          <m_DestinationNodeID>6d83568f-9392-4bb5-9f41-c4ce79a14ff3</m_DestinationNodeID>
           <m_Action>None</m_Action>
         </Option>
         <Option>
           <m_Text>Talk to Shulk</m_Text>
-          <m_DestinationNodeID>d8f21f30-9334-433c-a94e-64327f10960f</m_DestinationNodeID>
+          <m_DestinationNodeID>60f1a67e-6407-480a-84e9-9534bd6dbd19</m_DestinationNodeID>
           <m_Action>None</m_Action>
         </Option>
       </m_Options>
     </Node>
     <Node>
-      <m_ID>ca5aed68-7f9e-4b1c-98cd-a85a9206eca7</m_ID>
+      <m_ID>6d83568f-9392-4bb5-9f41-c4ce79a14ff3</m_ID>
       <m_Name>Lea</m_Name>
       <m_Text>Thank you for choosing me !</m_Text>
       <m_NextNodeID />
       <m_Options />
     </Node>
     <Node>
-      <m_ID>d8f21f30-9334-433c-a94e-64327f10960f</m_ID>
+      <m_ID>60f1a67e-6407-480a-84e9-9534bd6dbd19</m_ID>
       <m_Name>Shulk</m_Name>
-      <m_Text>I provide option too.</m_Text>
+      <m_Text>I provide options too.</m_Text>
       <m_NextNodeID />
       <m_Options>
         <Option>
-          <m_Text>Quit the game</m_Text>
+          <m_Text>Quit</m_Text>
           <m_DestinationNodeID />
           <m_Action>Quit</m_Action>
         </Option>
       </m_Options>
     </Node>
   </m_Nodes>
-  <m_RootNodeID>9d94ed10-31cc-4eb8-949b-6377d4952662</m_RootNodeID>
+  <m_RootNodeID>e7fc557b-ad11-4900-aa2d-a529551a0bb9</m_RootNodeID>
 </Dialogue>
