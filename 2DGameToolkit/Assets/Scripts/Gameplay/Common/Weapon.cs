@@ -22,7 +22,7 @@ public class FireCommand
 
 public class Weapon : MonoBehaviour
 {
-    [SerializeField] int m_Type;
+    [SerializeField] string m_Type;
     [SerializeField] int m_TotalAmmo = int.MaxValue;
     [SerializeField] int m_CurrentAmmo;
     [SerializeField] float m_AmmoVelocity;
@@ -109,7 +109,7 @@ public class Weapon : MonoBehaviour
         m_CurrentAmmo = m_TotalAmmo;
     }
 
-    public int GetWeaponType ()
+    public string GetWeaponType ()
     {
         return m_Type;
     }

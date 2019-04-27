@@ -11,12 +11,12 @@ public class PlayerController : MonoBehaviour
     private MovingObject m_Mover;
     private WeaponManager m_WeaponManager;
     private Transform m_GroundCheck;
-    private const float ms_GroundedRadius = 0.2f;
+    private const float m_GroundedRadius = 0.2f;
     private bool m_Grounded;
     private Vector3 m_FacingDirection;
 
-    private static Vector3 ms_Right = new Vector3 (1, 0, 0);
-    private static Vector3 ms_Left = new Vector3 (-1, 0, 0);
+    private static Vector3 m_Right = new Vector3 (1, 0, 0);
+    private static Vector3 m_Left = new Vector3 (-1, 0, 0);
 
     void Awake ()
     {
@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
     {
         m_Grounded = false;
         
-        Collider2D[] colliders = Physics2D.OverlapCircleAll (m_GroundCheck.position, ms_GroundedRadius, m_WhatIsGround);
+        Collider2D[] colliders = Physics2D.OverlapCircleAll (m_GroundCheck.position, m_GroundedRadius, m_WhatIsGround);
         foreach (Collider2D collider in colliders)
         {
             if (collider.gameObject != gameObject)
@@ -58,16 +58,22 @@ public class PlayerController : MonoBehaviour
                 break;
             case "Right":
                 Move (state == EInputState.Held ? 1 : 0);
-                m_FacingDirection = ms_Right;
+                m_FacingDirection = m_Right;
                 break;
             case "Left":
                 Move (state == EInputState.Held ? -1 : 0);
-                m_FacingDirection = ms_Left;
+                m_FacingDirection = m_Left;
                 break;
             case "Fire":
                 if (state == EInputState.Held)
                 {
                     Fire ();
+                }
+                break;
+            case "Slash":
+                if (state == EInputState.Held)
+                {
+                    Slash();
                 }
                 break;
             default:
@@ -95,6 +101,11 @@ public class PlayerController : MonoBehaviour
 
     private void Fire ()
     {
-        m_WeaponManager.Fire (0, m_FacingDirection);
+        m_WeaponManager.Fire ("Bow", m_FacingDirection);
+    }
+
+    private void Slash()
+    {
+        m_WeaponManager.Fire("Sword", m_FacingDirection);
     }
 }
