@@ -7,6 +7,7 @@
     StartDialogue,
     StartTransition,
     EndTransition,
+    EndLevel,
     Quit,
 }
 

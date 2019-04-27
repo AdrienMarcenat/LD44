@@ -10,11 +10,13 @@ public class PlayerManager : IPlayerManager
     public void OnEngineStart()
     {
         this.RegisterAsListener("Game", typeof(LevelEvent));
+        this.RegisterAsListener("Player", typeof(ChangePlayerStatGameEvent));
     }
 
     public void OnEngineStop()
     {
         this.UnregisterAsListener("Game");
+        this.UnregisterAsListener("Player");
     }
 
     public void OnGameEvent(LevelEvent levelEvent)
@@ -28,6 +30,12 @@ public class PlayerManager : IPlayerManager
         {
             SaveManagerProxy.Get().SaveObject(m_PlayerStat, m_PlayerStatSavePath);
         }
+    }
+
+    public void OnGameEvent(ChangePlayerStatGameEvent changePlayerStatGameEvent)
+    {
+        changePlayerStatGameEvent.GetStatChange().ChangeStats(m_PlayerStat);
+        new GameFlowEvent(EGameFlowAction.EndLevel).Push();
     }
 
     public PlayerStat GetPlayerStat()
