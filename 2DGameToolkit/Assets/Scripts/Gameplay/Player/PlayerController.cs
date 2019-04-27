@@ -63,6 +63,10 @@ public class PlayerController : MonoBehaviour
 
     public void OnGameEvent(PlayerInputGameEvent inputEvent)
     {
+        if(UpdaterProxy.Get().IsPaused())
+        {
+            return;
+        }
         string input = inputEvent.GetInput ();
         EInputState state = inputEvent.GetInputState ();
         switch (input)
