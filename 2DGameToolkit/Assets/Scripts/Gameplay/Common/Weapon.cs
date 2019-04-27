@@ -83,6 +83,7 @@ public class Weapon : MonoBehaviour
             bullet.transform.position = transform.position;
         }
         bullet.transform.localScale *= sizeModifier;
+        bullet.GetComponent<SpriteRenderer>().flipX = fireDirection.x < 0;
         bullet.GetComponent<Rigidbody2D> ().velocity = m_AmmoVelocity * fireDirection;
         bullet.GetComponentInChildren<SpriteRenderer> ().transform.rotation = new Quaternion (0, 0, Vector2.SignedAngle (Vector2.up, fireDirection), 0);
 
