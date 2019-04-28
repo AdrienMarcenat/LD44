@@ -60,7 +60,8 @@ public class Camera2D : MonoBehaviour
         float height = 2f * m_Camera.orthographicSize;
         float width = height * m_Camera.aspect;
         yNew = Mathf.Lerp (transform.position.y, yNew, Time.deltaTime * m_FollowSpeed);
-        xNew = Mathf.Clamp(xNew, RoomTransition.m_CurrentMinX + width/2, RoomTransition.m_CurrentMaxX - width/2);
+        yNew = Mathf.Clamp(yNew, RoomTransition.m_CurrentMinY + height / 2, RoomTransition.m_CurrentMaxY - height / 2);
+        xNew = Mathf.Clamp(xNew, RoomTransition.m_CurrentMinX + width / 2, RoomTransition.m_CurrentMaxX - width / 2);
         transform.position = new Vector3 (xNew, yNew, transform.position.z);
     }
 

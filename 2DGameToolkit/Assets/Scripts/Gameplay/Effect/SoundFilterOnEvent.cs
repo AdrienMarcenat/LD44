@@ -21,8 +21,11 @@ public class SoundFilterOnEvent : MonoBehaviour
 
     public void OnGameEvent (DamageGameEvent damageGameEvent)
     {
-        StopAllCoroutines ();
-        StartCoroutine (LowPassRoutine());
+        if (damageGameEvent.GetDamage() < 0)
+        {
+            StopAllCoroutines();
+            StartCoroutine(LowPassRoutine());
+        }
     }
 
     private IEnumerator LowPassRoutine()

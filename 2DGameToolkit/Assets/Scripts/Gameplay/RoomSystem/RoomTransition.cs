@@ -5,6 +5,9 @@ public class RoomTransition : MonoBehaviour
 {
     public static float m_CurrentMinX;
     public static float m_CurrentMaxX;
+    public static float m_CurrentMinY;
+    public static float m_CurrentMaxY;
+
 
     [SerializeField] RoomInfo m_ExitRoom;
     [SerializeField] RoomInfo m_EnterRoom;
@@ -15,7 +18,7 @@ public class RoomTransition : MonoBehaviour
     private Transform m_PlayerTransform;
     private MovingObject m_PlayerMovement;
 
-    private void Awake()
+    private void Start()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         m_PlayerTransform = player.transform;
@@ -23,6 +26,8 @@ public class RoomTransition : MonoBehaviour
         RoomInfo firstRoom = GameObject.FindGameObjectWithTag("FirstRoom").GetComponent<RoomInfo>();
         m_CurrentMinX = firstRoom.GetMinX();
         m_CurrentMaxX = firstRoom.GetMaxX();
+        m_CurrentMinY = firstRoom.GetMinY();
+        m_CurrentMaxY = firstRoom.GetMaxY();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -44,6 +49,8 @@ public class RoomTransition : MonoBehaviour
 
         m_CurrentMinX = m_EnterRoom.GetMinX();
         m_CurrentMaxX = m_EnterRoom.GetMaxX();
+        m_CurrentMinY = m_EnterRoom.GetMinY();
+        m_CurrentMaxY = m_EnterRoom.GetMaxY();
         m_EnterRoom.gameObject.SetActive(true);
         RoomEnemy enemies =m_EnterRoom.GetComponent<RoomEnemy>();
         if(enemies != null)
