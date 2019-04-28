@@ -11,11 +11,13 @@ public class Camera2D : MonoBehaviour
     [SerializeField] private bool m_IsYLocked = false;
 
     private Transform m_Player;
+    private Camera m_Camera;
     private List<Transform> m_Lanes;
 
     void Awake ()
     {
         m_Player = GameObject.FindGameObjectWithTag ("Player").transform;
+        m_Camera = GetComponent<Camera>();
         m_Lanes = new List<Transform> ();
         foreach (Transform lane in GameObject.Find ("Lanes").GetComponentsInChildren<Transform> ())
         {
@@ -55,8 +57,10 @@ public class Camera2D : MonoBehaviour
                 }
             }
         }
-
+        float height = 2f * m_Camera.orthographicSize;
+        float width = height * m_Camera.aspect;
         yNew = Mathf.Lerp (transform.position.y, yNew, Time.deltaTime * m_FollowSpeed);
+        xNew = Mathf.Clamp(xNew, RoomTransition.m_CurrentMinX + width/2, RoomTransition.m_CurrentMaxX - width/2);
         transform.position = new Vector3 (xNew, yNew, transform.position.z);
     }
 

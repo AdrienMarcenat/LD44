@@ -3,10 +3,11 @@ using UnityEngine;
 
 public class RoomTransition : MonoBehaviour
 {
-    public static Transform m_CurrentRoom;
+    public static float m_CurrentMinX;
+    public static float m_CurrentMaxX;
 
-    [SerializeField] GameObject m_ExitRoom;
-    [SerializeField] GameObject m_EnterRoom;
+    [SerializeField] RoomInfo m_ExitRoom;
+    [SerializeField] RoomInfo m_EnterRoom;
 
     [SerializeField] Transform m_PlayerNode;
     [SerializeField] float m_TransitionTime = 0.5f;
@@ -19,6 +20,9 @@ public class RoomTransition : MonoBehaviour
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         m_PlayerTransform = player.transform;
         m_PlayerMovement = m_PlayerTransform.GetComponent<MovingObject>();
+        RoomInfo firstRoom = GameObject.FindGameObjectWithTag("FirstRoom").GetComponent<RoomInfo>();
+        m_CurrentMinX = firstRoom.GetMinX();
+        m_CurrentMaxX = firstRoom.GetMaxX();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -38,9 +42,10 @@ public class RoomTransition : MonoBehaviour
 
         yield return new WaitForSecondsRealtime(m_TransitionTime);
 
-        m_CurrentRoom = m_EnterRoom.transform;
-        m_EnterRoom.SetActive(true);
-        m_ExitRoom.SetActive(false);
+        m_CurrentMinX = m_EnterRoom.GetMinX();
+        m_CurrentMaxX = m_EnterRoom.GetMaxX();
+        m_EnterRoom.gameObject.SetActive(true);
+        m_ExitRoom.gameObject.SetActive(false);
         m_PlayerMovement.Unfreeze();
         new GameFlowEvent(EGameFlowAction.EndTransition).Push();
     }
