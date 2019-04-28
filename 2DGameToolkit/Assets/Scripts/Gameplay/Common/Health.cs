@@ -51,8 +51,8 @@ public class Health : MonoBehaviour
             return;
         }
         int heal = m_MaxHealth - m_CurrentHealth;
-        new DamageGameEvent(gameObject.name, -heal).Push();
         m_CurrentHealth = m_MaxHealth;
+        new DamageGameEvent(gameObject.name, -heal).Push();
     }
 
     public void LoseHealth (int damage)
