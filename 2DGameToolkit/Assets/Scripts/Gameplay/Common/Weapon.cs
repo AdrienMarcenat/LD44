@@ -34,14 +34,27 @@ public class Weapon : MonoBehaviour
     private float m_FireDelay;
     private float m_FireCommandNumber;
 
-    void Start ()
+    void Awake ()
     {
         m_FireCommands = new Queue<FireCommand> ();
         m_CurrentAmmo = m_TotalAmmo;
         m_FireDelay = m_FireRate;
+        this.RegisterToUpdate(EUpdatePass.AI);
+        this.RegisterAsListener(transform.parent.name, typeof(GameOverGameEvent));
     }
 
-    void Update ()
+    public void OnGameEvent(GameOverGameEvent gameOverEvent)
+    {
+        ClearFireCommands();
+        this.UnregisterToUpdate(EUpdatePass.AI);
+    }
+
+    private void OnDestroy()
+    {
+        this.UnregisterAsListener(transform.parent.name);
+    }
+
+    public void UpdateAI ()
     {
         if (m_FireDelay < m_FireRate)
         {
@@ -117,5 +130,10 @@ public class Weapon : MonoBehaviour
     public int GetAmmo ()
     {
         return m_CurrentAmmo;
+    }
+
+    public void ClearFireCommands()
+    {
+        m_FireCommands.Clear();
     }
 }

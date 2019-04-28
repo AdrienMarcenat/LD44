@@ -23,7 +23,7 @@ public class EnemySeeker : Enemy
 
     public virtual void Seek(GameObject target)
     {
-        if (m_IsSeeking)
+        if (m_IsSeeking || IsDying())
             return;
 
         SoundManagerProxy.Get().PlayMultiple(m_SeekingSound);
@@ -37,9 +37,9 @@ public class EnemySeeker : Enemy
         enemyAI.SetFireParameters(2, 1, 1, 0);
     }
 
-    protected new void OnDestroy()
+    protected override void OnGameOver()
     {
-        base.OnDestroy();
+        base.OnGameOver();
         this.UnregisterToUpdate(EUpdatePass.AI);
     }
 
@@ -63,7 +63,7 @@ public class EnemySeeker : Enemy
         }
     }
 
-    public override void OnPlayerCollision()
+    protected override void OnPlayerCollision()
     {
         StartCoroutine(WaitAfterCollisionRoutine());
     }

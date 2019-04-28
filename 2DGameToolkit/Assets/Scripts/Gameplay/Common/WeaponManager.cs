@@ -13,6 +13,7 @@ public class WeaponManager : MonoBehaviour
             m_Weapons.Add (w.GetWeaponType (), w);
         }
     }
+
     public void Fire(int weaponIndex, Vector3 target, float sizeModifier = 1f)
     {
         int i = 0;

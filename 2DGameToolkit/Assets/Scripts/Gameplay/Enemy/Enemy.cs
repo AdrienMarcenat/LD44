@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour
     protected Animator m_Animator;
     protected SpriteRenderer m_Sprite;
     protected Color m_InitialColor;
+    protected bool m_IsDying = false;
 
     protected void Awake ()
     {
@@ -36,12 +37,21 @@ public class Enemy : MonoBehaviour
 
     public void OnGameEvent (GameOverGameEvent gameOverEvent)
     {
+        m_IsDying = true;
+        OnGameOver();
+        // Remove collision to avoid hurting player or being hurt
         GetComponent<BoxCollider2D> ().enabled = false;
+        // Let some time for the dying animation to be played
         Destroy (gameObject, 1);
     }
 
     protected void OnDestroy ()
     {
+        // Call the cleanup code if it has not been done
+        if (!m_IsDying)
+        {
+            OnGameOver();
+        }
         this.UnregisterAsListener (gameObject.name);
     }
 
@@ -60,5 +70,11 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public virtual void OnPlayerCollision() { }
+    protected virtual void OnPlayerCollision() { }
+    protected virtual void OnGameOver() { }
+
+    public bool IsDying()
+    {
+        return m_IsDying;
+    }
 }

@@ -9,7 +9,13 @@ public class EnemyPath : Enemy
 
     private float m_Progress;
 
-    private void Update ()
+    protected new void Awake()
+    {
+        base.Awake();
+        this.RegisterToUpdate(EUpdatePass.AI);
+    }
+
+    public void UpdateAI()
     {
         m_Progress += m_Direction* (Time.deltaTime / m_Duration);
         if ((m_Direction == 1 && m_Progress > 1f) || (m_Direction == -1 && m_Progress < 0f))
@@ -18,13 +24,15 @@ public class EnemyPath : Enemy
             {
                 m_Direction *= -1;
             }
-            else
-            {
-                Destroy(gameObject);
-            }
         }
         Vector2 position = m_Path.GetPoint (m_Progress);
         transform.position = position;
+    }
+
+    protected override void OnGameOver()
+    {
+        base.OnGameOver();
+        this.UnregisterToUpdate(EUpdatePass.AI);
     }
 
     public void SetPath (BezierCurve path)

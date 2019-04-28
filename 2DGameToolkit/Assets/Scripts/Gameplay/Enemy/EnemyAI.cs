@@ -16,13 +16,25 @@ public class EnemyAI : MonoBehaviour
 
     }
 
-    void Start ()
+    void Awake ()
     {
         m_WeaponManager = GetComponent<WeaponManager> ();
         m_FireDelay = m_FireRate;
+        this.RegisterToUpdate(EUpdatePass.AI);
+        this.RegisterAsListener(gameObject.name, typeof(GameOverGameEvent));
     }
 
-    void Update ()
+    public void OnGameEvent(GameOverGameEvent gameOverEvent)
+    {
+        this.UnregisterToUpdate(EUpdatePass.AI);
+    }
+
+    private void OnDestroy()
+    {
+        this.UnregisterAsListener(gameObject.name);
+    }
+
+    public void UpdateAI ()
     {
         if (m_FireDelay < m_FireRate)
         {
