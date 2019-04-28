@@ -19,7 +19,7 @@ public static class Extension
     }
     public static void RegisterToUpdate(this System.Object objectToNotify, params EUpdatePass[] updatePassList)
     {
-        UpdaterProxy.Get().Register(objectToNotify, false, updatePassList);
+        UpdaterProxy.Get().Register(objectToNotify, true, updatePassList);
     }
 
     public static void UnregisterToUpdate (this System.Object objectToNotify, params EUpdatePass[] updatePassList)

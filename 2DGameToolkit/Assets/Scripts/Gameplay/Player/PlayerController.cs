@@ -93,7 +93,7 @@ public class PlayerController : MonoBehaviour
                 ChangeFacingDirection(m_Left);
                 break;
             case "Blast":
-                if (state == EInputState.Held)
+                if (state == EInputState.Down)
                 {
                     Fire ();
                 }
