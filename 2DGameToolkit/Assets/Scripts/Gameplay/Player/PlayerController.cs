@@ -72,6 +72,7 @@ public class PlayerController : MonoBehaviour
     {
         if(UpdaterProxy.Get().IsPaused() || !m_ProcessInput)
         {
+            Move(0);
             return;
         }
         string input = inputEvent.GetInput ();
