@@ -106,7 +106,7 @@ public class PlayerController : MonoBehaviour
         if (m_FacingDirection != newFacingDirection)
         {
             m_FacingDirection = newFacingDirection;
-            transform.localScale *= -1;
+            transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
         }
     }
 
