@@ -97,7 +97,7 @@ public class Weapon : MonoBehaviour
             bullet.GetComponent<SpriteRenderer>().flipX = fireDirection.x < 0;
         }
         bullet.transform.localScale *= sizeModifier;
-        bullet.GetComponent<Rigidbody2D> ().velocity = m_AmmoVelocity * fireDirection;
+        bullet.GetComponent<Rigidbody2D> ().velocity = m_AmmoVelocity * fireDirection.normalized;
 
         return true;
     }

@@ -41,7 +41,7 @@ PrefabInstance:
     - target: {fileID: 4267224593845518309, guid: cccac38c1adee6841a9aabcdfad4eee7,
         type: 3}
       propertyPath: m_AmmoVelocity
-      value: 0.7
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cccac38c1adee6841a9aabcdfad4eee7, type: 3}
