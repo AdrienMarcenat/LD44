@@ -24,6 +24,10 @@ namespace Dialogue
         {
             DialogueManagerProxy.Open (this);
             this.RegisterAsListener ("Player", typeof (PlayerInputGameEvent));
+            foreach (DialogueOptionButton optionButton in m_OptionButtons)
+            {
+                optionButton.Reset();
+            }
         }
 
         void OnDestroy()
@@ -92,6 +96,7 @@ namespace Dialogue
             Assert.IsTrue(options.Count <= m_OptionButtons.Count, "too many options to display");
             for(int i = 0; i < options.Count; i++)
             {
+                m_OptionButtons[i].gameObject.SetActive(true);
                 m_OptionButtons[i].SetOption(options[i]);
             }
         }
