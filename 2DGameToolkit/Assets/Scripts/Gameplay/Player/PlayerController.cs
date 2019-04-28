@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 m_FacingDirection;
     private int m_JumpCount;
     private bool m_ProcessInput = true;
+    private Animator m_Animator;
 
     private PlayerHSM m_PlayerHSM = new PlayerHSM();
 
@@ -30,6 +31,7 @@ public class PlayerController : MonoBehaviour
     {
         m_Mover = GetComponent<MovingObject> ();
         m_WeaponManager = GetComponent<WeaponManager> ();
+        m_Animator = GetComponent<Animator>();
         m_GroundCheck = transform.Find ("GroundCheck");
         m_FacingDirection = new Vector3 (1, 0, 0);
         this.RegisterAsListener ("Player", typeof(PlayerInputGameEvent));
@@ -62,6 +64,7 @@ public class PlayerController : MonoBehaviour
                 m_JumpCount = 0;
             }
             m_Grounded = grounded;
+            m_Animator.SetBool("jumping", !m_Grounded);
         }
     }
 
@@ -129,17 +132,20 @@ public class PlayerController : MonoBehaviour
     {
         if (m_Grounded || m_AirControl)
         {
+            m_Animator.SetBool("running", true);
             m_Mover.MoveHorizontal (xDir);
         }
     }
 
     private void Fire ()
     {
+        m_Animator.SetTrigger("attacking");
         m_WeaponManager.Fire ("Blast", m_FacingDirection);
     }
 
     private void Slash()
     {
+        m_Animator.SetTrigger("attacking");
         m_WeaponManager.Fire("Sword", m_FacingDirection);
     }
 
