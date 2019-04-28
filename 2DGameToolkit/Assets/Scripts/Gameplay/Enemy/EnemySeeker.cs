@@ -4,8 +4,18 @@ public class EnemySeeker : Enemy
 {
     [SerializeField] bool m_IsSeeking = false;
     [SerializeField] AudioClip m_SeekingSound;
+    [SerializeField] SpriteRenderer m_HealthBar;
+    private Collider2D m_Collider;
 
     protected Transform m_Target;
+
+    protected new void Awake()
+    {
+        base.Awake();
+        m_Collider = GetComponent<Collider2D>();
+        m_HealthBar.enabled = false;
+        m_Collider.enabled = false;
+    }
 
     public bool IsSeeking()
     {
@@ -21,5 +31,7 @@ public class EnemySeeker : Enemy
         m_IsSeeking = true;
         m_Animator.SetTrigger("seeking");
         m_Target = target.transform;
+        m_HealthBar.enabled = true;
+        m_Collider.enabled = true;
     }
 }

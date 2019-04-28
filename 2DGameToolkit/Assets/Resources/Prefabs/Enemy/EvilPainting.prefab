@@ -175,6 +175,7 @@ MonoBehaviour:
   m_HitColorTime: 0.1
   m_IsSeeking: 0
   m_SeekingSound: {fileID: 0}
+  m_HealthBar: {fileID: 9051560375870731023}
 --- !u!1 &5903932497614647551
 GameObject:
   m_ObjectHideFlags: 0

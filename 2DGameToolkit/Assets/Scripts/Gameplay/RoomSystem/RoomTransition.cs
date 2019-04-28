@@ -45,6 +45,11 @@ public class RoomTransition : MonoBehaviour
         m_CurrentMinX = m_EnterRoom.GetMinX();
         m_CurrentMaxX = m_EnterRoom.GetMaxX();
         m_EnterRoom.gameObject.SetActive(true);
+        RoomEnemy enemies =m_EnterRoom.GetComponent<RoomEnemy>();
+        if(enemies != null)
+        {
+            enemies.ResetEnemies();
+        }
         m_ExitRoom.gameObject.SetActive(false);
         m_PlayerMovement.Unfreeze();
         new GameFlowEvent(EGameFlowAction.EndTransition).Push();

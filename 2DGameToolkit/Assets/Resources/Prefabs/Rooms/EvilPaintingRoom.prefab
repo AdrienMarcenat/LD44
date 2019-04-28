@@ -225,6 +225,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8180680549005630738}
   - component: {fileID: 3323531049605105073}
+  - component: {fileID: 8583754098461261802}
   m_Layer: 0
   m_Name: EvilPaintingRoom
   m_TagString: Untagged
@@ -266,6 +267,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MinX: {fileID: 7531525750143361713}
   m_MaxX: {fileID: 4840534556247801718}
+--- !u!114 &8583754098461261802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3763677688415178485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c26c2c6ddeea33b4581118e07aa370b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RoomEnemyPrefab: {fileID: 5578064520841976231, guid: 212cd6d76597ddf42b81abab0566a8c6,
+    type: 3}
 --- !u!1 &3876237273620597906
 GameObject:
   m_ObjectHideFlags: 0
@@ -587,7 +602,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3445708561813392301
 Transform:
   m_ObjectHideFlags: 0
@@ -599,7 +614,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 5380298086065854154}
+  - {fileID: 7979580913664298427}
   m_Father: {fileID: 8180680549005630738}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -803,24 +818,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Health
       value: 
-      objectReference: {fileID: 5418877455155186482}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cccac38c1adee6841a9aabcdfad4eee7, type: 3}
---- !u!4 &5380298086065854154 stripped
+--- !u!4 &7979580913664298427 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 4079508624134862, guid: cccac38c1adee6841a9aabcdfad4eee7,
+  m_CorrespondingSourceObject: {fileID: 2601387614892165567, guid: cccac38c1adee6841a9aabcdfad4eee7,
     type: 3}
   m_PrefabInstance: {fileID: 5378660047919055876}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5418877455155186482 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114681833838923574, guid: cccac38c1adee6841a9aabcdfad4eee7,
-    type: 3}
-  m_PrefabInstance: {fileID: 5378660047919055876}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f469169c58ccef34fb22b1a073bdcbdd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

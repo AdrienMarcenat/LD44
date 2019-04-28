@@ -241,6 +241,7 @@ MonoBehaviour:
   m_HitColorTime: 0.1
   m_IsSeeking: 0
   m_SeekingSound: {fileID: 0}
+  m_HealthBar: {fileID: 4792158764215716711}
   m_KeepDistance: 5
   m_WaitTimeAfterCollision: 1
   m_SlowSpeed: 2
