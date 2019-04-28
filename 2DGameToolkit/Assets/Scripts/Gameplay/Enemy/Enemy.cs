@@ -51,6 +51,11 @@ public class Enemy : MonoBehaviour
         {
             Health playerHealth = other.gameObject.GetComponent<Health> ();
             playerHealth.LoseHealth (m_PlayerDamageOnCollision);
+            PlayerController playerController = other.gameObject.GetComponent<PlayerController>();
+            if(playerController != null)
+            {
+                playerController.KnockBack(transform);
+            }
             OnPlayerCollision();
         }
     }

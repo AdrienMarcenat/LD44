@@ -163,6 +163,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_JumpForce: 6
+  m_KnockBackForce: 4
+  m_KnockBackYCorrectionForce: 1
+  m_KnockBackTime: 1
   m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2

@@ -1,10 +1,14 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 [RequireComponent(typeof(MovingObject))]
 [RequireComponent (typeof (WeaponManager))]
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float m_JumpForce = 5;
+    [SerializeField] private float m_KnockBackForce = 3;
+    [SerializeField] private float m_KnockBackYCorrectionForce = 1;
+    [SerializeField] private float m_KnockBackTime = 1;
     [SerializeField] private bool m_AirControl = false;
     [SerializeField] private LayerMask m_WhatIsGround;
 
@@ -15,6 +19,7 @@ public class PlayerController : MonoBehaviour
     private bool m_Grounded;
     private Vector3 m_FacingDirection;
     private int m_JumpCount;
+    private bool m_ProcessInput = true;
 
     private PlayerHSM m_PlayerHSM = new PlayerHSM();
 
@@ -62,7 +67,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnGameEvent(PlayerInputGameEvent inputEvent)
     {
-        if(UpdaterProxy.Get().IsPaused())
+        if(UpdaterProxy.Get().IsPaused() || !m_ProcessInput)
         {
             return;
         }
@@ -136,5 +141,20 @@ public class PlayerController : MonoBehaviour
     private void Slash()
     {
         m_WeaponManager.Fire("Sword", m_FacingDirection);
+    }
+
+    public void KnockBack(Transform hazardTransfrom)
+    {
+        m_Mover.CancelVelocity();
+        m_Mover.ApplyForce(m_KnockBackForce * new Vector2(transform.position.x - hazardTransfrom.position.x
+            , m_KnockBackYCorrectionForce));
+        StartCoroutine(KnockBackRoutine());
+    }
+
+    private IEnumerator KnockBackRoutine()
+    {
+        m_ProcessInput = false;
+        yield return new WaitForSeconds(m_KnockBackTime);
+        m_ProcessInput = true;
     }
 }
