@@ -1616,6 +1616,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1329614414601198607, guid: 158765199a6cb1f4ab94863c284b7ce1,
+        type: 3}
+      propertyPath: m_BulletPrefab
+      value: 
+      objectReference: {fileID: 1936235728, guid: b55f53b8eb7368443bbef6746a5d4588,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 158765199a6cb1f4ab94863c284b7ce1, type: 3}
 --- !u!1 &1511257445
@@ -1813,6 +1819,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Health: {fileID: 957026017}
+--- !u!1 &1670123738 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7180595594729943749, guid: 158765199a6cb1f4ab94863c284b7ce1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1336459333}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1670123745
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1670123738}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 15590dea8db3cfd40bf8b98512ad1d23, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1701991739
 GameObject:
   m_ObjectHideFlags: 0
@@ -2129,6 +2160,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Slime
+      objectReference: {fileID: 0}
+    - target: {fileID: 381874446006064202, guid: d7b6588d3d2fd584d980e30bf8851ffd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 381874446006064245, guid: d7b6588d3d2fd584d980e30bf8851ffd,
         type: 3}
@@ -2529,7 +2565,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1010579222374794, guid: cccac38c1adee6841a9aabcdfad4eee7, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4079508624134862, guid: cccac38c1adee6841a9aabcdfad4eee7, type: 3}
       propertyPath: m_LocalPosition.x

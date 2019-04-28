@@ -17,7 +17,8 @@ public class Enemy : MonoBehaviour
     protected void Awake ()
     {
         m_Health = GetComponent<Health> ();
-        m_Sprite = GetComponentInChildren<SpriteRenderer> ();
+        m_Sprite = GetComponent<SpriteRenderer> ();
+        m_Animator = GetComponent<Animator>();
         m_InitialColor = m_Sprite.color;
 
         this.RegisterAsListener (gameObject.name, typeof (GameOverGameEvent), typeof (DamageGameEvent));
@@ -38,6 +39,7 @@ public class Enemy : MonoBehaviour
     public void OnGameEvent (GameOverGameEvent gameOverEvent)
     {
         m_IsDying = true;
+        m_Animator.SetTrigger("death");
         OnGameOver();
         // Remove collision to avoid hurting player or being hurt
         GetComponent<BoxCollider2D> ().enabled = false;

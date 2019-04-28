@@ -61,6 +61,7 @@ public class EnemySeeker : Enemy
         {
             m_Body.MoveDecelerate(horizontal, vertical, 5 * Time.deltaTime);
         }
+        m_Sprite.flipX = horizontal < 0;
     }
 
     protected override void OnPlayerCollision()

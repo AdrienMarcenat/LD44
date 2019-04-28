@@ -9,6 +9,7 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] protected Transform m_ShootDirection;
 
     protected WeaponManager m_WeaponManager;
+    protected Animator m_Animator;
     protected float m_FireDelay;
     protected bool m_IsDying = false;
     protected bool m_InitDone = false;
@@ -21,6 +22,7 @@ public class EnemyAI : MonoBehaviour
     void Start()
     {
         m_WeaponManager = GetComponent<WeaponManager> ();
+        m_Animator = GetComponent<Animator>();
         m_FireDelay = m_FireRate;
         this.RegisterToUpdate(EUpdatePass.AI);
         this.RegisterAsListener(gameObject.name, typeof(GameOverGameEvent));
@@ -54,6 +56,7 @@ public class EnemyAI : MonoBehaviour
         }
         else
         {
+            m_Animator.SetTrigger("attack");
             Fire ();
             m_FireDelay = 0;
         }
