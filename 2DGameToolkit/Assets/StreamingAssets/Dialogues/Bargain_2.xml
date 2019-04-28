@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<Dialogue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <m_Nodes>
+    <Node>
+      <m_ID>486ef591-1c55-416e-859b-ee9e3be4712f</m_ID>
+      <m_Name>Devil</m_Name>
+      <m_Text>Give me your soul, I'll give you my strentgh.</m_Text>
+      <m_NextNodeID />
+      <m_Options>
+        <Option>
+          <m_Text>Gain 1 Force, lose 1 HP</m_Text>
+          <m_DestinationNodeID>94bf83eb-96e6-4a9f-9429-84827da76d7d</m_DestinationNodeID>
+          <m_Action>UpgradeForce</m_Action>
+        </Option>
+        <Option>
+          <m_Text>Gain 1 Magic, lose 1 HP</m_Text>
+          <m_DestinationNodeID>94bf83eb-96e6-4a9f-9429-84827da76d7d</m_DestinationNodeID>
+          <m_Action>UpgradeMagic</m_Action>
+        </Option>
+        <Option>
+          <m_Text>Gain 1 Jump, lose 2 HP</m_Text>
+          <m_DestinationNodeID>94bf83eb-96e6-4a9f-9429-84827da76d7d</m_DestinationNodeID>
+          <m_Action>UpgradeJump</m_Action>
+        </Option>
+      </m_Options>
+    </Node>
+    <Node>
+      <m_ID>94bf83eb-96e6-4a9f-9429-84827da76d7d</m_ID>
+      <m_Name>Devil</m_Name>
+      <m_Text>You may now visit my Library.</m_Text>
+      <m_NextNodeID>0fb515bc-28fc-40f6-b80f-e2fefcd7287e</m_NextNodeID>
+      <m_Options />
+    </Node>
+    <Node>
+      <m_ID>0fb515bc-28fc-40f6-b80f-e2fefcd7287e</m_ID>
+      <m_Name>Devil</m_Name>
+      <m_Text>I hope you know how to read niark niark niark !</m_Text>
+      <m_NextNodeID />
+      <m_Options>
+        <Option>
+          <m_Text>Go tho the library</m_Text>
+          <m_DestinationNodeID />
+          <m_Action>NextLevel</m_Action>
+        </Option>
+      </m_Options>
+    </Node>
+  </m_Nodes>
+  <m_RootNodeID>486ef591-1c55-416e-859b-ee9e3be4712f</m_RootNodeID>
+</Dialogue>

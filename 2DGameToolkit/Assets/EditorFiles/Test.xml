@@ -12,7 +12,7 @@
         </position>
         <center>
           <x>383</x>
-          <y>319</y>
+          <y>309</y>
         </center>
         <min>
           <x>183</x>
@@ -20,18 +20,18 @@
         </min>
         <max>
           <x>583</x>
-          <y>429</y>
+          <y>409</y>
         </max>
         <width>400</width>
-        <height>220</height>
+        <height>200</height>
         <size>
           <x>400</x>
-          <y>220</y>
+          <y>200</y>
         </size>
         <xMin>183</xMin>
         <yMin>209</yMin>
         <xMax>583</xMax>
-        <yMax>429</yMax>
+        <yMax>409</yMax>
       </m_Rect>
       <m_InPoint>
         <m_Id>c5f5a6b1-b83b-4c8d-b42e-7d83b292922d</m_Id>
@@ -39,24 +39,14 @@
       <m_OutPoint>
         <m_Id>4f3ef301-9a12-4b5b-ae59-f18fbe31dcf1</m_Id>
       </m_OutPoint>
+      <m_OptionOutPoints />
       <m_Node>
         <m_ID>7f50170f-f60c-4376-ab87-e41239489dcb</m_ID>
         <m_Name>Bob</m_Name>
         <m_Text>This is a test</m_Text>
         <m_NextNodeID>9ae2fa37-c02d-4baf-ac50-98e711e0d3f3</m_NextNodeID>
-        <m_Options>
-          <Option>
-            <m_Text>Option</m_Text>
-            <m_DestinationNodeID />
-            <m_Action>None</m_Action>
-          </Option>
-        </m_Options>
+        <m_Options />
       </m_Node>
-      <m_OptionOutPoints>
-        <ConnectionPoint>
-          <m_Id>3143af86-9332-4c24-9078-ced62e34f41e</m_Id>
-        </ConnectionPoint>
-      </m_OptionOutPoints>
     </DialogueNode>
     <DialogueNode>
       <m_ID>9ae2fa37-c02d-4baf-ac50-98e711e0d3f3</m_ID>
@@ -96,6 +86,7 @@
       <m_OutPoint>
         <m_Id>4725d0bb-3f8d-4928-bee1-0162322ced88</m_Id>
       </m_OutPoint>
+      <m_OptionOutPoints />
       <m_Node>
         <m_ID>9ae2fa37-c02d-4baf-ac50-98e711e0d3f3</m_ID>
         <m_Name>Bob</m_Name>
@@ -103,7 +94,6 @@
         <m_NextNodeID />
         <m_Options />
       </m_Node>
-      <m_OptionOutPoints />
     </DialogueNode>
   </m_Nodes>
   <m_Connections>

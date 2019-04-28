@@ -6,6 +6,7 @@ public class GameFlowGameOverState : HSMState
     {
         UpdaterProxy.Get ().SetPause (true);
         Time.timeScale = 0;
+        PlayerManagerProxy.Get().ResetStat();
         this.RegisterAsListener ("Game", typeof (GameFlowEvent));
     }
 

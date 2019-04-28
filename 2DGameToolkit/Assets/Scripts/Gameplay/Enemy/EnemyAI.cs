@@ -35,6 +35,20 @@ public class EnemyAI : MonoBehaviour
         OnGameOver();
     }
 
+    private void OnDisable()
+    {
+        // Call the cleanup code if it has not been done
+        if (!m_IsDying)
+        {
+            OnGameOver();
+        }
+        if (m_InitDone)
+        {
+            m_InitDone = false;
+            this.UnregisterAsListener(gameObject.name);
+        }
+    }
+
     private void OnDestroy()
     {
         // Call the cleanup code if it has not been done
@@ -44,6 +58,7 @@ public class EnemyAI : MonoBehaviour
         }
         if(m_InitDone)
         {
+            m_InitDone = false;
             this.UnregisterAsListener(gameObject.name);
         }
     }

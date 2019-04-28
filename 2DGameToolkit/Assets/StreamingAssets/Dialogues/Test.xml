@@ -6,13 +6,7 @@
       <m_Name>Bob</m_Name>
       <m_Text>This is a test</m_Text>
       <m_NextNodeID>9ae2fa37-c02d-4baf-ac50-98e711e0d3f3</m_NextNodeID>
-      <m_Options>
-        <Option>
-          <m_Text>Option</m_Text>
-          <m_DestinationNodeID />
-          <m_Action>None</m_Action>
-        </Option>
-      </m_Options>
+      <m_Options />
     </Node>
     <Node>
       <m_ID>9ae2fa37-c02d-4baf-ac50-98e711e0d3f3</m_ID>

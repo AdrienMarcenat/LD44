@@ -27,7 +27,7 @@ public class DialogueNode : Node
         , Action<ConnectionPoint> OnClickOutPoint, Action<Node> OnClickRemoveNode, string inPointID
         , string outPointID, string id = null)
     : base(position, nodeStyle, selectedStyle, inPointStyle, outPointStyle
-        , OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, inPointID, outPointID, false, id)
+        , OnClickInPoint, OnClickOutPoint, OnClickRemoveNode, inPointID, outPointID, true, id)
     {
         m_RectWithMargin = new Rect (m_Margin, m_Margin, GetWidth () - 2 * m_Margin, GetHeight () - 2 * m_Margin);
         m_OnClickOutPoint = OnClickOutPoint;
