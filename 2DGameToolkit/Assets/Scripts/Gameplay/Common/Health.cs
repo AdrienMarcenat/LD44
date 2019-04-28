@@ -2,7 +2,7 @@
 
 public class DamageGameEvent : GameEvent
 {
-    public DamageGameEvent(string tag, float damage) : base(tag)
+    public DamageGameEvent(string tag, float damage) : base(tag, EProtocol.Instant)
     {
         m_Damage = damage;
     }

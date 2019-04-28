@@ -10,28 +10,40 @@ public class EnemyAI : MonoBehaviour
 
     protected WeaponManager m_WeaponManager;
     protected float m_FireDelay;
+    protected bool m_IsDying = false;
+    protected bool m_InitDone = false;
 
     protected virtual void Fire ()
     {
 
     }
 
-    void Awake ()
+    void Start()
     {
         m_WeaponManager = GetComponent<WeaponManager> ();
         m_FireDelay = m_FireRate;
         this.RegisterToUpdate(EUpdatePass.AI);
         this.RegisterAsListener(gameObject.name, typeof(GameOverGameEvent));
+        m_InitDone = true;
     }
 
     public void OnGameEvent(GameOverGameEvent gameOverEvent)
     {
-        this.UnregisterToUpdate(EUpdatePass.AI);
+        m_IsDying = true;
+        OnGameOver();
     }
 
     private void OnDestroy()
     {
-        this.UnregisterAsListener(gameObject.name);
+        // Call the cleanup code if it has not been done
+        if (!m_IsDying)
+        {
+            OnGameOver();
+        }
+        if(m_InitDone)
+        {
+            this.UnregisterAsListener(gameObject.name);
+        }
     }
 
     public void UpdateAI ()
@@ -58,6 +70,11 @@ public class EnemyAI : MonoBehaviour
     public void SetShootDirection (Transform shootDirection)
     {
         m_ShootDirection = shootDirection;
+    }
+
+    protected void OnGameOver()
+    {
+        this.UnregisterToUpdate(EUpdatePass.AI);
     }
 }
 

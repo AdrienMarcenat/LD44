@@ -5,6 +5,7 @@ using AnyObject = System.Object;
 
 public enum EUpdatePass
 {
+    Invalid,
     First,
     BeforeAI,
     AI,
@@ -17,7 +18,7 @@ public enum EUpdatePass
 public class Updater : IUpdater
 {
     List<ObjectToUpdate>[] m_ObjectListPerPass = new List<ObjectToUpdate>[(int)EUpdatePass.Count];
-    private bool m_UpdateGuard = false;
+    private EUpdatePass m_UpdateGuardPass = EUpdatePass.Invalid;
     private bool m_IsPaused = false;
     private int m_PauseLock = 0;
 
@@ -47,10 +48,10 @@ public class Updater : IUpdater
 
     public void Update ()
     {
-        m_UpdateGuard = true;
-        for (int i = 0; i < (int)EUpdatePass.Count; i++)
+        for (int i = 1; i < (int)EUpdatePass.Count; i++)
         {
             EUpdatePass pass = (EUpdatePass)i;
+            m_UpdateGuardPass = pass;
             foreach (ObjectToUpdate objectToUpdate in m_ObjectListPerPass[(int)pass])
             {
                 if (!m_IsPaused || !objectToUpdate.m_IsPausable)
@@ -58,16 +59,16 @@ public class Updater : IUpdater
                     ReflectionHelper.CallMethod("Update" + pass.ToString(), objectToUpdate.m_ObjectToUpdate);
                 }
             }
+            m_UpdateGuardPass = EUpdatePass.Invalid;
         }
-        m_UpdateGuard = false;
     }
 
     public void Register (AnyObject objectToUpdate, bool isPausable, params EUpdatePass[] updatePassList)
     {
-        Assert.IsFalse (m_UpdateGuard, "Cannot register an object to update while updating !");
         ObjectToUpdate newEntry = new ObjectToUpdate(objectToUpdate, isPausable);
         foreach (EUpdatePass pass in updatePassList)
         {
+            Assert.IsFalse(m_UpdateGuardPass == pass, "Cannot register an object to update while updating !");
             Assert.IsTrue (pass != EUpdatePass.Count, "Invalid Update Pass : " + pass.ToString ());
             if (!m_ObjectListPerPass[(int)pass].Contains (newEntry))
             {
@@ -78,10 +79,10 @@ public class Updater : IUpdater
 
     public void Unregister (AnyObject objectToUpdate, params EUpdatePass[] updatePassList)
     {
-        Assert.IsFalse (m_UpdateGuard, "Cannot unregister an object to update while updating !");
         ObjectToUpdate entryToRemove = new ObjectToUpdate(objectToUpdate);
         foreach (EUpdatePass pass in updatePassList)
         {
+            Assert.IsFalse(m_UpdateGuardPass == pass, "Cannot register an object to update while updating !");
             Assert.IsTrue (pass != EUpdatePass.Count, "Invalid Update Pass : " + pass.ToString ());
             m_ObjectListPerPass[(int)pass].Remove (entryToRemove);
         }

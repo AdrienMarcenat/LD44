@@ -132,7 +132,7 @@ public class PlayerController : MonoBehaviour
     {
         if (m_Grounded || m_AirControl)
         {
-            m_Animator.SetBool("running", true);
+            m_Animator.SetBool("running", xDir != 0);
             m_Mover.MoveHorizontal (xDir);
         }
     }

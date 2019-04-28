@@ -24,7 +24,7 @@ namespace _2DGameToolKitTest
             public void UpdateLast ()
             {
                 // This should not be allowed in an update callback
-                this.RegisterToUpdate (EUpdatePass.First);
+                this.UnregisterToUpdate (EUpdatePass.Last);
             }
 
             public int m_UpdateCount;

@@ -46,16 +46,14 @@ public class GameEventManager : IGameEventManager
 
     public void PushGameEvent (GameEvent e, GameEvent.EProtocol protocol)
     {
-        Assert.IsFalse (m_DispatchGuard, "Cannot push GameEvent while dispatching !");
         switch (protocol)
         {
             case GameEvent.EProtocol.Delayed:
+                Assert.IsFalse(m_DispatchGuard, "Cannot push delayed GameEvent while dispatching !");
                 m_GameEventQueue.Enqueue (e);
                 break;
             case GameEvent.EProtocol.Instant:
-                m_DispatchGuard = true;
                 Notify (e);
-                m_DispatchGuard = false;
                 break;
             case GameEvent.EProtocol.Discard:
                 break;
