@@ -1271,6 +1271,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SkullHead
       objectReference: {fileID: 0}
+    - target: {fileID: 7180595594729943749, guid: 158765199a6cb1f4ab94863c284b7ce1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2558650670584205504, guid: 158765199a6cb1f4ab94863c284b7ce1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1755,7 +1760,7 @@ PrefabInstance:
     - target: {fileID: 381874446006064202, guid: d7b6588d3d2fd584d980e30bf8851ffd,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 381874446006064245, guid: d7b6588d3d2fd584d980e30bf8851ffd,
         type: 3}
