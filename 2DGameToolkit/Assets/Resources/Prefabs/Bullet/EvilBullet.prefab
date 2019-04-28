@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Damage: 1
-  m_Range: 1
+  m_Range: 2
   m_Penetration: 0
   m_TargetTag: Player
   m_FollowShooter: 0

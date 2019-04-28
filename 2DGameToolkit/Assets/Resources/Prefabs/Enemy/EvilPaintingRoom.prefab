@@ -37,7 +37,12 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 8771182841448607107}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 4267224593845518309, guid: cccac38c1adee6841a9aabcdfad4eee7,
+        type: 3}
+      propertyPath: m_AmmoVelocity
+      value: 0.7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cccac38c1adee6841a9aabcdfad4eee7, type: 3}
 --- !u!4 &6471169228065516708 stripped
