@@ -4,6 +4,7 @@ using UnityEngine;
 public abstract class PlayerStatBar : MonoBehaviour, IPlayerStatWatcher
 {
     [SerializeField] GameObject m_StatPrefab;
+    [SerializeField] float m_Spacing = 1f;
     private List<GameObject> m_Stats = new List<GameObject>();
 
     private void OnEnable()
@@ -23,7 +24,7 @@ public abstract class PlayerStatBar : MonoBehaviour, IPlayerStatWatcher
         {
             GameObject g = Instantiate(m_StatPrefab);
             g.transform.SetParent(transform, false);
-            g.transform.position += new Vector3(i * 0.5f, 0, 0);
+            g.transform.position += new Vector3(i * m_Spacing, 0, 0);
             m_Stats.Add(g);
         }
     }
