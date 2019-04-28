@@ -41,7 +41,7 @@ public class Health : MonoBehaviour
         {
             return;
         }
-        int newHealth = System.Math.Max(m_MaxHealth, m_CurrentHealth + value);
+        int newHealth = System.Math.Min(m_MaxHealth, m_CurrentHealth + value);
         int heal = newHealth - m_CurrentHealth;
         m_CurrentHealth = newHealth;
         new DamageGameEvent(gameObject.name, -heal).Push();
