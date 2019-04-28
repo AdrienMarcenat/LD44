@@ -43,6 +43,12 @@ public class Enemy : MonoBehaviour
         OnGameOver();
         // Remove collision to avoid hurting player or being hurt
         GetComponent<BoxCollider2D> ().enabled = false;
+        Rigidbody2D body = GetComponent<Rigidbody2D>();
+        if(body != null)
+        {
+            // Avoid enemy falling through floor
+            body.gravityScale = 0f;
+        }
         // Let some time for the dying animation to be played
         Destroy (gameObject, 1);
     }

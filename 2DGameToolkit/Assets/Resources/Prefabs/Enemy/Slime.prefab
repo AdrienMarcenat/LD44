@@ -301,8 +301,9 @@ MonoBehaviour:
   m_Sound: {fileID: 0}
   m_HitColorTime: 0.1
   m_Path: {fileID: 381874445960545640}
-  m_Duration: 2
   m_Loop: 1
+  m_WaitTimeAfterCollision: 1
+  m_Speed: 1
 --- !u!212 &5107122257517615367
 SpriteRenderer:
   m_ObjectHideFlags: 0
