@@ -50,11 +50,11 @@ public class Camera2D : MonoBehaviour
         {
             foreach (Transform lane in m_Lanes)
             {
-                yNew = lane.position.y + m_YOffset;
                 if (m_TrackingTarget.position.y < lane.position.y)
                 {
                     break;
                 }
+                yNew = lane.position.y + m_YOffset;
             }
         }
         float height = 2f * m_Camera.orthographicSize;
