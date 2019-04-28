@@ -217,8 +217,8 @@ GameObject:
   - component: {fileID: 1449649228592864590}
   - component: {fileID: 7790921954259393845}
   - component: {fileID: 6916435537446270534}
-  - component: {fileID: 4363870461989696903}
   - component: {fileID: 4110108436085995003}
+  - component: {fileID: 5972931252103473849}
   m_Layer: 0
   m_Name: SkullHead
   m_TagString: Enemy
@@ -328,29 +328,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_MaxHealth: 3
---- !u!114 &4363870461989696903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7180595594729943749}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4c60cc9b8b39c04d81d9941259c1913, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Type: 2
-  m_PlayerDamageOnCollision: 1
-  m_Sound: {fileID: 0}
-  m_HitColorTime: 0.1
-  m_KeepDistance: 5
-  m_WaitTimeAfterCollision: 1
-  m_SlowSpeed: 1
-  m_IsSeeking: 0
-  m_XLocked: 0
-  m_YLocked: 1
-  m_SeekingSound: {fileID: 0}
 --- !u!212 &4110108436085995003
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -399,3 +376,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5972931252103473849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7180595594729943749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4995d4264d8bbbc498c2af2cc7e6f471, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Type: 1
+  m_PlayerDamageOnCollision: 1
+  m_Sound: {fileID: 0}
+  m_HitColorTime: 0.1
+  m_IsSeeking: 0
+  m_SeekingSound: {fileID: 0}
+  m_KeepDistance: 5
+  m_WaitTimeAfterCollision: 1
+  m_SlowSpeed: 2
+  m_XLocked: 0
+  m_YLocked: 1

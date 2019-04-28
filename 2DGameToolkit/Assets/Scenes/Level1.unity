@@ -1041,7 +1041,7 @@ PrefabInstance:
     - target: {fileID: 20084672740440758, guid: 5bb248ca3513597448e252c3a63811cb,
         type: 3}
       propertyPath: orthographic size
-      value: 16
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4778993090554472, guid: 5bb248ca3513597448e252c3a63811cb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1622,6 +1622,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1936235728, guid: b55f53b8eb7368443bbef6746a5d4588,
         type: 3}
+    - target: {fileID: 4110108436085995003, guid: 158765199a6cb1f4ab94863c284b7ce1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 158765199a6cb1f4ab94863c284b7ce1, type: 3}
 --- !u!1 &1511257445
@@ -2563,17 +2568,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: EvilPainting
       objectReference: {fileID: 0}
-    - target: {fileID: 1010579222374794, guid: cccac38c1adee6841a9aabcdfad4eee7, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4079508624134862, guid: cccac38c1adee6841a9aabcdfad4eee7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.37
+      value: 4.51
       objectReference: {fileID: 0}
     - target: {fileID: 4079508624134862, guid: cccac38c1adee6841a9aabcdfad4eee7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.5
+      value: 3.14
       objectReference: {fileID: 0}
     - target: {fileID: 4079508624134862, guid: cccac38c1adee6841a9aabcdfad4eee7, type: 3}
       propertyPath: m_LocalPosition.z
