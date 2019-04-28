@@ -61,7 +61,6 @@ public class PlayerManager : IPlayerManager
         {
             cb.OnStatChanged(m_PlayerStat);
         }
-        LevelManagerProxy.Get().NextLevel();
     }
 
     public PlayerStat GetPlayerStat()

@@ -1,6 +1,4 @@
 ﻿
-using UnityEngine;
-
 namespace Dialogue
 {
     public enum EAction
@@ -9,7 +7,8 @@ namespace Dialogue
         Quit,
         UpgradeForce,
         UpgradeMagic,
-        UpgradeJump
+        UpgradeJump,
+        NextLevel
     }
 
     public class DialogueCommand : Command
@@ -32,6 +31,8 @@ namespace Dialogue
                     return new ChangeStat<UpgradeMagic>();
                 case EAction.UpgradeJump:
                     return new ChangeStat<UpgradeJump>();
+                case EAction.NextLevel:
+                    return new NextLevel();
             }
             return null;
         }
@@ -53,6 +54,14 @@ namespace Dialogue
 #else
 		    Application.Quit ();
 #endif
+        }
+    }
+
+    public class NextLevel : DialogueCommand
+    {
+        public override void Execute()
+        {
+            LevelManagerProxy.Get().NextLevel();
         }
     }
 }
