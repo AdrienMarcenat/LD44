@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Sound: {fileID: 0}
   m_HitColorTime: 0.1
   m_IsSeeking: 0
-  m_SeekingSound: {fileID: 0}
+  m_SeekingSound: {fileID: 8300000, guid: a8498ec714acc1142a2d287e2211119c, type: 3}
   m_HealthBar: {fileID: 9051560375870731023}
 --- !u!1 &5903932497614647551
 GameObject:
@@ -284,6 +284,7 @@ MonoBehaviour:
   m_CurrentAmmo: 0
   m_AmmoVelocity: 5
   m_FireRate: 3
+  m_FireSound: {fileID: 0}
   m_BulletPrefab: {fileID: 3036854428837619863, guid: bb64b6f3bcbacf94788a77dbe5ada5b9,
     type: 3}
 --- !u!1 &7492660014445264472

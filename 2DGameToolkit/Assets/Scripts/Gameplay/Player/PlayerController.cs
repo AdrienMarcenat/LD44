@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float m_KnockBackTime = 1;
     [SerializeField] private bool m_AirControl = false;
     [SerializeField] private LayerMask m_WhatIsGround;
+    [SerializeField] AudioClip m_HitSound;
 
     private MovingObject m_Mover;
     private WeaponManager m_WeaponManager;
@@ -151,6 +152,7 @@ public class PlayerController : MonoBehaviour
 
     public void KnockBack(Transform hazardTransfrom)
     {
+        SoundManagerProxy.Get().PlayMultiple(m_HitSound);
         m_Mover.CancelVelocity();
         m_Mover.ApplyForce(m_KnockBackForce * new Vector2(transform.position.x - hazardTransfrom.position.x
             , m_KnockBackYCorrectionForce));

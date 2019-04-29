@@ -48,6 +48,7 @@ MonoBehaviour:
   m_CurrentAmmo: 0
   m_AmmoVelocity: 5
   m_FireRate: 2
+  m_FireSound: {fileID: 0}
   m_BulletPrefab: {fileID: 1936235728, guid: b55f53b8eb7368443bbef6746a5d4588, type: 3}
 --- !u!1 &4792158764095581311
 GameObject:
@@ -240,7 +241,7 @@ MonoBehaviour:
   m_Sound: {fileID: 0}
   m_HitColorTime: 0.1
   m_IsSeeking: 0
-  m_SeekingSound: {fileID: 0}
+  m_SeekingSound: {fileID: 8300000, guid: f383c88333b06494d8616f70420abf88, type: 3}
   m_HealthBar: {fileID: 4792158764215716711}
   m_KeepDistance: 5
   m_WaitTimeAfterCollision: 1

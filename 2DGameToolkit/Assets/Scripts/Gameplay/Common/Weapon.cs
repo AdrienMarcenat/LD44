@@ -27,6 +27,8 @@ public class Weapon : MonoBehaviour
     [SerializeField] int m_CurrentAmmo;
     [SerializeField] float m_AmmoVelocity;
     [SerializeField] float m_FireRate;
+    [SerializeField] AudioClip m_FireSound;
+
 
     [SerializeField] GameObject m_BulletPrefab;
 
@@ -98,7 +100,7 @@ public class Weapon : MonoBehaviour
         }
         bullet.transform.localScale *= sizeModifier;
         bullet.GetComponent<Rigidbody2D> ().velocity = m_AmmoVelocity * fireDirection.normalized;
-
+        SoundManagerProxy.Get().PlayMultiple(m_FireSound);
         return true;
     }
 

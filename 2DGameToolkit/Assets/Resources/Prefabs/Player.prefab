@@ -48,6 +48,7 @@ MonoBehaviour:
   m_CurrentAmmo: 0
   m_AmmoVelocity: 0
   m_FireRate: 0.7
+  m_FireSound: {fileID: 8300000, guid: ba939fc4ec3690d4c8240c9b608ae668, type: 3}
   m_BulletPrefab: {fileID: 12841111538080621, guid: 7c27518ed1f115b448ea7e500bc12a19,
     type: 3}
 --- !u!1 &1295975795656072
@@ -171,6 +172,7 @@ MonoBehaviour:
   m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 256
+  m_HitSound: {fileID: 8300000, guid: 2d6724cdbbb62544abc8b66eaee6acaa, type: 3}
 --- !u!212 &212117605618472070
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -341,5 +343,6 @@ MonoBehaviour:
   m_CurrentAmmo: 0
   m_AmmoVelocity: 10
   m_FireRate: 0.7
+  m_FireSound: {fileID: 8300000, guid: 08ecc08c536dd6844b6d723fa4a1283e, type: 3}
   m_BulletPrefab: {fileID: 6007506422951949005, guid: 466dfd8ed0b5b744c87bc20d2081e538,
     type: 3}

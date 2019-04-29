@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2422395110973360204}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.0216, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 488647674871471020}
@@ -61,7 +61,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5278664423903724962}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.0216, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7708039280624844199}
@@ -157,6 +157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Heal: 2
+  m_Sound: {fileID: 8300000, guid: 604206e2f60017f4f9e71348c97c6e76, type: 3}
 --- !u!95 &5278664423903724965
 Animator:
   serializedVersion: 3
@@ -183,11 +184,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7708039280624844199}
     m_Modifications:
-    - target: {fileID: 277124695872690051, guid: a5cfe00b6d9745849970bc0c4b851f7d,
-        type: 3}
-      propertyPath: m_Name
-      value: Potion 12
-      objectReference: {fileID: 0}
     - target: {fileID: 5499203397333813645, guid: a5cfe00b6d9745849970bc0c4b851f7d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -196,7 +192,7 @@ PrefabInstance:
     - target: {fileID: 5499203397333813645, guid: a5cfe00b6d9745849970bc0c4b851f7d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.0216
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5499203397333813645, guid: a5cfe00b6d9745849970bc0c4b851f7d,
         type: 3}
@@ -242,6 +238,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 277124695872690051, guid: a5cfe00b6d9745849970bc0c4b851f7d,
+        type: 3}
+      propertyPath: m_Name
+      value: Potion 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5cfe00b6d9745849970bc0c4b851f7d, type: 3}
