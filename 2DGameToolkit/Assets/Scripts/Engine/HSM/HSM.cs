@@ -150,12 +150,12 @@ public class HSM
 
     private void DumpStack ()
     {
-        this.DebugLog ("=======================> Dump state stack begin");
+        //this.DebugLog ("=======================> Dump state stack begin");
         foreach (HSMState state in m_StateStack)
         {
-            this.DebugLog (state.GetType ());
+            //this.DebugLog (state.GetType ());
         }
-        this.DebugLog ("<======================= Dump state stack end");
+        //this.DebugLog ("<======================= Dump state stack end");
     }
 
     public HSMState[] GetStack()
