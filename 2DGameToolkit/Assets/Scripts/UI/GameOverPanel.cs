@@ -2,6 +2,8 @@
 
 public class GameOverPanel : MonoBehaviour
 {
+    [SerializeField] AudioClip m_GameOverMusic;
+
     private void Awake ()
     {
         gameObject.SetActive (false);
@@ -11,6 +13,7 @@ public class GameOverPanel : MonoBehaviour
     public void OnGameEvent (GameOverGameEvent gameOver)
     {
         gameObject.SetActive (true);
+        SoundManagerProxy.Get().PlayMusic(m_GameOverMusic);
     }
 
     private void OnDestroy ()

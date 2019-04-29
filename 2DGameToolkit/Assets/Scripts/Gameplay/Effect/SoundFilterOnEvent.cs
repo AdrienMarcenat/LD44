@@ -11,12 +11,18 @@ public class SoundFilterOnEvent : MonoBehaviour
     void Awake ()
     {
         m_AudioLowPassFilter = GetComponent<AudioLowPassFilter> ();
-        this.RegisterAsListener ("Player", typeof (DamageGameEvent));
+        this.RegisterAsListener ("Player", typeof (DamageGameEvent), typeof(GameOverGameEvent));
     }
 
     void OnDestroy ()
     {
         this.UnregisterAsListener ("Player");
+    }
+
+    public void OnGameEvent(GameOverGameEvent gameOverGameEvent)
+    {
+            StopAllCoroutines();
+        m_AudioLowPassFilter.cutoffFrequency = 22000;
     }
 
     public void OnGameEvent (DamageGameEvent damageGameEvent)
