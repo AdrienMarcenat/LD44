@@ -8,7 +8,8 @@ namespace Dialogue
         UpgradeForce,
         UpgradeMagic,
         UpgradeJump,
-        NextLevel
+        NextLevel,
+        FightDemon
     }
 
     public class DialogueCommand : Command
@@ -33,6 +34,8 @@ namespace Dialogue
                     return new ChangeStat<UpgradeJump>();
                 case EAction.NextLevel:
                     return new NextLevel();
+                case EAction.FightDemon:
+                    return new FightDemon();
             }
             return null;
         }
@@ -62,6 +65,14 @@ namespace Dialogue
         public override void Execute()
         {
             LevelManagerProxy.Get().NextLevel();
+        }
+    }
+
+    public class FightDemon : DialogueCommand
+    {
+        public override void Execute()
+        {
+            new DemonFightGameEvent().Push();
         }
     }
 }

@@ -67,9 +67,9 @@
             <m_Action>UpgradeMagic</m_Action>
           </Option>
           <Option>
-            <m_Text>Gain 1 Jump, lose 2 HP</m_Text>
+            <m_Text>Refuse bargain and fight !</m_Text>
             <m_DestinationNodeID />
-            <m_Action>UpgradeJump</m_Action>
+            <m_Action>FightDemon</m_Action>
           </Option>
         </m_Options>
       </m_Node>
