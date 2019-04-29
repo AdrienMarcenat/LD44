@@ -4,23 +4,23 @@
     <DialogueNode>
       <m_ID>486ef591-1c55-416e-859b-ee9e3be4712f</m_ID>
       <m_Rect>
-        <x>24</x>
-        <y>180</y>
+        <x>51</x>
+        <y>188</y>
         <position>
-          <x>24</x>
-          <y>180</y>
+          <x>51</x>
+          <y>188</y>
         </position>
         <center>
-          <x>224</x>
-          <y>310</y>
+          <x>251</x>
+          <y>318</y>
         </center>
         <min>
-          <x>24</x>
-          <y>180</y>
+          <x>51</x>
+          <y>188</y>
         </min>
         <max>
-          <x>424</x>
-          <y>440</y>
+          <x>451</x>
+          <y>448</y>
         </max>
         <width>400</width>
         <height>260</height>
@@ -28,10 +28,10 @@
           <x>400</x>
           <y>260</y>
         </size>
-        <xMin>24</xMin>
-        <yMin>180</yMin>
-        <xMax>424</xMax>
-        <yMax>440</yMax>
+        <xMin>51</xMin>
+        <yMin>188</yMin>
+        <xMax>451</xMax>
+        <yMax>448</yMax>
       </m_Rect>
       <m_InPoint>
         <m_Id>ae60c5b9-02b4-4e6c-9b43-45983b8130ec</m_Id>
@@ -62,14 +62,14 @@
             <m_Action>UpgradeForce</m_Action>
           </Option>
           <Option>
-            <m_Text>Gain 1 Magic, lose 1 HP</m_Text>
+            <m_Text>Gain 1 Jump, lose 2 HP</m_Text>
             <m_DestinationNodeID>94bf83eb-96e6-4a9f-9429-84827da76d7d</m_DestinationNodeID>
             <m_Action>UpgradeMagic</m_Action>
           </Option>
           <Option>
-            <m_Text>Gain 1 Jump, lose 2 HP</m_Text>
+            <m_Text>Refuse bargain and fight !</m_Text>
             <m_DestinationNodeID>94bf83eb-96e6-4a9f-9429-84827da76d7d</m_DestinationNodeID>
-            <m_Action>UpgradeJump</m_Action>
+            <m_Action>FightDemon</m_Action>
           </Option>
         </m_Options>
       </m_Node>
@@ -77,23 +77,23 @@
     <DialogueNode>
       <m_ID>94bf83eb-96e6-4a9f-9429-84827da76d7d</m_ID>
       <m_Rect>
-        <x>465</x>
-        <y>99</y>
+        <x>492</x>
+        <y>107</y>
         <position>
-          <x>465</x>
-          <y>99</y>
+          <x>492</x>
+          <y>107</y>
         </position>
         <center>
-          <x>665</x>
-          <y>199</y>
+          <x>692</x>
+          <y>207</y>
         </center>
         <min>
-          <x>465</x>
-          <y>99</y>
+          <x>492</x>
+          <y>107</y>
         </min>
         <max>
-          <x>865</x>
-          <y>299</y>
+          <x>892</x>
+          <y>307</y>
         </max>
         <width>400</width>
         <height>200</height>
@@ -101,10 +101,10 @@
           <x>400</x>
           <y>200</y>
         </size>
-        <xMin>465</xMin>
-        <yMin>99</yMin>
-        <xMax>865</xMax>
-        <yMax>299</yMax>
+        <xMin>492</xMin>
+        <yMin>107</yMin>
+        <xMax>892</xMax>
+        <yMax>307</yMax>
       </m_Rect>
       <m_InPoint>
         <m_Id>a39cf216-f440-461e-b330-697da60de795</m_Id>
@@ -124,34 +124,34 @@
     <DialogueNode>
       <m_ID>0fb515bc-28fc-40f6-b80f-e2fefcd7287e</m_ID>
       <m_Rect>
-        <x>804</x>
-        <y>311</y>
+        <x>831</x>
+        <y>319</y>
         <position>
-          <x>804</x>
-          <y>311</y>
+          <x>831</x>
+          <y>319</y>
         </position>
         <center>
-          <x>1004</x>
-          <y>421</y>
+          <x>1031</x>
+          <y>419</y>
         </center>
         <min>
-          <x>804</x>
-          <y>311</y>
+          <x>831</x>
+          <y>319</y>
         </min>
         <max>
-          <x>1204</x>
-          <y>531</y>
+          <x>1231</x>
+          <y>519</y>
         </max>
         <width>400</width>
-        <height>220</height>
+        <height>200</height>
         <size>
           <x>400</x>
-          <y>220</y>
+          <y>200</y>
         </size>
-        <xMin>804</xMin>
-        <yMin>311</yMin>
-        <xMax>1204</xMax>
-        <yMax>531</yMax>
+        <xMin>831</xMin>
+        <yMin>319</yMin>
+        <xMax>1231</xMax>
+        <yMax>519</yMax>
       </m_Rect>
       <m_InPoint>
         <m_Id>0976f3f8-1a32-435e-804a-883769307e9c</m_Id>
@@ -159,23 +159,13 @@
       <m_OutPoint>
         <m_Id>a673813b-c93f-4242-9558-9a21b8fffdfc</m_Id>
       </m_OutPoint>
-      <m_OptionOutPoints>
-        <ConnectionPoint>
-          <m_Id>11b5faf6-8538-492e-8ac7-4c5658681fde</m_Id>
-        </ConnectionPoint>
-      </m_OptionOutPoints>
+      <m_OptionOutPoints />
       <m_Node>
         <m_ID>0fb515bc-28fc-40f6-b80f-e2fefcd7287e</m_ID>
         <m_Name>Devil</m_Name>
         <m_Text>I hope you know how to read niark niark niark !</m_Text>
         <m_NextNodeID />
-        <m_Options>
-          <Option>
-            <m_Text>Go tho the library</m_Text>
-            <m_DestinationNodeID />
-            <m_Action>NextLevel</m_Action>
-          </Option>
-        </m_Options>
+        <m_Options />
       </m_Node>
     </DialogueNode>
   </m_Nodes>

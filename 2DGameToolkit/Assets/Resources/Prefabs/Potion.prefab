@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ce81def89eb3054ba86cad6c50206b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Heal: 2
+  m_Heal: 3
   m_Sound: {fileID: 8300000, guid: 604206e2f60017f4f9e71348c97c6e76, type: 3}
 --- !u!95 &5278664423903724965
 Animator:
@@ -238,6 +238,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7838863026065710177, guid: a5cfe00b6d9745849970bc0c4b851f7d,
+        type: 3}
+      propertyPath: m_Heal
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 277124695872690051, guid: a5cfe00b6d9745849970bc0c4b851f7d,
         type: 3}
