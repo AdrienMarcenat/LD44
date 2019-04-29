@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<Dialogue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <m_Nodes>
+    <Node>
+      <m_ID>4fdbcef9-c2a4-42d2-aca8-ebe6b0160014</m_ID>
+      <m_Name>Devil</m_Name>
+      <m_Text>Aaaaaaaargh ! I cannot be defeated you fool !</m_Text>
+      <m_NextNodeID>2dbc6de5-87fb-4e11-9fcd-01b4150e8ec7</m_NextNodeID>
+      <m_Options />
+    </Node>
+    <Node>
+      <m_ID>2dbc6de5-87fb-4e11-9fcd-01b4150e8ec7</m_ID>
+      <m_Name>Name</m_Name>
+      <m_Text>I'll have the next one ! Niark niark nirak...</m_Text>
+      <m_NextNodeID />
+      <m_Options>
+        <Option>
+          <m_Text>Leave the devil's house</m_Text>
+          <m_DestinationNodeID />
+          <m_Action>EndGame</m_Action>
+        </Option>
+      </m_Options>
+    </Node>
+  </m_Nodes>
+  <m_RootNodeID>4fdbcef9-c2a4-42d2-aca8-ebe6b0160014</m_RootNodeID>
+</Dialogue>

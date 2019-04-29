@@ -21,6 +21,12 @@ public class Demon : Enemy
         m_WeaponManager = GetComponent<WeaponManager>();
     }
 
+    private new void OnDestroy()
+    {
+        base.OnDestroy();
+        Dialogue.DialogueManagerProxy.Get().TriggerDialogue("EndGame");
+    }
+
     public void SetNodes(List<Transform> nodes)
     {
         m_Nodes = nodes;

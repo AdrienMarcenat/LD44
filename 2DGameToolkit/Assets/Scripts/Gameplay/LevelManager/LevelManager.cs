@@ -37,6 +37,12 @@ public class LevelManager
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
+
+    public void Reset()
+    {
+        m_CurrentLevel = 0;
+    }
+
     public void NextLevel()
     {
         m_CurrentLevel++;

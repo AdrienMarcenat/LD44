@@ -13,6 +13,9 @@
             case EGameFlowAction.EndDialogue:
                 ChangeNextTransition (HSMTransition.EType.Exit);
                 break;
+            case EGameFlowAction.Quit:
+                ChangeNextTransition(HSMTransition.EType.Clear, typeof(GameFlowMenuState));
+                break;
         }
     }
 

@@ -9,7 +9,8 @@ namespace Dialogue
         UpgradeMagic,
         UpgradeJump,
         NextLevel,
-        FightDemon
+        FightDemon,
+        EndGame
     }
 
     public class DialogueCommand : Command
@@ -36,6 +37,8 @@ namespace Dialogue
                     return new NextLevel();
                 case EAction.FightDemon:
                     return new FightDemon();
+                case EAction.EndGame:
+                    return new EndGame();
             }
             return null;
         }
@@ -73,6 +76,15 @@ namespace Dialogue
         public override void Execute()
         {
             new DemonFightGameEvent().Push();
+        }
+    }
+    public class EndGame : DialogueCommand
+    {
+        public override void Execute()
+        {
+            PlayerManagerProxy.Get().ResetStat();
+            LevelManagerProxy.Get().Reset();
+            new GameFlowEvent(EGameFlowAction.Quit).Push();
         }
     }
 }

@@ -215,6 +215,7 @@ MonoBehaviour:
   m_Sound: {fileID: 0}
   m_HitColorTime: 0.2
   m_DecisionTime: 3
+  m_WrathBulletNumber: 10
   m_EnemiesToInvoke:
   - {fileID: 4792158764095581311, guid: 158765199a6cb1f4ab94863c284b7ce1, type: 3}
   - {fileID: 1274478057624783861, guid: fda795079e6b1044cbea3edb0ef26d65, type: 3}
@@ -307,7 +308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f469169c58ccef34fb22b1a073bdcbdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MaxHealth: 100
+  m_MaxHealth: 1
 --- !u!50 &4951278785307368948
 Rigidbody2D:
   serializedVersion: 4
