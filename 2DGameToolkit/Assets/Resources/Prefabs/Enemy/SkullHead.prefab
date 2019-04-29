@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4792158763964773598}
   - component: {fileID: 4792158763964773593}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67,7 +67,7 @@ GameObject:
   - component: {fileID: 4792158764095581304}
   - component: {fileID: 4792158764095581305}
   - component: {fileID: 4792158764095581252}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SkullHead
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -278,7 +278,7 @@ GameObject:
   - component: {fileID: 4792158764215716708}
   - component: {fileID: 4792158764215716710}
   - component: {fileID: 4792158764215716711}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -371,7 +371,7 @@ GameObject:
   - component: {fileID: 4792158765388947600}
   - component: {fileID: 4792158765388947602}
   - component: {fileID: 4792158765388947603}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Detection
   m_TagString: Untagged
   m_Icon: {fileID: 0}

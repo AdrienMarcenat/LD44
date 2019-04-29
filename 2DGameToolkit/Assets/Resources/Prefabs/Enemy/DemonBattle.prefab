@@ -69,6 +69,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3622690246581570897}
+  - component: {fileID: 2250189628771988218}
   m_Layer: 0
   m_Name: DemonBattle
   m_TagString: Untagged
@@ -83,7 +84,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2250189628771988217}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -91,6 +92,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2250189628771988218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2250189628771988217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd24dd8e5707a17439a3538d050e1ed4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_DemonPrefab: {fileID: 3002202867812051719, guid: 517c1a597d625fe43a2b4bfa1df000cd,
+    type: 3}
+  m_Nodes:
+  - {fileID: 478169092762632576}
+  - {fileID: 8302012109960048597}
+  - {fileID: 2992460203880827359}
+  m_BossMusic: {fileID: 8300000, guid: e8c9a4f23d6120f4ca93e9e2648b183f, type: 3}
 --- !u!1 &8687238477573032765
 GameObject:
   m_ObjectHideFlags: 0

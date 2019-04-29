@@ -28,10 +28,15 @@ public class Health : MonoBehaviour
 	protected int m_CurrentHealth;
     private int m_DamageModifier;
     private bool m_Enable = true;
+    protected string m_EventTag;
+
+    protected virtual string GetEventTag() { return gameObject.GetInstanceID().ToString(); }
 
 	protected void Start ()
 	{
-		m_CurrentHealth = m_MaxHealth;
+        m_EventTag = GetEventTag();
+
+        m_CurrentHealth = m_MaxHealth;
         m_DamageModifier = 1;
 	}
 
@@ -44,7 +49,7 @@ public class Health : MonoBehaviour
         int newHealth = System.Math.Min(m_MaxHealth, m_CurrentHealth + value);
         int heal = newHealth - m_CurrentHealth;
         m_CurrentHealth = newHealth;
-        new DamageGameEvent(gameObject.name, -heal).Push();
+        PushDamageEvent(-heal);
     }
 
     public void FullHeal()
@@ -55,7 +60,7 @@ public class Health : MonoBehaviour
         }
         int heal = m_MaxHealth - m_CurrentHealth;
         m_CurrentHealth = m_MaxHealth;
-        new DamageGameEvent(gameObject.name, -heal).Push();
+        PushDamageEvent(-heal);
     }
 
     public void LoseHealth (int damage)
@@ -66,7 +71,7 @@ public class Health : MonoBehaviour
         }
 
 		m_CurrentHealth = System.Math.Max (0, m_CurrentHealth - m_DamageModifier * damage);
-        new DamageGameEvent (gameObject.name, damage).Push();
+        PushDamageEvent(damage);
 
 		CheckIfGameOver ();
 	}
@@ -81,7 +86,7 @@ public class Health : MonoBehaviour
         int damage = m_MaxHealth - newMaxHealth;
         m_MaxHealth = System.Math.Max(0, newMaxHealth);
         m_CurrentHealth = System.Math.Min(0, m_CurrentHealth - m_DamageModifier * damage);
-        new DamageGameEvent(gameObject.name, damage).Push();
+        PushDamageEvent(damage);
 
         CheckIfGameOver();
     }
@@ -112,7 +117,7 @@ public class Health : MonoBehaviour
 	{
 		if (m_CurrentHealth <= 0)
 		{
-			new GameOverGameEvent (gameObject.name).Push ();
+			new GameOverGameEvent (m_EventTag).Push ();
 		}
 	}
 
@@ -125,5 +130,13 @@ public class Health : MonoBehaviour
 	{
 		m_DamageModifier = modifier;
 	}
+
+    private void PushDamageEvent(int damage)
+    {
+        if (m_EventTag != null)
+        {
+            new DamageGameEvent(m_EventTag, damage).Push();
+        }
+    }
 }
 

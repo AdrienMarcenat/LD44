@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7924105691719882992}
   - component: {fileID: 2438963046262333914}
   - component: {fileID: 4985785857091083100}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: EvilPainting
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -187,7 +187,7 @@ GameObject:
   - component: {fileID: 1398885244037255454}
   - component: {fileID: 7129794842378824011}
   - component: {fileID: 1758465706846390669}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Detection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -246,7 +246,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5922005804994502533}
   - component: {fileID: 4267224593845518309}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -298,7 +298,7 @@ GameObject:
   - component: {fileID: 3304507375307137658}
   - component: {fileID: 1992007047612960841}
   - component: {fileID: 9051560375870731023}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}

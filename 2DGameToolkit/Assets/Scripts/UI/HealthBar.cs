@@ -8,12 +8,12 @@ public class HealthBar : MonoBehaviour
     private void OnEnable ()
     {
         m_InitialXScale = transform.localScale.x;
-        this.RegisterAsListener (transform.parent.name, typeof (DamageGameEvent));
+        this.RegisterAsListener (transform.parent.gameObject.GetInstanceID().ToString(), typeof (DamageGameEvent));
     }
 
     private void OnDisable ()
     {
-        this.UnregisterAsListener (transform.parent.name);
+        this.UnregisterAsListener (transform.parent.gameObject.GetInstanceID().ToString());
     }
 
     public void OnGameEvent (DamageGameEvent damageEvent)

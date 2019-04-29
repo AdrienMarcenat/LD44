@@ -27,7 +27,7 @@ public class DemonBattle : MonoBehaviour
     private IEnumerator DemonSpawnRoutine()
     {
         yield return new WaitForSeconds(2);
-        Instantiate(m_DemonPrefab, transform);
-        m_DemonPrefab.GetComponent<Demon>().SetNodes(m_Nodes);
+        GameObject demon = Instantiate(m_DemonPrefab, transform);
+        demon.GetComponent<Demon>().SetNodes(m_Nodes);
     }
 }

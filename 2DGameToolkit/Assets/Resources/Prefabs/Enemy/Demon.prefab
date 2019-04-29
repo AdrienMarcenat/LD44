@@ -30,7 +30,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4675417545655457534}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &732100587314789808
 SpriteRenderer:
@@ -106,6 +106,56 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &2250107836356125784
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4104760440474994063}
+  - component: {fileID: 3933503671955314833}
+  m_Layer: 9
+  m_Name: DemonFire
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4104760440474994063
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2250107836356125784}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4675417545655457534}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3933503671955314833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2250107836356125784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27529e155b0b9d042a549a410cf264e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Type: DemonFire
+  m_TotalAmmo: 2147483647
+  m_CurrentAmmo: 0
+  m_AmmoVelocity: 5
+  m_FireRate: 0.1
+  m_FireSound: {fileID: 0}
+  m_BulletPrefab: {fileID: 1936235728, guid: b55f53b8eb7368443bbef6746a5d4588, type: 3}
 --- !u!1 &3002202867812051719
 GameObject:
   m_ObjectHideFlags: 0
@@ -121,7 +171,8 @@ GameObject:
   - component: {fileID: 2562236955084434982}
   - component: {fileID: 4951278785307368948}
   - component: {fileID: 4607927622236731803}
-  m_Layer: 0
+  - component: {fileID: 6928983900500001239}
+  m_Layer: 9
   m_Name: Demon
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -139,6 +190,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
+  - {fileID: 4104760440474994063}
+  - {fileID: 8980358056568100874}
   - {fileID: 5005912640955223178}
   - {fileID: 1572775620260919357}
   m_Father: {fileID: 0}
@@ -160,6 +213,9 @@ MonoBehaviour:
   m_PlayerDamageOnCollision: 2
   m_Sound: {fileID: 0}
   m_HitColorTime: 0.2
+  m_DecisionTime: 3
+  m_EnemiesToInvoke:
+  - {fileID: 4792158764095581311, guid: 158765199a6cb1f4ab94863c284b7ce1, type: 3}
 --- !u!212 &8297477876553909737
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -267,7 +323,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!95 &4607927622236731803
 Animator:
   serializedVersion: 3
@@ -287,6 +343,68 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6928983900500001239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3002202867812051719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 076f5bc6468afed418c1a4c75a8b4996, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &8574326596583003666
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8980358056568100874}
+  - component: {fileID: 788749953982531501}
+  m_Layer: 9
+  m_Name: DemonWrath
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8980358056568100874
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8574326596583003666}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4675417545655457534}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &788749953982531501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8574326596583003666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27529e155b0b9d042a549a410cf264e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Type: DemonWrath
+  m_TotalAmmo: 2147483647
+  m_CurrentAmmo: 0
+  m_AmmoVelocity: 5
+  m_FireRate: 0.1
+  m_FireSound: {fileID: 0}
+  m_BulletPrefab: {fileID: 1936235728, guid: b55f53b8eb7368443bbef6746a5d4588, type: 3}
 --- !u!1 &9049110664694905989
 GameObject:
   m_ObjectHideFlags: 0
@@ -298,7 +416,7 @@ GameObject:
   - component: {fileID: 1572775620260919357}
   - component: {fileID: 2878931484670768641}
   - component: {fileID: 1576024293705773352}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -317,7 +435,7 @@ Transform:
   m_LocalScale: {x: 2, y: 0.19999999, z: 1}
   m_Children: []
   m_Father: {fileID: 4675417545655457534}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2878931484670768641
 MonoBehaviour:

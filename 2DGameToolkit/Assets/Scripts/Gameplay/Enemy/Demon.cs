@@ -1,24 +1,96 @@
 ﻿using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
 
 public class Demon : Enemy
 {
+    [SerializeField] float m_DecisionTime = 3f;
+    [SerializeField] List<GameObject> m_EnemiesToInvoke;
+
     private List<Transform> m_Nodes;
+    private float m_DecisionTimer = 0;
+    private int m_CurrentNodeIndex = 1;
+    private WeaponManager m_WeaponManager;
+    private Transform m_Target;
+    private int m_InvokeCount;
 
-    // Use this for initialization
-    void Start()
+    private new void Awake()
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        base.Awake();
+        m_Target = GameObject.FindGameObjectWithTag("Player").transform;
+        m_WeaponManager = GetComponent<WeaponManager>();
     }
 
     public void SetNodes(List<Transform> nodes)
     {
         m_Nodes = nodes;
+        transform.position = m_Nodes[m_CurrentNodeIndex].position;
+    }
+
+    private void Update()
+    {
+        m_DecisionTimer += Time.deltaTime;
+        if(m_DecisionTimer > m_DecisionTime)
+        {
+            m_DecisionTimer = 0;
+            Action();
+        }
+    }
+
+    private void Action()
+    {
+        StopAllCoroutines();
+        //int i = Random.Range(0, 3);
+        int i = 1;
+        switch(i)
+        {
+            case 0:
+                StartCoroutine(FireRoutine());
+                break;
+            case 1:
+                StartCoroutine(InvokeRoutine());
+                break;
+            case 2:
+                StartCoroutine(TeleportRoutine());
+                break;
+        }
+    }
+
+    private IEnumerator FireRoutine()
+    {
+        m_Animator.SetTrigger("fire");
+        yield return new WaitForSeconds(1);
+        int direction = m_Target.position.x - transform.position.x < 0 ? -1 : 1;
+        Vector3 orientation = direction < 0 ? Vector3.left : Vector3.right;
+        for (int i = 0; i < 20; i++)
+        {
+            m_WeaponManager.AddFireCommand("DemonFire", 1, 1, orientation);
+            orientation = Quaternion.AngleAxis(5 * direction, new Vector3(0, 0, -1)) * orientation;
+        }
+    }
+
+    private IEnumerator InvokeRoutine()
+    {
+        m_Animator.SetTrigger("invoke");
+        yield return new WaitForSeconds(1);
+        int i = Random.Range(0, m_EnemiesToInvoke.Count);
+        GameObject enemy = Instantiate(m_EnemiesToInvoke[i]);
+        int nodeIndex = (m_CurrentNodeIndex + 1) % m_Nodes.Count;
+        enemy.transform.position = m_Nodes[nodeIndex].position;
+        enemy.name = enemy.name + m_InvokeCount;
+        m_InvokeCount++;
+    }
+
+    private IEnumerator TeleportRoutine()
+    {
+        m_Animator.SetTrigger("teleport");
+        yield return new WaitForSeconds(1);
+        int i = Random.Range(0, 3);
+        if(i == m_CurrentNodeIndex)
+        {
+            i = (i + 1) % m_Nodes.Count;
+        }
+        m_CurrentNodeIndex = i;
+        transform.position = m_Nodes[m_CurrentNodeIndex].position;
     }
 }

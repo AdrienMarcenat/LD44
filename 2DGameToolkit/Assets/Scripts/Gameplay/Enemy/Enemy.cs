@@ -21,7 +21,7 @@ public class Enemy : MonoBehaviour
         m_Animator = GetComponent<Animator>();
         m_InitialColor = m_Sprite.color;
 
-        this.RegisterAsListener (gameObject.name, typeof (GameOverGameEvent), typeof (DamageGameEvent));
+        this.RegisterAsListener (gameObject.GetInstanceID().ToString(), typeof (GameOverGameEvent), typeof (DamageGameEvent));
     }
 
     IEnumerator HitRoutine (float damage)
@@ -60,7 +60,7 @@ public class Enemy : MonoBehaviour
         {
             OnGameOver();
         }
-        this.UnregisterAsListener (gameObject.name);
+        this.UnregisterAsListener (gameObject.GetInstanceID().ToString());
     }
 
     private void OnCollisionEnter2D (Collision2D other)

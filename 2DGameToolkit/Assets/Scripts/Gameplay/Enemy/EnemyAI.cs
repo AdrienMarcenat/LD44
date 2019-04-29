@@ -25,7 +25,7 @@ public class EnemyAI : MonoBehaviour
         m_Animator = GetComponent<Animator>();
         m_FireDelay = m_FireRate;
         this.RegisterToUpdate(EUpdatePass.AI);
-        this.RegisterAsListener(gameObject.name, typeof(GameOverGameEvent));
+        this.RegisterAsListener(gameObject.GetInstanceID().ToString(), typeof(GameOverGameEvent));
         m_InitDone = true;
     }
 
@@ -45,7 +45,7 @@ public class EnemyAI : MonoBehaviour
         if (m_InitDone)
         {
             m_InitDone = false;
-            this.UnregisterAsListener(gameObject.name);
+            this.UnregisterAsListener(gameObject.GetInstanceID().ToString());
         }
     }
 
@@ -59,7 +59,7 @@ public class EnemyAI : MonoBehaviour
         if(m_InitDone)
         {
             m_InitDone = false;
-            this.UnregisterAsListener(gameObject.name);
+            this.UnregisterAsListener(gameObject.GetInstanceID().ToString());
         }
     }
 
