@@ -85,7 +85,7 @@ PrefabInstance:
     - target: {fileID: 4792158764095581305, guid: 158765199a6cb1f4ab94863c284b7ce1,
         type: 3}
       propertyPath: m_KeepDistance
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4792158764095581304, guid: 158765199a6cb1f4ab94863c284b7ce1,
         type: 3}
@@ -110,7 +110,7 @@ PrefabInstance:
     - target: {fileID: 4792158765388947603, guid: 158765199a6cb1f4ab94863c284b7ce1,
         type: 3}
       propertyPath: m_Radius
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4792158764215716710, guid: 158765199a6cb1f4ab94863c284b7ce1,
         type: 3}
