@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class Demon : Enemy
 {
     [SerializeField] float m_DecisionTime = 3f;
+    [SerializeField] int m_WrathBulletNumber = 10;
     [SerializeField] List<GameObject> m_EnemiesToInvoke;
 
     private List<Transform> m_Nodes;
@@ -39,7 +40,7 @@ public class Demon : Enemy
     private void Action()
     {
         StopAllCoroutines();
-        int i = Random.Range(0, 4);
+        int i = 1;//Random.Range(0, 4);
         switch(i)
         {
             case 0:
@@ -75,7 +76,7 @@ public class Demon : Enemy
         m_Animator.SetTrigger("fire");
         yield return new WaitForSeconds(1);
         Vector3 orientation = Vector3.left;
-        for (int i = 0; i < 20; i++)
+        for (int i = 0; i < m_WrathBulletNumber; i++)
         {
             int direction = Random.Range(0, 36);
             m_WeaponManager.AddFireCommand("DemonWrath", 1, 2, orientation);
@@ -87,12 +88,20 @@ public class Demon : Enemy
     {
         m_Animator.SetTrigger("invoke");
         yield return new WaitForSeconds(1);
-        for (int i = 0; i < m_Nodes.Count-1; i++)
+        for (int i = 1; i < m_Nodes.Count; i++)
         {
             int j = Random.Range(0, m_EnemiesToInvoke.Count);
             GameObject enemy = Instantiate(m_EnemiesToInvoke[j]);
             int nodeIndex = (m_CurrentNodeIndex + i) % m_Nodes.Count;
             enemy.transform.position = m_Nodes[nodeIndex].position;
+            int yOffset = Random.Range(0,3);
+            enemy.transform.position = new Vector3(enemy.transform.position.x, enemy.transform.position.y + yOffset, enemy.transform.position.z);
+            EnemySimplePath enemyPath = enemy.GetComponentInChildren<EnemySimplePath>();
+            if(enemyPath != null)
+            {
+                enemyPath.SetLeftNode(m_Nodes[0]);
+                enemyPath.SetRitghNode(m_Nodes[m_Nodes.Count-1]);
+            }
         }
     }
 

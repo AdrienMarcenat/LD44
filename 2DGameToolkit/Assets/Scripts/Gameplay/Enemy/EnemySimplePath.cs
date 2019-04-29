@@ -13,6 +13,16 @@ public class EnemySimplePath : Enemy
     private MovingObject m_Body;
     private bool m_IsWaitingAfterCollision = false;
 
+    public void SetLeftNode(Transform pathLeft)
+    {
+        m_PathLeft = pathLeft;
+    }
+
+    public void SetRitghNode(Transform pathRight)
+    {
+        m_PathRight = pathRight;
+    }
+
     protected new void Awake()
     {
         base.Awake();
