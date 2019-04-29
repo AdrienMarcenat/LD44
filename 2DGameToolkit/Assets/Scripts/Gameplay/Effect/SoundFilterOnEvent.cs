@@ -21,7 +21,7 @@ public class SoundFilterOnEvent : MonoBehaviour
 
     public void OnGameEvent (DamageGameEvent damageGameEvent)
     {
-        if (damageGameEvent.GetDamage() < 0)
+        if (damageGameEvent.GetDamage() > 0)
         {
             StopAllCoroutines();
             StartCoroutine(LowPassRoutine());
@@ -32,6 +32,6 @@ public class SoundFilterOnEvent : MonoBehaviour
     {
         m_AudioLowPassFilter.cutoffFrequency = 1000;
         yield return new WaitForSecondsRealtime(m_TimeInSeconds);
-        m_AudioLowPassFilter.cutoffFrequency = 5000;
+        m_AudioLowPassFilter.cutoffFrequency = 22000;
     }
 }
