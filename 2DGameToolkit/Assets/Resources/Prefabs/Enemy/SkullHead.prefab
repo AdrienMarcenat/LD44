@@ -243,11 +243,11 @@ MonoBehaviour:
   m_IsSeeking: 0
   m_SeekingSound: {fileID: 8300000, guid: f383c88333b06494d8616f70420abf88, type: 3}
   m_HealthBar: {fileID: 4792158764215716711}
-  m_KeepDistance: 5
+  m_KeepDistance: 3
   m_WaitTimeAfterCollision: 1
   m_SlowSpeed: 2
   m_XLocked: 0
-  m_YLocked: 1
+  m_YLocked: 0
 --- !u!95 &4792158764095581252
 Animator:
   serializedVersion: 3

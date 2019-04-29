@@ -12,7 +12,6 @@ public class Demon : Enemy
     private int m_CurrentNodeIndex = 1;
     private WeaponManager m_WeaponManager;
     private Transform m_Target;
-    private int m_InvokeCount;
 
     private new void Awake()
     {
@@ -40,8 +39,7 @@ public class Demon : Enemy
     private void Action()
     {
         StopAllCoroutines();
-        //int i = Random.Range(0, 3);
-        int i = 1;
+        int i = Random.Range(0, 4);
         switch(i)
         {
             case 0:
@@ -52,6 +50,9 @@ public class Demon : Enemy
                 break;
             case 2:
                 StartCoroutine(TeleportRoutine());
+                break;
+            case 3:
+                StartCoroutine(WrathRoutine());
                 break;
         }
     }
@@ -69,16 +70,30 @@ public class Demon : Enemy
         }
     }
 
+    private IEnumerator WrathRoutine()
+    {
+        m_Animator.SetTrigger("fire");
+        yield return new WaitForSeconds(1);
+        Vector3 orientation = Vector3.left;
+        for (int i = 0; i < 20; i++)
+        {
+            int direction = Random.Range(0, 36);
+            m_WeaponManager.AddFireCommand("DemonWrath", 1, 2, orientation);
+            orientation = Quaternion.AngleAxis(10 * direction, new Vector3(0, 0, -1)) * orientation;
+        }
+    }
+
     private IEnumerator InvokeRoutine()
     {
         m_Animator.SetTrigger("invoke");
         yield return new WaitForSeconds(1);
-        int i = Random.Range(0, m_EnemiesToInvoke.Count);
-        GameObject enemy = Instantiate(m_EnemiesToInvoke[i]);
-        int nodeIndex = (m_CurrentNodeIndex + 1) % m_Nodes.Count;
-        enemy.transform.position = m_Nodes[nodeIndex].position;
-        enemy.name = enemy.name + m_InvokeCount;
-        m_InvokeCount++;
+        for (int i = 0; i < m_Nodes.Count-1; i++)
+        {
+            int j = Random.Range(0, m_EnemiesToInvoke.Count);
+            GameObject enemy = Instantiate(m_EnemiesToInvoke[j]);
+            int nodeIndex = (m_CurrentNodeIndex + i) % m_Nodes.Count;
+            enemy.transform.position = m_Nodes[nodeIndex].position;
+        }
     }
 
     private IEnumerator TeleportRoutine()

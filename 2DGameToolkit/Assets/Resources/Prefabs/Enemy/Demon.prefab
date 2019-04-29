@@ -155,7 +155,8 @@ MonoBehaviour:
   m_AmmoVelocity: 5
   m_FireRate: 0.1
   m_FireSound: {fileID: 0}
-  m_BulletPrefab: {fileID: 1936235728, guid: b55f53b8eb7368443bbef6746a5d4588, type: 3}
+  m_BulletPrefab: {fileID: 738832038139588660, guid: db0f7ad2f2c402440a24103c751f00ee,
+    type: 3}
 --- !u!1 &3002202867812051719
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,6 +217,10 @@ MonoBehaviour:
   m_DecisionTime: 3
   m_EnemiesToInvoke:
   - {fileID: 4792158764095581311, guid: 158765199a6cb1f4ab94863c284b7ce1, type: 3}
+  - {fileID: 1274478057624783861, guid: fda795079e6b1044cbea3edb0ef26d65, type: 3}
+  - {fileID: 1466036736241047514, guid: cccac38c1adee6841a9aabcdfad4eee7, type: 3}
+  - {fileID: 381874446006064202, guid: d7b6588d3d2fd584d980e30bf8851ffd, type: 3}
+  - {fileID: 5026716846077114268, guid: 71e7cd0b1aeb9da42ba6457e3a4d0caa, type: 3}
 --- !u!212 &8297477876553909737
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -302,7 +307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f469169c58ccef34fb22b1a073bdcbdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MaxHealth: 50
+  m_MaxHealth: 100
 --- !u!50 &4951278785307368948
 Rigidbody2D:
   serializedVersion: 4
@@ -401,10 +406,11 @@ MonoBehaviour:
   m_Type: DemonWrath
   m_TotalAmmo: 2147483647
   m_CurrentAmmo: 0
-  m_AmmoVelocity: 5
-  m_FireRate: 0.1
+  m_AmmoVelocity: 3
+  m_FireRate: 0.2
   m_FireSound: {fileID: 0}
-  m_BulletPrefab: {fileID: 1936235728, guid: b55f53b8eb7368443bbef6746a5d4588, type: 3}
+  m_BulletPrefab: {fileID: 475080079455218474, guid: 1c1d94587e8cb6b4caa56fc0df407c5a,
+    type: 3}
 --- !u!1 &9049110664694905989
 GameObject:
   m_ObjectHideFlags: 0

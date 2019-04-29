@@ -42,7 +42,7 @@ public class Weapon : MonoBehaviour
         m_CurrentAmmo = m_TotalAmmo;
         m_FireDelay = m_FireRate;
         this.RegisterToUpdate(EUpdatePass.AI);
-        this.RegisterAsListener(transform.parent.GetInstanceID().ToString(), typeof(GameOverGameEvent));
+        this.RegisterAsListener(transform.parent.gameObject.GetInstanceID().ToString(), typeof(GameOverGameEvent));
     }
 
     public void OnGameEvent(GameOverGameEvent gameOverEvent)
@@ -53,7 +53,7 @@ public class Weapon : MonoBehaviour
 
     private void OnDestroy()
     {
-        this.UnregisterAsListener(transform.parent.GetInstanceID().ToString());
+        this.UnregisterAsListener(transform.parent.gameObject.GetInstanceID().ToString());
     }
 
     public void UpdateAI ()
