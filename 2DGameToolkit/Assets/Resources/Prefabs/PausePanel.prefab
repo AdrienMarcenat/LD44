@@ -171,6 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c6538f4f1cfc074b936130083e65945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_InputConfiguration: {fileID: 0}
 --- !u!1 &1430379601664510
 GameObject:
   m_ObjectHideFlags: 0
@@ -974,6 +975,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Panel1: {fileID: 0}
   m_Panel2: {fileID: 0}
+  m_DeactivateAtInit: 0
 --- !u!1 &1284481774748917455
 GameObject:
   m_ObjectHideFlags: 0
@@ -1274,7 +1276,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Input
+  m_Text: Controls
 --- !u!1 &8689062447972518488
 GameObject:
   m_ObjectHideFlags: 0

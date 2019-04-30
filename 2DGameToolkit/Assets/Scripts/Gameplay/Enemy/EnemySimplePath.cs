@@ -44,9 +44,9 @@ public class EnemySimplePath : Enemy
         m_Body.MoveHorizontal(m_Direction * m_Speed);
     }
 
-    protected override void OnGameOver()
+    protected override void OnGameOver(bool real)
     {
-        base.OnGameOver();
+        base.OnGameOver(real);
         this.UnregisterToUpdate(EUpdatePass.AI);
     }
 

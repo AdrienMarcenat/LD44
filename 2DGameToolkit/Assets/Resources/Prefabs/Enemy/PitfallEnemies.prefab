@@ -588,7 +588,7 @@ MonoBehaviour:
   m_Sound: {fileID: 0}
   m_HitColorTime: 0.1
   m_IsSeeking: 0
-  m_SeekingSound: {fileID: 0}
+  m_SeekingSound: {fileID: 8300000, guid: f383c88333b06494d8616f70420abf88, type: 3}
   m_HealthBar: {fileID: 8411100522266540053}
   m_KeepDistance: 2
   m_WaitTimeAfterCollision: 1
@@ -818,6 +818,7 @@ MonoBehaviour:
   m_CurrentAmmo: 0
   m_AmmoVelocity: 10
   m_FireRate: 2
+  m_FireSound: {fileID: 0}
   m_BulletPrefab: {fileID: 1281901161740308, guid: 0016386fd70d4ff41a91f89ba91aa16b,
     type: 3}
 --- !u!1 &2722175771792216437
@@ -1011,7 +1012,7 @@ MonoBehaviour:
   m_Sound: {fileID: 0}
   m_HitColorTime: 0.1
   m_IsSeeking: 0
-  m_SeekingSound: {fileID: 0}
+  m_SeekingSound: {fileID: 8300000, guid: f383c88333b06494d8616f70420abf88, type: 3}
   m_HealthBar: {fileID: 4332687324035984091}
   m_KeepDistance: 2
   m_WaitTimeAfterCollision: 1
@@ -1601,6 +1602,7 @@ MonoBehaviour:
   m_CurrentAmmo: 0
   m_AmmoVelocity: 10
   m_FireRate: 2
+  m_FireSound: {fileID: 0}
   m_BulletPrefab: {fileID: 1281901161740308, guid: 0016386fd70d4ff41a91f89ba91aa16b,
     type: 3}
 --- !u!1 &3946711587868203845
@@ -1683,6 +1685,7 @@ MonoBehaviour:
   m_CurrentAmmo: 0
   m_AmmoVelocity: 10
   m_FireRate: 2
+  m_FireSound: {fileID: 0}
   m_BulletPrefab: {fileID: 1281901161740308, guid: 0016386fd70d4ff41a91f89ba91aa16b,
     type: 3}
 --- !u!1 &4026081292726562597
@@ -1733,6 +1736,7 @@ MonoBehaviour:
   m_CurrentAmmo: 0
   m_AmmoVelocity: 5
   m_FireRate: 2
+  m_FireSound: {fileID: 0}
   m_BulletPrefab: {fileID: 1936235728, guid: b55f53b8eb7368443bbef6746a5d4588, type: 3}
 --- !u!1 &4360489601699444173
 GameObject:
@@ -1758,7 +1762,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4360489601699444173}
   m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: 0, z: 0}
+  m_LocalPosition: {x: 1.44, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4833013070915297882}
@@ -2270,6 +2274,7 @@ MonoBehaviour:
   m_CurrentAmmo: 0
   m_AmmoVelocity: 10
   m_FireRate: 2
+  m_FireSound: {fileID: 0}
   m_BulletPrefab: {fileID: 1281901161740308, guid: 0016386fd70d4ff41a91f89ba91aa16b,
     type: 3}
 --- !u!1 &6490949132709727250
@@ -2875,6 +2880,7 @@ MonoBehaviour:
   m_CurrentAmmo: 0
   m_AmmoVelocity: 5
   m_FireRate: 2
+  m_FireSound: {fileID: 0}
   m_BulletPrefab: {fileID: 1936235728, guid: b55f53b8eb7368443bbef6746a5d4588, type: 3}
 --- !u!1 &7514790746889162443
 GameObject:
@@ -3575,6 +3581,7 @@ MonoBehaviour:
   m_CurrentAmmo: 0
   m_AmmoVelocity: 10
   m_FireRate: 2
+  m_FireSound: {fileID: 0}
   m_BulletPrefab: {fileID: 1281901161740308, guid: 0016386fd70d4ff41a91f89ba91aa16b,
     type: 3}
 --- !u!1 &8981448618682972228
@@ -3601,7 +3608,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8981448618682972228}
   m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: 0, z: 0}
+  m_LocalPosition: {x: 1.57, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 942588461000842337}
@@ -3655,5 +3662,6 @@ MonoBehaviour:
   m_CurrentAmmo: 0
   m_AmmoVelocity: 10
   m_FireRate: 2
+  m_FireSound: {fileID: 0}
   m_BulletPrefab: {fileID: 1281901161740308, guid: 0016386fd70d4ff41a91f89ba91aa16b,
     type: 3}

@@ -1,7 +1,7 @@
 ﻿
 public class PlayerStat
 {
-    public int m_HP = 10;
+    public int m_HP = 6;
     public int m_Force = 1;
     public int m_Magic = 1;
     public int m_JumpNumber = 1;

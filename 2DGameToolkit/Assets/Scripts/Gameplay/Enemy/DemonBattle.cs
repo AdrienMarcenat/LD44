@@ -8,12 +8,12 @@ public class DemonBattle : MonoBehaviour
     [SerializeField] List<Transform> m_Nodes;
     [SerializeField] AudioClip m_BossMusic;
 
-    private void Awake()
+    private void OnEnable()
     {
         this.RegisterAsListener("Game", typeof(DemonFightGameEvent));
     }
 
-    private void OnDestroy()
+    private void OnDisable()
     {
         this.UnregisterAsListener("Game");
     }

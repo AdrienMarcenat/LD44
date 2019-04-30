@@ -37,9 +37,9 @@ public class EnemyPath : Enemy
         transform.position = position;
     }
 
-    protected override void OnGameOver()
+    protected override void OnGameOver(bool real)
     {
-        base.OnGameOver();
+        base.OnGameOver(real);
         this.UnregisterToUpdate(EUpdatePass.AI);
     }
 

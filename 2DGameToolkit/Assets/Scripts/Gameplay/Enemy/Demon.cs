@@ -21,10 +21,14 @@ public class Demon : Enemy
         m_WeaponManager = GetComponent<WeaponManager>();
     }
 
-    private new void OnDestroy()
+    protected override void OnGameOver(bool real)
     {
-        base.OnDestroy();
-        Dialogue.DialogueManagerProxy.Get().TriggerDialogue("EndGame");
+        base.OnGameOver(real);
+        if (real)
+        {
+            m_Target.GetComponent<Collider2D>().enabled = false;
+            Dialogue.DialogueManagerProxy.Get().TriggerDialogue("EndGame");
+        }
     }
 
     public void SetNodes(List<Transform> nodes)
@@ -46,19 +50,23 @@ public class Demon : Enemy
     private void Action()
     {
         StopAllCoroutines();
-        int i = 1;//Random.Range(0, 4);
+        int i = Random.Range(0, 8);
         switch(i)
         {
             case 0:
+            case 1:
+            case 2:
                 StartCoroutine(FireRoutine());
                 break;
-            case 1:
+            case 3:
                 StartCoroutine(InvokeRoutine());
                 break;
-            case 2:
+            case 4:
+            case 5:
                 StartCoroutine(TeleportRoutine());
                 break;
-            case 3:
+            case 6:
+            case 7:
                 StartCoroutine(WrathRoutine());
                 break;
         }

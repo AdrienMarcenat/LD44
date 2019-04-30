@@ -214,7 +214,7 @@ MonoBehaviour:
   m_PlayerDamageOnCollision: 2
   m_Sound: {fileID: 0}
   m_HitColorTime: 0.2
-  m_DecisionTime: 3
+  m_DecisionTime: 4
   m_WrathBulletNumber: 10
   m_EnemiesToInvoke:
   - {fileID: 4792158764095581311, guid: 158765199a6cb1f4ab94863c284b7ce1, type: 3}

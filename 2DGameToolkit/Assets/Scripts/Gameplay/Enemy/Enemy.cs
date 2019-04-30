@@ -40,7 +40,7 @@ public class Enemy : MonoBehaviour
     {
         m_IsDying = true;
         m_Animator.SetTrigger("death");
-        OnGameOver();
+        OnGameOver(true);
         // Remove collision to avoid hurting player or being hurt
         GetComponent<BoxCollider2D> ().enabled = false;
         Rigidbody2D body = GetComponent<Rigidbody2D>();
@@ -58,7 +58,7 @@ public class Enemy : MonoBehaviour
         // Call the cleanup code if it has not been done
         if (!m_IsDying)
         {
-            OnGameOver();
+            OnGameOver(false);
         }
         this.UnregisterAsListener (gameObject.GetInstanceID().ToString());
     }
@@ -79,7 +79,7 @@ public class Enemy : MonoBehaviour
     }
 
     protected virtual void OnPlayerCollision() { }
-    protected virtual void OnGameOver() { }
+    protected virtual void OnGameOver(bool real) { }
 
     public bool IsDying()
     {
