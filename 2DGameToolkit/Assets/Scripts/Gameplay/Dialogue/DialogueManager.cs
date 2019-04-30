@@ -108,6 +108,10 @@ namespace Dialogue
             m_IsInDialogue = false;
             new GameFlowEvent (EGameFlowAction.EndDialogue).Push ();
             m_Dialogue = null;
+            foreach (DialogueOptionButton optionButton in m_OptionButtons)
+            {
+                optionButton.Reset();
+            }
         }
 
         public void TriggerDialogue(string tag)

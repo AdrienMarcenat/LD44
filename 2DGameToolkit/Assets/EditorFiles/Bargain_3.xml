@@ -53,7 +53,7 @@
       <m_Node>
         <m_ID>486ef591-1c55-416e-859b-ee9e3be4712f</m_ID>
         <m_Name>Devil</m_Name>
-        <m_Text>Give me your soul, I'll give you my strentgh.</m_Text>
+        <m_Text>Just give me a taste of your soul.</m_Text>
         <m_NextNodeID />
         <m_Options>
           <Option>
@@ -116,7 +116,7 @@
       <m_Node>
         <m_ID>bf2b3ff9-53c4-4c5b-b5cd-5361a5601b12</m_ID>
         <m_Name>Devil</m_Name>
-        <m_Text>Welcome to my house, mortal !</m_Text>
+        <m_Text>You could become even more powerful !</m_Text>
         <m_NextNodeID>486ef591-1c55-416e-859b-ee9e3be4712f</m_NextNodeID>
         <m_Options />
       </m_Node>

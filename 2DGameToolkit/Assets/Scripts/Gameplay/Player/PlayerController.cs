@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
     private static Vector3 m_Right = new Vector3 (1, 0, 0);
     private static Vector3 m_Left = new Vector3 (-1, 0, 0);
 
+
     void Awake ()
     {
         m_Mover = GetComponent<MovingObject> ();
