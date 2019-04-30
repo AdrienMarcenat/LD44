@@ -35,6 +35,7 @@ public class Weapon : MonoBehaviour
     private Queue<FireCommand> m_FireCommands;
     private float m_FireDelay;
     private float m_FireCommandNumber;
+    private bool m_IsRegistered = false;
 
     void Awake ()
     {
@@ -43,17 +44,25 @@ public class Weapon : MonoBehaviour
         m_FireDelay = m_FireRate;
         this.RegisterToUpdate(EUpdatePass.AI);
         this.RegisterAsListener(transform.parent.gameObject.GetInstanceID().ToString(), typeof(GameOverGameEvent));
+        m_IsRegistered = true;
     }
 
     public void OnGameEvent(GameOverGameEvent gameOverEvent)
     {
         ClearFireCommands();
         this.UnregisterToUpdate(EUpdatePass.AI);
+        m_IsRegistered = false;
     }
 
     private void OnDestroy()
     {
+        ClearFireCommands();
         this.UnregisterAsListener(transform.parent.gameObject.GetInstanceID().ToString());
+        if(m_IsRegistered)
+        {
+            this.UnregisterToUpdate(EUpdatePass.AI);
+            m_IsRegistered = false;
+        }
     }
 
     public void UpdateAI ()

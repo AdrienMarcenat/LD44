@@ -211,10 +211,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Type: 10
-  m_PlayerDamageOnCollision: 2
+  m_PlayerDamageOnCollision: 1
   m_Sound: {fileID: 0}
   m_HitColorTime: 0.2
-  m_DecisionTime: 4
+  m_DecisionTime: 3
   m_WrathBulletNumber: 10
   m_EnemiesToInvoke:
   - {fileID: 4792158764095581311, guid: 158765199a6cb1f4ab94863c284b7ce1, type: 3}

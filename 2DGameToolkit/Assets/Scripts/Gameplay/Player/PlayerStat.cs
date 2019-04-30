@@ -33,7 +33,7 @@ public class UpgradeJump : IStatChange
     public void ChangeStats(PlayerStat stat)
     {
         stat.m_JumpNumber++;
-        stat.m_HP -= 2;
+        stat.m_HP -= 1;
     }
 }
 

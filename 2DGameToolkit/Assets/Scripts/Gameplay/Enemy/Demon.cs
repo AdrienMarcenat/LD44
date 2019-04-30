@@ -102,7 +102,7 @@ public class Demon : Enemy
     {
         m_Animator.SetTrigger("invoke");
         yield return new WaitForSeconds(1);
-        for (int i = 1; i < m_Nodes.Count; i++)
+        for (int i = 1; i < 2 /*m_Nodes.Count*/; i++)
         {
             int j = Random.Range(0, m_EnemiesToInvoke.Count);
             GameObject enemy = Instantiate(m_EnemiesToInvoke[j]);

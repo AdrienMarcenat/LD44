@@ -62,13 +62,13 @@
             <m_Action>UpgradeForce</m_Action>
           </Option>
           <Option>
-            <m_Text>Gain 1 Jump, lose 2 HP</m_Text>
+            <m_Text>Gain 1 Jump, lose 1 HP</m_Text>
             <m_DestinationNodeID>94bf83eb-96e6-4a9f-9429-84827da76d7d</m_DestinationNodeID>
             <m_Action>UpgradeJump</m_Action>
           </Option>
           <Option>
             <m_Text>Refuse bargain and fight !</m_Text>
-            <m_DestinationNodeID>94bf83eb-96e6-4a9f-9429-84827da76d7d</m_DestinationNodeID>
+            <m_DestinationNodeID />
             <m_Action>FightDemon</m_Action>
           </Option>
         </m_Options>
@@ -184,14 +184,6 @@
       </m_InPoint>
       <m_OutPoint>
         <m_Id>b2c6b157-e912-4e8a-b6e0-82aaf8eedd50</m_Id>
-      </m_OutPoint>
-    </Connection>
-    <Connection>
-      <m_InPoint>
-        <m_Id>a39cf216-f440-461e-b330-697da60de795</m_Id>
-      </m_InPoint>
-      <m_OutPoint>
-        <m_Id>1792c2b2-0f53-4a6b-b52e-429dcad9fd53</m_Id>
       </m_OutPoint>
     </Connection>
     <Connection>
